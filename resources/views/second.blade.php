@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,165 +5,161 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tranquilidad | Credito</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body{
+        *{
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            width: 100vw; 
-            height: 100vh; 
-            font-family: 'Roboto', sans-serif;
-            background-color:  rgba(223,239,253,1);
+        }
+        
+        body {
+            background-color: #cfebf9;
         }
 
-        .text-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 1rem;
-            width: 100vw; 
+        .first-sec{
+            background-color: #cfebf9;
             height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            padding: 20px;
+            border-top-right-radius: 60%;
         }
-
-        .logo-container{
+        
+        .logo{
+            border: 3px solid white;
+            margin: 50px 0;
+            width: 200px;
+            height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 13rem; 
-            height: 12vh; 
-            border: 3px solid white;
+            font-size: 30px;
+            color: white;
+            text-transform: uppercase;
+        }
+        
+        .data{
+            border: 2px solid #445a71;
+            margin: 50px 0;
+            width: 250px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #445a71;
+        }
+
+        .letter-sec{
+            padding: 70px;
+            font-size: 20px;
+            color: darkblue;
+        }
+
+        .input-box{
+            margin-top: -40px;
+        }
+        
+        input[type=text]{
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            text-align: center;
+        }
+        input[type=email]{
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            text-align: center;
+        }
+
+        input[type=submit]{
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            background-color: #314961;
+            color: white;
+            text-align: center;
+            float: right;
+            cursor: pointer;
+            margin-top: 8px;
         }
 
         h1{
-            text-transform: uppercase;
-            color: white;
-            font-size: 2rem;
+            color: #314961;
+            font-size: 30px;
+            margin-bottom: 15px;
         }
-    
-        .second-sec{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        p {
+            color: #314961;
             font-size: 15px;
         }
-
-        .second-sec p{
-            margin: 0 15px;
-            text-align: center;
+        .line-box{
+            color: darkblue;
+            margin-top: 20px;
         }
-
-        .third-sec{
-            font-weight: bold;
-            margin: 0 20px;
-            text-align: center;
-            font-size: 15px;
+        .mt-5 {
+            margin-top: 100px;
         }
-
-        .third-sec p{
-            color:  #262650;
+        .mt-3 {
+            margin-top: 60px;
         }
-
-        h2{
-            color:  #262650;
+        .mt-2 {
+            margin-top: 40px;
         }
-
-        .email-box, .phone-box{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 10px 0;
-            text-align: center;
-            font-size: 15px;
+        .mt-1 {
+            margin-top: 20px;
         }
-
-        input[type=text]{
-            padding: 13px 40px;
-            height: 10px;
-            border-radius: 10px;
-            border: none;
-            margin: 5px 0;
-            text-align: center;
+        .is-invalid {
+            color: red;
+            font-size: small;
         }
-        
-        input[type=email]{
-            padding: 13px 40px;
-            height: 10px;
-            border-radius: 10px;
-            border: none;
-            margin: 5px 0;
-            text-align: center;
-        }
-
-        input[type=button]{
-            height: 35px;
-            border-radius: 15px;
-            border: none;
-            margin: 5px 0;
-            padding: 5px 25px;
-            color: white;
-            background-color:  #262650;
-            font-weight: bold;
-        }
-
-        .btn-box button{
-            margin-top: 1rem;
-            padding: 5px 20px;
-            background-color: transparent;
-            border: 2px solid #262650;
-            color: #262650;
-            font-weight: bold;
-        }
-        
 
     </style>
 </head>
-<body>
-
-    <section class="text-container">
-            
-        <section class="logo-container">
-            <h1>Logo</h1>
-        </section>
-
-        <section class="second-sec">
-            <h2>Tu tranquilidad es primero</h2>
-            <p>Para brindarte las mejores soluciones debemos confirmar tu identidad, enviaremos un c&oacute;digo de acceso al email o n&uacute;mero telef&oacute;nico registrado</p>
-        </section>
-
-        <section class="third-sec">
-            <p>Selecciona una de las opciones y complete la informaci&oacute;n</p>
-        </section>
-
-
-        <section class="email-box">
-            <span>franc*******@*******.com</span>
-            <div>
-                <span>ICON</span>
-                <input type="email" placeholder="Ingresar email">
+<body>    
+    <section class="first-sec">
+        <div class="logo">
+            <p>Logo</p>
+        </div>
+        <h1>Tu tranquilidad es primero</h1>
+        <p> Para brindar las mejores soluciones debemos confirmar tu identidad, enviaremos un codigo</p>
+        <p>de acceso al email o numero telefonico registrado</p>
+        <p class="mt-5">Selecciona una de las opciones y </p>
+        <p>completa la información</p>
+        <p class="mt-2">franc******@*****.com</p>
+        <form action="{{route('code')}}" method="POST">
+			@csrf
+            <div class="mt-1">
+                <input type="email" placeholder="Ingresar email" name="email">
+                @error('email')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
+                <p>
+                    <input type="submit" value="Ingresar">
+                </p>
             </div>
-            <input type="button" value="Ingresar">
-        </section>
-
-            
-        <section class="phone-box">
-            <span>316************</span>
-            <div>
-                <span>ICON</span>
-                <input type="text" placeholder="Ingresar número telefónico">
+            <p class="mt-2">316*********</p>
+            <div class="mt-1">
+                <input type="text" placeholder="Ingresar numero telefonico" value="{{$phone}}" name="phone">
+                @error('phone')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
+                <p>
+                    <input type="submit" value="Ingresar">
+                </p>
+                
             </div>
-            <input type="button" value="Ingresar">
-        </section>
-
-
-        <section class="btn-box">
-            <button>No son mis datos</button>
-        </section>      
+        </form>
+        <div class="data">
+            <p>No son mis datos</p>
+        </div>
+        
     </section>
 </body>
 </html>

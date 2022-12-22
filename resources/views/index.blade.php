@@ -143,12 +143,15 @@
         .mt-1 {
             margin-top: 20px;
         }
-				.first-sec {
-					 margin-top: 250px;
-					 margin-left: 200px;
-					 margin-bottom: 250px;
-				}
-
+        .first-sec {
+                margin-top: 250px;
+                margin-left: 200px;
+                margin-bottom: 250px;
+        }
+        .is-invalid {
+            color: red;
+            font-size: small;
+        }
     </style>
 </head>
 <body>
@@ -167,10 +170,16 @@
         <p>Aprende de educación financiera y te ayudamos a conseguir</p>
 				<p>un empleo.</p>
 				<div class="mt-1">
-					<form action="{{route('send-credit')}}" method="POST">
+					<form action="{{route('tranquillity')}}" method="POST">
 						@csrf
-            <input type="text" placeholder="Ingresa con tu numero celular " name="phone">
+                        <input type="text" 
+                                placeholder="Ingresa con tu numero celular" 
+                                name="phone" 
+                        >
 						<input type="submit" value="Ingresar">
+                        @error('phone')
+                            <div class="is-invalid">{{ $message }}</div>
+                        @enderror
 					</form>
         </div>
         <p class="mt-3">Recupera tu vida financiera </p>        

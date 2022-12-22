@@ -18,7 +18,7 @@
             width: 100vw; 
             height: 100vh; 
             font-family: 'Roboto', sans-serif;
-            background-color:  rgba(223,239,253,1);
+            background-color: #cfebf9;
         }
 
         .text-container{
@@ -36,9 +36,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 13rem; 
-            height: 12vh; 
+            width: 15rem; 
+            height: 8vh; 
             border: 3px solid white;
+            margin-top: 5rem;
         }
 
         h1{
@@ -55,7 +56,14 @@
         }
 
         h2{
-            color:  #262650;
+            color: #314961;
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+        p {
+            color: #314961;
+            font-size: 1rem;
         }
 
         .second-sec p{
@@ -74,6 +82,7 @@
         input[type=text]{
             padding: 13px 80px;
             height: 10px;
+            width: 7rem;
             border-radius: 10px;
             border: none;
             margin: 5px 0;
@@ -84,9 +93,10 @@
             margin-top: 1rem;
             padding: 5px 10px;
             background-color: transparent;
-            border: 2px solid #262650;
+            border: 1px solid #262650;
             color: #262650;
             font-weight: bold;
+            cursor: pointer;
         }
 
         input[type=button]{
@@ -98,6 +108,34 @@
             color: white;
             background-color:  #262650;
             font-weight: bold;
+        }
+        input[type=submit]{
+            height: 35px;
+            border-radius: 15px;
+            border: none;
+            margin: 5px 0;
+            padding: 5px 25px;
+            color: white;
+            background-color:  #262650;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .mt-5 {
+            margin-top: 100px;
+        }
+        .mt-3 {
+            margin-top: 60px;
+        }
+        .mt-2 {
+            margin-top: 40px;
+        }
+        .mt-1 {
+            margin-top: 20px;
+        }
+        .is-invalid {
+            color: red;
+            font-size: small;
         }
 
         
@@ -112,17 +150,25 @@
 
         <section class="second-sec">
             <h2>Tu tranquilidad es primero</h2>
-            <p>Para brindarte las mejores soluciones debemos confirmar tu identidad, enviaremos un c&oacute;digo de acceso al email o n&uacute;mero telef&oacute;nico registrado</p>
+            <p>Para brindarte las mejores soluciones debemos confirmar tu identidad,</p> 
+            <p>enviaremos un c&oacute;digo de acceso al email o n&uacute;mero telef&oacute;nico registrado</p>
         </section>
 
         <section class="third-sec">
+        <form action="{{route('validate')}}" method="POST">
+			@csrf
             <p>Hemos enviado un c&oacute;digo de acceso a tu email</p>
-            <input type="text" placeholder="Ingresar código">
+            <input type="text" placeholder="Ingresar código" name="code">
+            <input type="submit" value="Ingresar">
+            @error('code')
+                <div class="is-invalid">{{ $message }}</div>
+            @enderror
+        </form>
         </section>
 
         <section class="btn-box">
-            <button>ICON Solicitar nuevo c&oacute;digo</button>
-            <input type="button" value="Ingresar">
+            <button >Solicitar nuevo c&oacute;digo</button>
+            
         </section>
     
     </section>

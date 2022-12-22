@@ -22,13 +22,20 @@ Route::get('/credit', function () {
 });*/
 
 Route::get('/', [App\Http\Controllers\CreditController::class, 'index'])->name('index');
-Route::post('/send-credit', [App\Http\Controllers\CreditController::class, 'sendCredit'])->name('send-credit');
-Route::get('/third', [App\Http\Controllers\CreditController::class, 'third'])->name('third');
+//Route::get('/third', [App\Http\Controllers\CreditController::class, 'third'])->name('third');
 Route::get('/quarter', [App\Http\Controllers\CreditController::class, 'quarter'])->name('quarter');
 Route::get('/fifth', [App\Http\Controllers\CreditController::class, 'fifth'])->name('fifth');
 Route::get('/sixth', [App\Http\Controllers\CreditController::class, 'sixth'])->name('sixth');
 Route::get('/seventh', [App\Http\Controllers\CreditController::class, 'seventh'])->name('seventh');
 
+Route::post('/tranquillity', [App\Http\Controllers\CreditController::class, 'sendCredit'])->name('tranquillity');
+Route::get('/tranquillity', [App\Http\Controllers\CreditController::class, 'tranquillity'])->name('tranquillity');
+
+Route::get('/code', [App\Http\Controllers\CreditController::class, 'code'])->name('code');
+Route::post('/code', [App\Http\Controllers\CreditController::class, 'storeCode'])->name('code');
+
+Route::get('/validate', [App\Http\Controllers\CreditController::class, 'quarter'])->name('validate');
+Route::post('/validate', [App\Http\Controllers\CreditController::class, 'validateCode'])->name('validate');
 
 Auth::routes();
 

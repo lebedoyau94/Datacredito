@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CodeStoreRequest;
+use App\Http\Requests\IndexCreditRequest;
+use App\Http\Requests\ValidateCodeRequest;
 use Illuminate\Http\Request;
 
 class CreditController extends Controller
@@ -25,20 +28,43 @@ class CreditController extends Controller
     {
         return view('index');
 	}
-		
-	public function sendCredit()
-	{
-        return view('second',["phone" => \request("phone")]);
-    }
 
-	/**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function third()
+    public function tranquillity()
     {
-        return view('third');
+        return view('second',["phone" => \old("phone")]);
+	}
+
+	public function sendCredit(IndexCreditRequest $indexCreditRequest)
+	{
+        return view('second',["phone" => \request("phone")]);
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function code()
+    {
+        return view('third',["code" => \old("code"),]);
+    }
+
+	/**
+     * Store the resource.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function storeCode(CodeStoreRequest $codeStoreRequest)
+    {
+        return view('third',[
+            "phone" => \request("phone"),
+            "email" => \request("email")
+        ]);
     }
     /**
      * Show the application dashboard.
@@ -46,6 +72,15 @@ class CreditController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function quarter()
+    {
+        return view('quarter');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function validateCode(ValidateCodeRequest $validateCoderequest)
     {
         return view('quarter');
     }
