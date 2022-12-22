@@ -113,7 +113,7 @@
             margin: 5px 0;
         }
 
-        input[type=submit]{
+        input[type=button]{
             height: 40px;
             border-radius: 20px;
             border: none;
@@ -166,12 +166,9 @@
 				<p>y recompesas por tus pagos. </p>
         <p>Aprende de educación financiera y te ayudamos a conseguir</p>
 				<p>un empleo.</p>
-				<div class="mt-1">
-					<form action="{{route('send-credit')}}" method="POST">
-						@csrf
-            <input type="text" placeholder="Ingresa con tu numero celular " name="phone">
-						<input type="submit" value="Ingresar">
-					</form>
+        <div class="mt-1">
+            <input type="text" placeholder="Ingresar email">
+            <input type="button" value="Ingresar">
         </div>
         <p class="mt-3">Recupera tu vida financiera </p>        
     </section>        

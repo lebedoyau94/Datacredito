@@ -13,13 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('index');
 });
 
 Route::get('/credit', function () {
     return view('credit');
-});
+});*/
+
+Route::get('/', [App\Http\Controllers\CreditController::class, 'index'])->name('index');
+#Route::get('/tranquillity', [App\Http\Controllers\CreditController::class, 'second'])->name('second');
+Route::post('/send-credit', [App\Http\Controllers\CreditController::class, 'sendCredit'])->name('send-credit');
 
 Auth::routes();
 
