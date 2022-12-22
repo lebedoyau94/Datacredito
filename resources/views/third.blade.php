@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Inicio | Credito</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codigo | Credito</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-		<style>
-			  body{
+    <style>
+        body{
             margin: 0;
             padding: 0;
             display: flex;
@@ -16,25 +17,8 @@
             flex-direction: column;
             width: 100vw; 
             height: 100vh; 
-            background-image: url('https://cdn.glitch.global/4796cf83-89b2-4901-b670-e7515e355baf/girl-is-jumping.jpg?v=1671237362508');  
-            background-position: center; 
-            background-repeat: no-repeat; 
-            background-size: cover;
-						font-family: 'Roboto', sans-serif;
-						background-color: #cfebf9;
-
-        }
-
-        .curtain{
-            background: rgb(216,191,216);
-            background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
-            width: 100vw; 
-            height: 100vh; 
-            position: absolute; 
-            opacity: .8; 
-            z-index: -4;
-            top: 0;
-						/*clip-path: polygon(91% 0, 83% 13%, 77% 27%, 72% 45%, 71% 64%, 75% 79%, 81% 90%, 90% 100%, 0 100%, 0 0);*/        
+            font-family: 'Roboto', sans-serif;
+            background-color:  rgba(223,239,253,1);
         }
 
         .text-container{
@@ -45,28 +29,17 @@
             margin-top: 1rem;
             width: 100vw; 
             height: 100vh;
-        }
-				.logo{
-            border: 3px solid white;
-            margin: 50px 0;
-            width: 200px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            color: white;
-						text-transform: uppercase;
+            color: #262650;
         }
 
-        /*.logo-container{
+        .logo-container{
             display: flex;
             justify-content: center;
             align-items: center;
             width: 13rem; 
             height: 12vh; 
             border: 3px solid white;
-				}*/
+        }
 
         h1{
             text-transform: uppercase;
@@ -74,103 +47,84 @@
             font-size: 2rem;
         }
 
-        .title-container{
-            text-align: center;
-        }
-
-        h2{
-            color: #262650;
-            letter-spacing: .5;
-            font-size: 30px;
-            margin-bottom: 1rem;
-						height: 4rem;
-        }
-
-        p{
-            color: #00001f;
-            font-size: 15px;
-        }
-
-        .text{
-            text-align: center;
-            margin: -5px 2rem;
-        }
-
-        .btn-container{
+        .second-sec{
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 200px;
-            height: 120px;
+            font-size: 15px;
+        }
+
+        h2{
+            color:  #262650;
+        }
+
+        .second-sec p{
+            margin: 0 25px;
+            text-align: center;
+        }
+
+        .third-sec{
+            font-weight: bold;
+            margin: 1rem 20px;
+            text-align: center;
+            font-size: 15px;
+            color: #262650;
         }
 
         input[type=text]{
-            width: inherit;
-            padding: 20px 40px;
+            padding: 13px 80px;
             height: 10px;
-            border-radius: 20px;
+            border-radius: 10px;
             border: none;
             margin: 5px 0;
+            text-align: center;
+        }
+
+        .btn-box button{
+            margin-top: 1rem;
+            padding: 5px 10px;
+            background-color: transparent;
+            border: 2px solid #262650;
+            color: #262650;
+            font-weight: bold;
         }
 
         input[type=button]{
-            height: 40px;
-            border-radius: 20px;
+            height: 35px;
+            border-radius: 15px;
             border: none;
             margin: 5px 0;
             padding: 5px 25px;
             color: white;
             background-color:  #262650;
+            font-weight: bold;
         }
 
-        .last-line{
-            margin-top: 10px;
-            color:  #262650;;
-        }
-				p {
-            color: #314961;
-            font-size: 15px;
-        }
-				.mt-5 {
-            margin-top: 100px;
-        }
-        .mt-3 {
-            margin-top: 60px;
-        }
-        .mt-2 {
-            margin-top: 40px;
-        }
-        .mt-1 {
-            margin-top: 20px;
-        }
-				.first-sec {
-					 margin-top: 250px;
-					 margin-left: 200px;
-					 margin-bottom: 250px;
-				}
-
+        
     </style>
 </head>
 <body>
+    <section class="text-container">
+            
+        <section class="logo-container">
+            <h1>Logo</h1>
+        </section>
 
-    <div class="curtain"></div>
+        <section class="second-sec">
+            <h2>Tu tranquilidad es primero</h2>
+            <p>Para brindarte las mejores soluciones debemos confirmar tu identidad, enviaremos un c&oacute;digo de acceso al email o n&uacute;mero telef&oacute;nico registrado</p>
+        </section>
 
-		<section class="first-sec">
-        <div class="logo">
-            <p>Logo</p>
-        </div>
-        <h2>Felicidad es <br> vivir sin deudas</h2>
-				<p>Descubre opciones y facilidades de pago para tus deudas </p>
-				<p>actuales. </p>
-        <p>Conoce tu estado financiero, puntaje en datacrédito</p>
-				<p>y recompesas por tus pagos. </p>
-        <p>Aprende de educación financiera y te ayudamos a conseguir</p>
-				<p>un empleo.</p>
-        <div class="mt-1">
-            <input type="text" placeholder="Ingresar email">
+        <section class="third-sec">
+            <p>Hemos enviado un c&oacute;digo de acceso a tu email</p>
+            <input type="text" placeholder="Ingresar código">
+        </section>
+
+        <section class="btn-box">
+            <button>ICON Solicitar nuevo c&oacute;digo</button>
             <input type="button" value="Ingresar">
-        </div>
-        <p class="mt-3">Recupera tu vida financiera </p>        
-    </section>        
+        </section>
+    
+    </section>
 </body>
 </html>

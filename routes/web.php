@@ -22,8 +22,13 @@ Route::get('/credit', function () {
 });*/
 
 Route::get('/', [App\Http\Controllers\CreditController::class, 'index'])->name('index');
-#Route::get('/tranquillity', [App\Http\Controllers\CreditController::class, 'second'])->name('second');
 Route::post('/send-credit', [App\Http\Controllers\CreditController::class, 'sendCredit'])->name('send-credit');
+Route::get('/third', [App\Http\Controllers\CreditController::class, 'third'])->name('third');
+Route::get('/quarter', [App\Http\Controllers\CreditController::class, 'quarter'])->name('quarter');
+Route::get('/fifth', [App\Http\Controllers\CreditController::class, 'fifth'])->name('fifth');
+Route::get('/sixth', [App\Http\Controllers\CreditController::class, 'sixth'])->name('sixth');
+Route::get('/seventh', [App\Http\Controllers\CreditController::class, 'seventh'])->name('seventh');
+
 
 Auth::routes();
 

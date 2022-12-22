@@ -145,38 +145,5 @@
         </div>
         
     </section>
-
-    <!-- <section class="first-sec">
-
-    
-        <section class="logo-sec">
-            <div class="logo">
-                <p>Logo</p>
-            </div>
-        </section>
-
-        <section class="letter-sec">
-            <h1>Felicidad es <br>
-                vivir sin deudas
-            </h1>
-            <p>Descubre opciones y facilidades de pago para tus deudas actuales.</p>
-            <p>Conoce tu estado financiero puntaje en datacrédito y recompesas por tus pagos.</p>
-            <p>Aprende de educación financiera y te ayudamos a conseguir un empleo.</p>
-        </section>
-
-        <section class="input-box">
-            <input type="text">
-            <input type="button" value="Ingresar">
-        </section>
-
-        <section class="line-box">
-            <p>Recupera tu vida financiera</p>
-        </section>
-
-    </section>
-
-    <section class="second-sec">
-
-    </section> -->
 </body>
 </html>

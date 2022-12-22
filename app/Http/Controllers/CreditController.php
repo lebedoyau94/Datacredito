@@ -24,20 +24,56 @@ class CreditController extends Controller
     public function index()
     {
         return view('index');
-		}
+	}
 		
-		public function sendCredit()
-		{
-        return view('credit',["phone" => \request("phone")]);
+	public function sendCredit()
+	{
+        return view('second',["phone" => \request("phone")]);
     }
 
-		/**
+	/**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function second()
+    public function third()
     {
-        return view('credit');
+        return view('third');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function quarter()
+    {
+        return view('quarter');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function fifth()
+    {
+        return view('fifth');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function sixth()
+    {
+        return view('sixth');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function seventh()
+    {
+        return view('seventh');
     }
 }
