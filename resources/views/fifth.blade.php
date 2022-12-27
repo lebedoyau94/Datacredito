@@ -58,14 +58,14 @@
 
         .percent{
             border: 3px solid #262650;
-            width: 8rem;
-            height: 3rem;
+            width: 7rem;
+            height: 7rem;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             font-weight: bold;
-            font-size: 25px;
+            font-size: 35px;
             margin-right: 10px;
         }
 
@@ -80,18 +80,36 @@
             border-radius: 15px;
         }
 
-        input[type=button]{
+        input[type=submit]{
             height: 35px;
             border-radius: 15px;
             border: none;
-            margin: 1rem 0;
+            margin: 1rem 10px;
             padding: 5px 25px;
             color: white;
             background-color:  #262650;
             font-weight: bold;
         }
+        .btn-container{
+            display: flex;
+            width: 250px;
+            height: 100px;
+        }
 
-        
+        @media only screen and (max-width: 600px) {
+            .percent{
+            border: 3px solid #262650;
+            width: 8rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 25px;
+        }
+    }
+                
     </style>
 </head>
 <body>
@@ -110,6 +128,8 @@
 
         <section class="question-container">
             <h3>¿C&uacute;al es su rango de ingresos actualmente?</h3>
+            <form action="{{route('sixth')}}">
+                @csrf
             <select id="" name=""> 
                 <option value="">Seleccione una opción</option>
                 <option value=""></option>
@@ -129,8 +149,9 @@
         </section>
 
         <section class="btn-container">
-            <input type="button" value="Continuar">
-            <input type="button" value="Omitir">
+            <input type="submit" value="Continuar"></form>
+        <form action="{{route('index')}}">
+            <input type="submit" value="Omitir"></form>
         </section>
         
     </section>

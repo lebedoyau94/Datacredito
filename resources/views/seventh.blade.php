@@ -59,13 +59,13 @@
         .percent{
             border: 3px solid #262650;
             width: 5rem;
-            height: 3rem;
+            height: 5rem;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             font-weight: bold;
-            font-size: 25px;
+            font-size: 35px;
             margin-right: 10px;
         }
 
@@ -90,6 +90,21 @@
             background-color:  #262650;
             font-weight: bold;
         }
+
+        @media only screen and (max-width: 600px) {
+            .percent{
+            border: 3px solid #262650;
+            width: 5rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 25px;
+            margin-right: 10px;
+        }
+}
     </style>
 </head>
 <body>

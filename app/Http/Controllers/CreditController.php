@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CodeStoreRequest;
 use App\Http\Requests\IndexCreditRequest;
+use App\Http\Requests\QuestionsRequest;
 use App\Http\Requests\ValidateCodeRequest;
 use Illuminate\Http\Request;
 
@@ -84,7 +85,7 @@ class CreditController extends Controller
     {
         return view('quarter');
     }
-    /**
+        /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -92,6 +93,15 @@ class CreditController extends Controller
     public function fifth()
     {
         return view('fifth');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function questionRequest(QuestionsRequest $questionsRequest)
+    {
+        return view('fifth',["option" => \request("option")]);
     }
     /**
      * Show the application dashboard.
