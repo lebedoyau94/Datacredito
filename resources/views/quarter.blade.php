@@ -70,14 +70,14 @@
 
         .percent{
             border: 3px solid #262650;
-            width: 8rem;
-            height: 3rem;
+            width: 6rem;
+            height: 6rem;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 35px;
         }
 
         .question-container{
@@ -91,7 +91,7 @@
             border-radius: 15px;
         }
 
-        input[type=button]{
+        input[type=submit]{
             height: 35px;
             border-radius: 15px;
             border: none;
@@ -120,6 +120,21 @@
             text-decoration: none;
             color: #262650;
         }
+
+        @media only screen and (max-width: 600px) {
+            .percent{
+            border: 3px solid #262650;
+            width: 6rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 25px;
+            padding: 5px;
+        }
+    }
         
     </style>
 </head>
@@ -141,16 +156,22 @@
             <p>Responde una serie de preguntas y g&aacute;nate un descuento de hasta el 20% en tus deudas.</p>
         </section>
 
+        
+        
         <section class="question-container">
             <h3>¿C&uacute;al ha sido el motivo que le ha impedido continuar con sus pagos?</h3>
+            <form action="{{route('fifth')}}" method="POST">
+                @csrf
             <select id="" name=""> 
                 <option value="">Seleccione una opción</option>
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
             </select> <br>
-            <input type="button" value="Continuar">
+            <input type="submit" value="Continuar">
+        </form>
         </section>
+    
 
         <section class="checkBox-container">
             <input type="checkbox" id="" name="" value="">

@@ -54,7 +54,7 @@
             text-align: center;
         }
 
-        input[type=button]{
+        input[type=submit]{
             height: 35px;
             border-radius: 15px;
             border: none;
@@ -77,14 +77,14 @@
 
         .percent{
             border: 3px solid #262650;
-            width: 8rem;
-            height: 3rem;
+            width: 7rem;
+            height: 7rem;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             font-weight: bold;
-            font-size: 25px;
+            font-size: 35px;
             margin-right: 10px;
         }
 
@@ -157,6 +157,24 @@
             margin-top: 0;
             font-weight: bold;
         }
+
+        form{
+            display: flex;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .percent{
+            border: 3px solid #262650;
+            width: 8rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 25px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -177,7 +195,9 @@
             <h2>Adjunta una imagen o pdf de tu &uacute;ltimo recibo de electricidad y agua</h2>
         </section>
 
-        <section class="upload-box">
+        <section class="upload-box">            
+            <form action="{{route('seventh')}}" method="POST">
+                @csrf
             <div class="first-box">
                 <p>Nombre archivo.</p>
                 <span>Eliminar</span>
@@ -205,8 +225,8 @@
 
 
         <section class="btn-container">
-            <input type="button" value="Continuar">
-            <input type="button" value="Omitir">
+            <input type="submit" value="Continuar"></form>
+            <input type="submit" value="Omitir">
         </section>
     </section>
 </body>

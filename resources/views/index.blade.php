@@ -26,15 +26,13 @@
         }
 
         .curtain{
-            background: rgb(216,191,216);
-            background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
+            background: linear-gradient(0deg, rgba(196,146,254,1) 0%, rgba(149,231,232,0.7931547619047619) 43%);
             width: 100vw; 
             height: 100vh; 
             position: absolute; 
             opacity: .8; 
             z-index: -4;
-            top: 0;
-			/*clip-path: polygon(91% 0, 83% 13%, 77% 27%, 72% 45%, 71% 64%, 75% 79%, 81% 90%, 90% 100%, 0 100%, 0 0);*/        
+            top: 0;    
         }
 
         .text-container{
@@ -144,14 +142,34 @@
             margin-top: 20px;
         }
         .first-sec {
-                margin-top: 250px;
-                margin-left: 200px;
-                margin-bottom: 250px;
+            margin-top: 250px;
+            margin-left: 200px;
+            margin-bottom: 250px;
         }
         .is-invalid {
             color: red;
             font-size: small;
         }
+        @media only screen and (min-width: 600px) {
+            .curtain{
+            background: linear-gradient(0deg, rgba(196,146,254,1) 0%, rgba(149,231,232,0.7931547619047619) 43%);
+            width: 100vw; 
+            height: 100vh; 
+            position: absolute; 
+            opacity: .8; 
+            z-index: -4;
+            top: 0;     
+            clip-path: circle(56.4% at 19% 48%);         
+       }
+       
+       @media only screen and (max-width: 600px) {
+        .first-sec {
+            margin-top: 250px;
+            margin-left: 50px;
+            margin-bottom: 0px;
+        }
+            
+}
     </style>
 </head>
 <body>
