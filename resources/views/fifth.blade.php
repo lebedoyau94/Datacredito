@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Descuento | Crédito</title>
     <style>
         body{
             margin: 0;
@@ -89,6 +89,7 @@
             color: white;
             background-color:  #262650;
             font-weight: bold;
+            cursor: pointer;
         }
         .btn-container{
             display: flex;
@@ -128,7 +129,7 @@
 
         <section class="question-container">
             <h3>¿C&uacute;al es su rango de ingresos actualmente?</h3>
-            <form action="{{route('sixth')}}">
+            <form action="{{route('sixth')}}" method="POST">
                 @csrf
             <select id="" name=""> 
                 <option value="">Seleccione una opción</option>
@@ -150,7 +151,7 @@
 
         <section class="btn-container">
             <input type="submit" value="Continuar"></form>
-        <form action="{{route('index')}}">
+        <form action="{{route('dashboard')}}" method="GET">
             <input type="submit" value="Omitir"></form>
         </section>
         

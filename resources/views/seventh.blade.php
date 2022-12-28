@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sueño | Crédito</title>
     <style>
         body{
             margin: 0;
@@ -80,7 +80,7 @@
             border-radius: 15px;
         }
 
-        input[type=button]{
+        input[type=submit]{
             height: 35px;
             border-radius: 15px;
             border: none;
@@ -89,6 +89,7 @@
             color: white;
             background-color:  #262650;
             font-weight: bold;
+            cursor: pointer;
         }
 
         @media only screen and (max-width: 600px) {
@@ -122,6 +123,8 @@
         </section>
 
         <section class="question-container">
+            <form action="{{route('dashboard')}}" method="POST">
+                @csrf
             <h3>¿C&uacute;entanos c&uacute;al es tu sueño?</h3>
             <select id="" name=""> 
                 <option value="">Seleccione una opción</option>
@@ -129,6 +132,9 @@
                 <option value=""></option>
                 <option value=""></option>
             </select> 
+        </section>
+        <section class="btn-container">
+            <input type="submit" value="Continuar"></form>
         </section>
     </section>
 </body>
