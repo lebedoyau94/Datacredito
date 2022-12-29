@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recibo | Crédito</title>
     <style>
         body{
             margin: 0;
@@ -63,6 +63,7 @@
             color: white;
             background-color:  #262650;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .percent-sec{
@@ -110,6 +111,7 @@
             border: 2px solid #262650;
             color: #262650;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .second-sec{
@@ -125,7 +127,6 @@
             margin-top: 0;
             margin-bottom: 10px;
             font-size: 16px;
-            text-align: end;
         }
 
         .sec-box span{
@@ -162,6 +163,10 @@
             display: flex;
         }
 
+        .recibos{
+            margin-right: 45px;
+        }
+
         @media only screen and (max-width: 600px) {
             .percent{
             border: 3px solid #262650;
@@ -174,6 +179,7 @@
             font-weight: bold;
             font-size: 25px;
             margin-right: 10px;
+        }
         }
     </style>
 </head>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CreditController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +22,8 @@ Route::get('/credit', function () {
     return view('credit');
 });*/
 
-Route::get('/', [App\Http\Controllers\CreditController::class, 'index'])->name('index');
+Route::get('/', [App\Http\Controllers\CreditController::class, 'index1'])->name('index');
+//Route::get('/', [App\Http\Controllers\CreditController::class, 'index'])->name('index');
 //Route::get('/third', [App\Http\Controllers\CreditController::class, 'third'])->name('third');
 Route::get('/quarter', [App\Http\Controllers\CreditController::class, 'quarter'])->name('quarter');
 Route::post('/quarter', [App\Http\Controllers\CreditController::class, 'quarter'])->name('quarter');
@@ -44,6 +46,13 @@ Route::post('/code', [App\Http\Controllers\CreditController::class, 'storeCode']
 Route::get('/validate', [App\Http\Controllers\CreditController::class, 'quarter'])->name('validate');
 Route::post('/validate', [App\Http\Controllers\CreditController::class, 'validateCode'])->name('validate');
 
+Route::get('/box', [App\Http\Controllers\CreditController::class, 'box'])->name('box');
+Route::post('/box', [App\Http\Controllers\CreditController::class, 'validateBox'])->name('box');
+
+
+Route::get('/dashboard', [App\Http\Controllers\CreditController::class, 'dashboard'])->name('dashboard');
+Route::post('/dashboard', [App\Http\Controllers\CreditController::class, 'dashboard'])->name('dashboard');
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

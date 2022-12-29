@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BoxCheckStoreRequest;
 use App\Http\Requests\CodeStoreRequest;
 use App\Http\Requests\IndexCreditRequest;
 use App\Http\Requests\QuestionsRequest;
+use App\Http\Requests\ValidateBoxRequest;
 use App\Http\Requests\ValidateCodeRequest;
 use Illuminate\Http\Request;
 
@@ -25,9 +27,9 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index1()
     {
-        return view('index');
+        return view('index1');
 	}
 
     /**
@@ -72,6 +74,15 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function validateCode(ValidateCodeRequest $validateCoderequest)
+    {
+        return view('quarter');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function quarter()
     {
         return view('quarter');
@@ -81,10 +92,20 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function validateCode(ValidateCodeRequest $validateCoderequest)
+    public function box()
     {
-        return view('quarter');
+        return view('quarter',["box" => \old("box")]);
     }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function validateBox(BoxCheckStoreRequest $boxCheckRequest)
+    {
+        return view('fifth',["active" => \request("active")]);
+    }
+    
         /**
      * Show the application dashboard.
      *
@@ -121,4 +142,14 @@ class CreditController extends Controller
     {
         return view('seventh');
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function dashboard()
+    {
+        return view('dashboard');
+	}
 }

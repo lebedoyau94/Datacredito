@@ -18,7 +18,7 @@
             width: 100vw; 
             height: 100vh; 
             font-family: 'Roboto', sans-serif;
-            background-color: #cfebf9;
+            background-color:  rgba(223,239,253,1);
         }
 
         .text-container{
@@ -36,10 +36,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 15rem; 
-            height: 8vh; 
+            width: 13rem; 
+            height: 12vh; 
             border: 3px solid white;
-            margin-top: 5rem;
         }
 
         h1{
@@ -56,14 +55,7 @@
         }
 
         h2{
-            color: #314961;
-            font-size: 2rem;
-            text-align: center;
-        }
-        
-        p {
-            color: #314961;
-            font-size: 1rem;
+            color:  #262650;
         }
 
         .second-sec p{
@@ -80,35 +72,24 @@
         }
 
         input[type=text]{
-            padding: 13px 80px;
+            padding: 13px 70px;
             height: 10px;
-            width: 7rem;
             border-radius: 10px;
             border: none;
             margin: 5px 0;
             text-align: center;
         }
+        
 
         .btn-box button{
             margin-top: 1rem;
             padding: 5px 10px;
             background-color: transparent;
-            border: 1px solid #262650;
+            border: 2px solid #262650;
             color: #262650;
             font-weight: bold;
-            cursor: pointer;
         }
 
-        input[type=button]{
-            height: 35px;
-            border-radius: 15px;
-            border: none;
-            margin: 5px 0;
-            padding: 5px 25px;
-            color: white;
-            background-color:  #262650;
-            font-weight: bold;
-        }
         input[type=submit]{
             height: 35px;
             border-radius: 15px;
@@ -119,19 +100,6 @@
             background-color:  #262650;
             font-weight: bold;
             cursor: pointer;
-        }
-
-        .mt-5 {
-            margin-top: 100px;
-        }
-        .mt-3 {
-            margin-top: 60px;
-        }
-        .mt-2 {
-            margin-top: 40px;
-        }
-        .mt-1 {
-            margin-top: 20px;
         }
         .is-invalid {
             color: red;
@@ -150,8 +118,7 @@
 
         <section class="second-sec">
             <h2>Tu tranquilidad es primero</h2>
-            <p>Para brindarte las mejores soluciones debemos confirmar tu identidad,</p> 
-            <p>enviaremos un c&oacute;digo de acceso al email o n&uacute;mero telef&oacute;nico registrado</p>
+            <p>Para brindarte las mejores soluciones debemos confirmar tu identidad, enviaremos un c&oacute;digo de acceso al email o n&uacute;mero telef&oacute;nico registrado</p>
         </section>
 
         <section class="third-sec">
@@ -159,18 +126,20 @@
 			@csrf
             <p>Hemos enviado un c&oacute;digo de acceso a tu email</p>
             <input type="text" placeholder="Ingresar código" name="code">
-            <input type="submit" value="Ingresar">
             @error('code')
                 <div class="is-invalid">{{ $message }}</div>
             @enderror
-        </form>
         </section>
 
         <section class="btn-box">
-            <button >Solicitar nuevo c&oacute;digo</button>
-            
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 15px; margin-bottom: -4px;" fill=" #262650" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 96c38.4 0 73.7 13.5 101.3 36.1l-32.6 32.6c-4.6 4.6-5.9 11.5-3.5 17.4s8.3 9.9 14.8 9.9H416c8.8 0 16-7.2 16-16V64c0-6.5-3.9-12.3-9.9-14.8s-12.9-1.1-17.4 3.5l-34 34C331.4 52.6 280.1 32 224 32c-10.9 0-21.5 .8-32 2.3V99.2c10.3-2.1 21-3.2 32-3.2zM100.1 154.7l32.6 32.6c4.6 4.6 11.5 5.9 17.4 3.5s9.9-8.3 9.9-14.8V64c0-8.8-7.2-16-16-16H32c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4l34 34C20.6 148.6 0 199.9 0 256c0 10.9 .8 21.5 2.3 32H67.2c-2.1-10.3-3.2-21-3.2-32c0-38.4 13.5-73.7 36.1-101.3zM445.7 224H380.8c2.1 10.3 3.2 21 3.2 32c0 38.4-13.5 73.7-36.1 101.3l-32.6-32.6c-4.6-4.6-11.5-5.9-17.4-3.5s-9.9 8.3-9.9 14.8V448c0 8.8 7.2 16 16 16H416c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-34-34C427.4 363.4 448 312.1 448 256c0-10.9-.8-21.5-2.3-32zM224 416c-38.4 0-73.7-13.5-101.3-36.1l32.6-32.6c4.6-4.6 5.9-11.5 3.5-17.4s-8.3-9.9-14.8-9.9H32c-8.8 0-16 7.2-16 16l0 112c0 6.5 3.9 12.3 9.9 14.8s12.9 1.1 17.4-3.5l34-34C116.6 459.4 167.9 480 224 480c10.9 0 21.5-.8 32-2.3V412.8c-10.3 2.1-21 3.2-32 3.2z"/></svg>
+                <span>Solicitar nuevo c&oacute;digo</span>    
+            </button>
+            <input type="submit" value="Ingresar">
         </section>
     
+    </form>
     </section>
 </body>
 </html>

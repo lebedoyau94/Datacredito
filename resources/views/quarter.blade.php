@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro | Crédito</title>
     <style>
         body{
             margin: 0;
@@ -100,6 +100,7 @@
             color: white;
             background-color:  #262650;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .checkBox-container{
@@ -160,21 +161,25 @@
         
         <section class="question-container">
             <h3>¿C&uacute;al ha sido el motivo que le ha impedido continuar con sus pagos?</h3>
-            <form action="{{route('fifth')}}" method="POST">
-                @csrf
+            {{-- <form action="{{route('fifth')}}" method="POST">
+                @csrf --}}
             <select id="" name=""> 
                 <option value="">Seleccione una opción</option>
                 <option value=""></option>
                 <option value=""></option>
                 <option value=""></option>
             </select> <br>
+       {{-- </form>--}}
+            <form action="{{route('box')}}" method="POST">
+                @csrf
             <input type="submit" value="Continuar">
         </form>
         </section>
     
 
         <section class="checkBox-container">
-            <input type="checkbox" id="" name="" value="">
+            <input type="checkbox" type="checkbox" name="active">
+            </form>
             <label for="">Para continuar debes de aceptar t&eacute;rminos y condiciones</label>
         </section>
 
