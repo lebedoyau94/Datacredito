@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descuento | Crédito</title>
+    <title>Rango | Crédito</title>
     <style>
         body{
             margin: 0;
@@ -14,8 +14,8 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            width: 100vw; 
-            height: 100vh; 
+            width: 100vw;
+            height: 100vh;
             font-family: 'Roboto', sans-serif;
             background-color:  rgba(223,239,253,1);
         }
@@ -26,7 +26,7 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 1rem;
-            width: 100vw; 
+            width: 100vw;
             height: 100vh;
             color: #262650;
         }
@@ -45,8 +45,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 13rem; 
-            height: 12vh; 
+            width: 13rem;
+            height: 12vh;
             border: 3px solid white;
         }
 
@@ -110,12 +110,12 @@
             font-size: 25px;
         }
     }
-                
+
     </style>
 </head>
 <body>
     <section class="text-container">
-            
+
         <section class="logo-container">
             <h1>Logo</h1>
         </section>
@@ -131,22 +131,22 @@
             <h3>¿C&uacute;al es su rango de ingresos actualmente?</h3>
             <form action="{{route('sixth')}}" method="POST">
                 @csrf
-            <select id="" name=""> 
+            <select id="" name="income">
                 <option value="">Seleccione una opción</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select> 
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
+            </select>
         </section>
 
         <section class="question-container">
             <h3>¿De sus ingresos actuales cuánto puede destinar al pago de su deuda?</h3>
-            <select id="" name=""> 
+            <select id="" name="be_assigned">
                 <option value="">Seleccione una opción</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select> 
+                <option value="50">50</option>
+                <option value="150">150</option>
+                <option value="250">250</option>
+            </select>
         </section>
 
         <section class="btn-container">
@@ -154,7 +154,7 @@
         <form action="{{route('dashboard')}}" method="GET">
             <input type="submit" value="Omitir"></form>
         </section>
-        
+
     </section>
 </body>
 </html>

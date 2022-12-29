@@ -14,8 +14,8 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            width: 100vw; 
-            height: 100vh; 
+            width: 100vw;
+            height: 100vh;
             font-family: 'Roboto', sans-serif;
             background-color:  rgba(223,239,253,1);
         }
@@ -26,7 +26,7 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 1rem;
-            width: 100vw; 
+            width: 100vw;
             height: 100vh;
             color: #262650;
         }
@@ -35,8 +35,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 13rem; 
-            height: 12vh; 
+            width: 13rem;
+            height: 12vh;
             border: 3px solid white;
         }
 
@@ -122,6 +122,10 @@
             color: #262650;
         }
 
+        .is-invalid {
+            color: red;
+            font-size: small;
+        }
         @media only screen and (max-width: 600px) {
             .percent{
             border: 3px solid #262650;
@@ -136,12 +140,12 @@
             padding: 5px;
         }
     }
-        
+
     </style>
 </head>
 <body>
     <section class="text-container">
-            
+
         <section class="logo-container">
             <h1>Logo</h1>
         </section>
@@ -157,31 +161,31 @@
             <p>Responde una serie de preguntas y g&aacute;nate un descuento de hasta el 20% en tus deudas.</p>
         </section>
 
-        
-        
-        <section class="question-container">
-            <h3>¿C&uacute;al ha sido el motivo que le ha impedido continuar con sus pagos?</h3>
-            {{-- <form action="{{route('fifth')}}" method="POST">
-                @csrf --}}
-            <select id="" name=""> 
-                <option value="">Seleccione una opción</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select> <br>
-       {{-- </form>--}}
-            <form action="{{route('box')}}" method="POST">
-                @csrf
-            <input type="submit" value="Continuar">
-        </form>
-        </section>
-    
 
-        <section class="checkBox-container">
-            <input type="checkbox" type="checkbox" name="active">
-            </form>
-            <label for="">Para continuar debes de aceptar t&eacute;rminos y condiciones</label>
-        </section>
+        <form action="{{route('range')}}" method="POST">
+            @csrf
+            <section class="question-container">
+                <h3>¿C&uacute;al ha sido el motivo que le ha impedido continuar con sus pagos?</h3>
+                <select id="" name="motive">
+                    <option value="">Seleccione una opción</option>
+                    <option value="none">Ninguno</option>
+                    <option value="cash">Efectivo</option>
+                    <option value="problem">Problemas</option>
+                </select> <br>
+                @error('motive')
+                <div class="is-invalid">{{ $message }}</div>
+                @enderror
+                <input type="submit" value="Continuar">
+            </section>
+            <section class="checkBox-container">
+                <input type="checkbox" type="checkbox" name="active">
+                <label for="">Para continuar debes de aceptar t&eacute;rminos y condiciones</label><br>
+                @error('active')
+                <div class="is-invalid">{{ $message }}</div>
+                @enderror
+            </section>
+        </form>
+
 
         <section class="terms-box">
             <a href="">Ver t&eacute;rminos y condiciones</a>

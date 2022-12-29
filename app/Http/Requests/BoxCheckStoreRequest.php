@@ -24,7 +24,16 @@ class BoxCheckStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'active' => 'required|boolean',
+            'active' => 'required',
+            'motive' => 'required|string',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            "active" => "terminos y condiciones",
+            "motive" => "motivo",
         ];
     }
 

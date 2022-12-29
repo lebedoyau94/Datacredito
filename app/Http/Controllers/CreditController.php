@@ -85,7 +85,10 @@ class CreditController extends Controller
      */
     public function quarter()
     {
-        return view('quarter');
+        return view('quarter',[
+            "active" => \old("active"),
+            "motive" => \old("motive")
+        ]);
     }
     /**
      * Show the application dashboard.
@@ -94,7 +97,7 @@ class CreditController extends Controller
      */
     public function box()
     {
-        return view('quarter',["box" => \old("box")]);
+        return view('quarter',["box" => \old("active")]);
     }
     /**
      * Show the application dashboard.
@@ -103,9 +106,9 @@ class CreditController extends Controller
      */
     public function validateBox(BoxCheckStoreRequest $boxCheckRequest)
     {
-        return view('fifth',["active" => \request("active")]);
+        return view('fifth');
     }
-    
+
         /**
      * Show the application dashboard.
      *

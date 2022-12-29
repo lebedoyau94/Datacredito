@@ -46,8 +46,8 @@ Route::post('/code', [App\Http\Controllers\CreditController::class, 'storeCode']
 Route::get('/validate', [App\Http\Controllers\CreditController::class, 'quarter'])->name('validate');
 Route::post('/validate', [App\Http\Controllers\CreditController::class, 'validateCode'])->name('validate');
 
-Route::get('/box', [App\Http\Controllers\CreditController::class, 'box'])->name('box');
-Route::post('/box', [App\Http\Controllers\CreditController::class, 'validateBox'])->name('box');
+Route::get('/range', [App\Http\Controllers\CreditController::class, 'range'])->name('range');
+Route::post('/range', [App\Http\Controllers\CreditController::class, 'validateBox'])->name('box');
 
 
 Route::get('/dashboard', [App\Http\Controllers\CreditController::class, 'dashboard'])->name('dashboard');
