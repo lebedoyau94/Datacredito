@@ -13,8 +13,8 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            width: 100vw; 
-            height: 100vh; 
+            width: 100vw;
+            height: 100vh;
             font-family: 'Roboto', sans-serif;
             background-color:  rgba(223,239,253,1);
         }
@@ -25,7 +25,7 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 1rem;
-            width: 100vw; 
+            width: 100vw;
             height: 100vh;
         }
 
@@ -33,8 +33,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 13rem; 
-            height: 12vh; 
+            width: 13rem;
+            height: 12vh;
             border: 3px solid white;
         }
 
@@ -43,7 +43,7 @@
             color: white;
             font-size: 2rem;
         }
-    
+
         .second-sec{
             display: flex;
             flex-direction: column;
@@ -118,9 +118,9 @@
 
     </style>
 </head>
-<body>    
+<body>
     <section class="text-container">
-            
+
         <section class="logo-container">
             <h1>Logo</h1>
         </section>
@@ -136,7 +136,7 @@
 
 
         <section class="email-box">
-            <form action="{{route('code')}}" method="POST">
+            <form action="{{route('register')}}" method="POST">
                 @csrf
             <span>franc*******@*******.com</span>
             <div>
@@ -169,7 +169,7 @@
 
         <section class="btn-box">
             <button>No son mis datos</button>
-        </section>      
+        </section>
     </section>
 </body>
 </html>
