@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\WelcomeCreditMail;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
@@ -30,7 +32,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = RouteServiceProvider::CODE;
 
     /**
      * Create a new controller instance.
@@ -39,7 +41,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        #$this->middleware('guest');
     }
 
     /**
@@ -70,13 +72,15 @@ class RegisterController extends Controller
         $name = Str::of($data["email"])->explode("@");
         $data["name"]       = $name[0];
         $data["password"]   = $data["phone"];
-        return User::updateOrCreate(['email' => $data['email']],[
+        $user = User::updateOrCreate(['email' => $data['email']],[
             'name'     => $data['name'],
             'email'    => $data['email'],
             'phone'    => $data['phone'],
             'code'     => $code,
             'password' => Hash::make($data['password']),
         ]);
-        #Enviar un email con el codigo random a su correo.
+        Mail::to($user->email)->send(new WelcomeCreditMail($user));
+
+        return $user;
     }
 }

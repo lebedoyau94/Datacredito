@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +13,8 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            width: 100vw; 
-            height: 100vh; 
+            width: 100vw;
+            height: 100vh;
             font-family: 'Roboto', sans-serif;
             background-color:  rgba(223,239,253,1);
         }
@@ -26,7 +25,7 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 1rem;
-            width: 100vw; 
+            width: 100vw;
             height: 100vh;
             color: #262650;
         }
@@ -45,8 +44,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 13rem; 
-            height: 12vh; 
+            width: 13rem;
+            height: 12vh;
             border: 3px solid white;
         }
 
@@ -109,33 +108,31 @@
     </style>
 </head>
 <body>
+<form action="{{route('redirect.dashboard')}}" method="POST">
+    @csrf
     <section class="text-container">
-            
         <section class="logo-container">
             <h1>Logo</h1>
         </section>
-
         <section class="percent-sec">
             <div class="percent">
                 <span>5%</span>
             </div>
             <p>Obten este descuento adicional en tus deudas</p>
         </section>
-
         <section class="question-container">
-            <form action="{{route('dashboard')}}" method="POST">
-                @csrf
             <h3>¿C&uacute;entanos c&uacute;al es tu sueño?</h3>
-            <select id="" name=""> 
+            <select id="" name="dreams">
                 <option value="">Seleccione una opción</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select> 
+                <option value="carro">Carro</option>
+                <option value="casa">Casa</option>
+                <option value="viaje">Viaje</option>
+            </select>
         </section>
         <section class="btn-container">
-            <input type="submit" value="Continuar"></form>
+            <input type="submit" value="Continuar">
         </section>
     </section>
+</form>
 </body>
 </html>

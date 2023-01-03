@@ -22,37 +22,21 @@ Route::get('/credit', function () {
     return view('credit');
 });*/
 
-Route::get('/', [App\Http\Controllers\CreditController::class, 'index1'])->name('index');
-//Route::get('/', [App\Http\Controllers\CreditController::class, 'index'])->name('index');
-//Route::get('/third', [App\Http\Controllers\CreditController::class, 'third'])->name('third');
-Route::post('/tranquillity', [App\Http\Controllers\CreditController::class, 'sendCredit'])->name('tranquillity');
-Route::get('/tranquillity', [App\Http\Controllers\CreditController::class, 'tranquillity'])->name('tranquillity');
-
-Route::get('/code', [App\Http\Controllers\CreditController::class, 'code'])->name('code');
-Route::post('/code', [App\Http\Controllers\CreditController::class, 'storeCode'])->name('code');
-
-Route::get('/quarter', [App\Http\Controllers\CreditController::class, 'quarter'])->name('quarter');
-Route::post('/quarter', [App\Http\Controllers\CreditController::class, 'quarter'])->name('quarter');
-
-Route::post('/fifth', [App\Http\Controllers\CreditController::class, 'fifth'])->name('fifth');
-Route::get('/fifth', [App\Http\Controllers\CreditController::class, 'fifth'])->name('fifth');
-
+Route::get('/', [App\Http\Controllers\CreditController::class, 'index1'])->name('view.index');
+Route::get('/tranquillity', [App\Http\Controllers\CreditController::class, 'tranquillity'])->name('view.second');
+Route::get('/code', [App\Http\Controllers\CreditController::class, 'viewCode'])->name('view.third');
+Route::get('/validate', [App\Http\Controllers\CreditController::class, 'viewQuarter'])->name('view.quater');
+Route::get('/range', [App\Http\Controllers\CreditController::class, 'viewValidateRange'])->name('view.fifth');
+Route::get('/attachment', [App\Http\Controllers\CreditController::class, 'viewSixth'])->name('view.sixth');
 Route::get('/sixth', [App\Http\Controllers\CreditController::class, 'sixth'])->name('sixth');
-Route::post('/sixth', [App\Http\Controllers\CreditController::class, 'sixth'])->name('sixth');
 
-Route::get('/seventh', [App\Http\Controllers\CreditController::class, 'seventh'])->name('seventh');
-Route::post('/seventh', [App\Http\Controllers\CreditController::class, 'seventh'])->name('seventh');
-
-Route::get('/validate', [App\Http\Controllers\CreditController::class, 'quarter'])->name('validate');
-Route::post('/validate', [App\Http\Controllers\CreditController::class, 'validateCode'])->name('validate');
-
-Route::get('/range', [App\Http\Controllers\CreditController::class, 'range'])->name('range');
-Route::post('/range', [App\Http\Controllers\CreditController::class, 'validateBox'])->name('box');
-
-
-Route::get('/dashboard', [App\Http\Controllers\CreditController::class, 'dashboard'])->name('dashboard');
-Route::post('/dashboard', [App\Http\Controllers\CreditController::class, 'dashboard'])->name('dashboard');
+Route::post('/tranquillity', [App\Http\Controllers\CreditController::class, 'redirectSecond'])->name('redirect.second');
+/*Route::post('/code', [App\Http\Controllers\CreditController::class, 'redirectThird'])->name('redirect.third');*/
+Route::post('/validate', [App\Http\Controllers\CreditController::class, 'redirectQuarter'])->name('redirect.quarter');
+Route::post('/range', [App\Http\Controllers\CreditController::class, 'redirectFifth'])->name('redirect.fifth');
+Route::post('/attachment', [App\Http\Controllers\CreditController::class, 'redirectSixth'])->name('redirect.sixth');
+Route::post('/dreams', [App\Http\Controllers\CreditController::class, 'redirectSeventh'])->name('redirect.seventh');
+Route::post('/dashboard', [App\Http\Controllers\CreditController::class, 'redirectDashboard'])->name('redirect.dashboard');
 
 Auth::routes();
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');

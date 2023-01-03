@@ -216,7 +216,7 @@
         <p>Aprende de educación financiera y te ayudamos a conseguir</p>
 				<p>un empleo.</p>
 				<div class="mt-1">
-					<form action="{{route('tranquillity')}}" method="POST">
+					<form action="{{route('redirect.second')}}" method="POST">
 						@csrf
                         <input type="text"
                                 placeholder="Ingresa con tu numero celular"

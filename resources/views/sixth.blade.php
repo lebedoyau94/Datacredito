@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +13,8 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            width: 100vw; 
-            height: 100vh; 
+            width: 100vw;
+            height: 100vh;
             font-family: 'Roboto', sans-serif;
             background-color:  rgba(223,239,253,1);
         }
@@ -26,7 +25,7 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 1rem;
-            width: 100vw; 
+            width: 100vw;
             height: 100vh;
             color: #262650;
         }
@@ -35,8 +34,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 13rem; 
-            height: 12vh; 
+            width: 13rem;
+            height: 12vh;
             border: 3px solid white;
         }
 
@@ -184,38 +183,33 @@
     </style>
 </head>
 <body>
+<form action="{{route('redirect.seventh')}}" method="POST">
+    @csrf
     <section class="text-container">
-            
         <section class="logo-container">
             <h1>Logo</h1>
         </section>
-
         <section class="percent-sec">
             <div class="percent">
                 <span>10%</span>
             </div>
             <p>Obten este descuento adicional en tus deudas</p>
         </section>
-
         <section class="second-sec">
             <h2>Adjunta una imagen o pdf de tu &uacute;ltimo recibo de electricidad y agua</h2>
         </section>
+        <section class="upload-box">
+                <div class="first-box">
+                    <p>Nombre archivo.</p>
+                    <span>Eliminar</span>
+                </div>
 
-        <section class="upload-box">            
-            <form action="{{route('seventh')}}" method="POST">
-                @csrf
-            <div class="first-box">
-                <p>Nombre archivo.</p>
-                <span>Eliminar</span>
-            </div>
-
-            <div class="sec-box">
-                <p>Recibo de electricidad</p>
-                <button>Ajuntar archivo</button>
-                <span>El formato no debe superar un peso de 3 mb</span>
-            </div>
+                <div class="sec-box">
+                    <p>Recibo de electricidad</p>
+                    <button>Ajuntar archivo</button>
+                    <span>El formato no debe superar un peso de 3 mb</span>
+                </div>
         </section>
-
         <section class="upload-box">
             <div class="first-box">
                 <p>Nombre archivo.</p>
@@ -228,12 +222,11 @@
                 <span>El formato no debe superar un peso de 3 mb</span>
             </div>
         </section>
-
-
         <section class="btn-container">
-            <input type="submit" value="Continuar"></form>
-            <input type="submit" value="Omitir">
+            <input type="submit" value="Continuar">
+            <a href="{{route('login')}}">Omitir</a>
         </section>
     </section>
+</form>
 </body>
 </html>

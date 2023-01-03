@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,47 +113,47 @@
     </style>
 </head>
 <body>
+<form action="{{route('redirect.sixth')}}" method="POST">
+    @csrf
     <section class="text-container">
-
-        <section class="logo-container">
-            <h1>Logo</h1>
-        </section>
-
-        <section class="percent-sec">
-            <div class="percent">
-                <span>5%</span>
-            </div>
-            <p>Gana este descuento en tus deudas respondiendo las siguientes preguntas</p>
-        </section>
-
-        <section class="question-container">
-            <h3>¿C&uacute;al es su rango de ingresos actualmente?</h3>
-            <form action="{{route('sixth')}}" method="POST">
-                @csrf
-            <select id="" name="income">
-                <option value="">Seleccione una opción</option>
-                <option value="100">100</option>
-                <option value="200">200</option>
-                <option value="300">300</option>
-            </select>
-        </section>
-
-        <section class="question-container">
-            <h3>¿De sus ingresos actuales cuánto puede destinar al pago de su deuda?</h3>
-            <select id="" name="be_assigned">
-                <option value="">Seleccione una opción</option>
-                <option value="50">50</option>
-                <option value="150">150</option>
-                <option value="250">250</option>
-            </select>
-        </section>
-
-        <section class="btn-container">
-            <input type="submit" value="Continuar"></form>
-        <form action="{{route('dashboard')}}" method="GET">
-            <input type="submit" value="Omitir"></form>
-        </section>
-
+    <section class="logo-container">
+        <h1>Logo</h1>
     </section>
+    <section class="percent-sec">
+        <div class="percent">
+            <span>5%</span>
+        </div>
+        <p>Gana este descuento en tus deudas respondiendo las siguientes preguntas</p>
+    </section>
+    <section class="question-container">
+        <h3>¿C&uacute;al es su rango de ingresos actualmente?</h3>
+        <select id="" name="income">
+            <option value="">Seleccione una opción</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+        </select>
+        @error('income')
+            <div class="is-invalid">{{ $message }}</div>
+        @enderror
+    </section>
+    <section class="question-container">
+        <h3>¿De sus ingresos actuales cuánto puede destinar al pago de su deuda?</h3>
+        <select id="" name="be_assigned">
+            <option value="">Seleccione una opción</option>
+            <option value="50">50</option>
+            <option value="150">150</option>
+            <option value="250">250</option>
+        </select>
+        @error('be_assigned')
+            <div class="is-invalid">{{ $message }}</div>
+        @enderror
+    </section>
+    <section class="btn-container">
+        <input type="submit" value="Continuar">
+        <a href="{{route('login')}}">Omitir</a>
+    </section>
+    </section>
+</form>
 </body>
 </html>

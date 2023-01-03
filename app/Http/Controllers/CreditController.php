@@ -4,21 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\BoxCheckStoreRequest;
 use App\Http\Requests\CodeStoreRequest;
+use App\Http\Requests\DashboardRequest;
 use App\Http\Requests\IndexCreditRequest;
 use App\Http\Requests\QuestionsRequest;
+use App\Http\Requests\SeventhRequest;
 use App\Http\Requests\ValidateBoxRequest;
 use App\Http\Requests\ValidateCodeRequest;
+use App\Services\UserService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CreditController extends Controller
 {
-   /**
+    /**
+     * @var UserService
+     */
+    private UserService $userService;
+
+    /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(UserService $userService)
     {
+        $this->userService = $userService;
+        $this->middleware('guest')->only('tranquillity');
         #$this->middleware('auth');
     }
 
@@ -42,7 +53,7 @@ class CreditController extends Controller
         return view('second',["phone" => \old("phone")]);
 	}
 
-	public function sendCredit(IndexCreditRequest $indexCreditRequest)
+	public function redirectSecond(IndexCreditRequest $indexCreditRequest)
 	{
         return view('second',["phone" => \request("phone")]);
     }
@@ -52,42 +63,43 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function code()
+    public function viewCode()
     {
-        return view('third',["code" => \old("code"),]);
-    }
-
-	/**
-     * Store the resource.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function storeCode(CodeStoreRequest $codeStoreRequest)
-    {
-        return view('third',[
-            "phone" => \request("phone"),
-            "email" => \request("email")
-        ]);
+        return view('third');
     }
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function validateCode(ValidateCodeRequest $validateCoderequest)
-    {
-        return view('quarter');
-    }
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function quarter()
+    public function viewQuarter()
     {
         return view('quarter',[
-            "active" => \old("active"),
-            "motive" => \old("motive")
+            "motive" => \old("motive"),
+            "active" => \old("active")
+        ]);
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     * @throws \Exception
+     */
+    public function redirectQuarter(ValidateCodeRequest $validateCodeRequest)
+    {
+        if ($this->userService->getCodeService())
+            return view('quarter');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function viewValidateRange()
+    {
+        return view('fifth',[
+            "income"        => old("income"),
+            "be_assigned"   => old("be_assigned")
         ]);
     }
     /**
@@ -95,44 +107,17 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function box()
-    {
-        return view('quarter',["box" => \old("active")]);
-    }
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function validateBox(BoxCheckStoreRequest $boxCheckRequest)
+    public function redirectFifth(BoxCheckStoreRequest $boxCheckRequest)
     {
         return view('fifth');
     }
 
-        /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function fifth()
-    {
-        return view('fifth');
-    }
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function questionRequest(QuestionsRequest $questionsRequest)
-    {
-        return view('fifth',["option" => \request("option")]);
-    }
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function sixth()
+    public function redirectSixth(QuestionsRequest $questionsRequest)
     {
         return view('sixth');
     }
@@ -141,18 +126,26 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function seventh()
+    public function viewSixth()
     {
-        return view('seventh');
+        return view('sixth');
     }
-
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function dashboard()
+    public function redirectSeventh(SeventhRequest $seventhRequest)
     {
-        return view('dashboard');
-	}
+        return view('seventh');
+    }
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function redirectDashboard(DashboardRequest $seventhRequest)
+    {
+        return view('home');
+    }
 }
