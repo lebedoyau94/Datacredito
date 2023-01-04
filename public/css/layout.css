@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100vw; 
+    height: 100vh; 
+    font-family: 'Roboto', sans-serif;
+    background-color:  rgba(223,239,253,1);
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13rem;
+    height: 12vh;
+    border: 3px solid white;
+}     
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100vw; 
+    height: 100vh;
+}
+
+h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 2rem;
+}
+
+.question-container{
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.question-container select{
+    border: none;
+    padding: 13px 30px;
+    border-radius: 15px;
+}
+
+input[type=submit]{
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    padding: 5px 25px;
+    color: white;
+    background-color:  #262650;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.is-invalid {
+    color: red;
+    font-size: small;
+}
+
+h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 2rem;
+}
+
+.percent-sec{
+    text-align: start;
+    font-size: 15px;
+    color: #262650;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.percent{
+    border: 3px solid #262650;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.btn-container{
+    display: flex;
+    width: 700px;
+    height: 100px;
+    justify-content: center;
+}
+
+.first-sec{
+    background-color: #cfebf9;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    border-top-right-radius: 60%;
+}
+
+.logo{
+    border: 3px solid white;
+    margin: 50px 0;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.data{
+    border: 2px solid #445a71;
+    margin: 50px 0;
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #445a71;
+}
+
+.letter-sec{
+    padding: 70px;
+    font-size: 20px;
+    color: darkblue;
+}
+
+.input-box{
+    margin-top: -40px;
+}
+

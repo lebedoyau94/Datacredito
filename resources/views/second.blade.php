@@ -1,120 +1,72 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tranquilidad | Credito</title>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            width: 100vw;
-            height: 100vh;
-            font-family: 'Roboto', sans-serif;
-            background-color:  rgba(223,239,253,1);
-        }
-
-        .text-container{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 1rem;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        .logo-container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 13rem;
-            height: 12vh;
-            border: 3px solid white;
-        }
-
-        h1{
-            text-transform: uppercase;
-            color: white;
-            font-size: 2rem;
-        }
-
-        .second-sec{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 15px;
-        }
-
-        .second-sec p{
-            margin: 0 15px;
-            text-align: center;
-        }
-
-        .third-sec{
-            font-weight: bold;
-            margin: 0 20px;
-            text-align: center;
-            font-size: 15px;
-        }
-
-        .third-sec p{
-            color:  #262650;
-        }
-
-        h2{
-            color:  #262650;
-        }
-
-        .email-box, .phone-box{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 10px 0;
-            text-align: center;
-            font-size: 15px;
-        }
-
-        input[type=text]{
-            padding: 13px 40px;
-            height: 10px;
-            border-radius: 10px;
-            border: none;
-            margin: 5px 0;
-            text-align: center;
-        }
-
-        input[type=submit]{
-            height: 35px;
-            border-radius: 15px;
-            border: none;
-            margin: 5px 0;
-            padding: 5px 25px;
-            color: white;
-            background-color:  #262650;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .btn-box button{
-            margin-top: 1rem;
-            padding: 5px 20px;
-            background-color: transparent;
-            border: 2px solid #262650;
-            color: #262650;
-            font-weight: bold;
-        }
-
-        .is-invalid {
-            color: red;
-            font-size: small;
-        }
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Tranquilidad | Credito</title>
+            <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
+            <style>
+            
+                .second-sec{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: 15px;
+                }
+        
+                .second-sec p{
+                    margin: 0 15px;
+                    text-align: center;
+                }
+        
+                .third-sec{
+                    font-weight: bold;
+                    margin: 0 20px;
+                    text-align: center;
+                    font-size: 15px;
+                }
+        
+                .third-sec p{
+                    color:  #262650;
+                }
+        
+                h2{
+                    color:  #262650;
+                }
+        
+                .email-box, .phone-box{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 10px 0;
+                    text-align: center;
+                    font-size: 15px;
+                }
+        
+                input[type=text]{
+                    padding: 13px 40px;
+                    height: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    margin: 5px 0;
+                    text-align: center;
+                }
+        
+                input[type=submit]{
+                    margin: 5px 0;
+                }
+        
+                .btn-box button{
+                    margin-top: 1rem;
+                    padding: 5px 20px;
+                    background-color: transparent;
+                    border: 2px solid #262650;
+                    color: #262650;
+                    font-weight: bold;
+                }
+        
 
     </style>
 </head>
