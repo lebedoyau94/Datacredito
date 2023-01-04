@@ -8,31 +8,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
             body{
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: flex-start;
-                flex-direction: column;
-                width: 100vw;
-                height: 100vh;
-                background-image: url("{{ asset('assets/img/index.png') }}");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                font-family: 'Roboto', sans-serif;
-                background-color: #cfebf9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 100vw; 
+            height: 100vh; 
+            background-image: url('https://cdn.glitch.global/4796cf83-89b2-4901-b670-e7515e355baf/girl-is-jumping.jpg?v=1671237362508');  
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover;
+			font-family: 'Roboto', sans-serif;
+			background-color: #cfebf9;
 
-            }
+        }
 
         .curtain{
             background: linear-gradient(0deg, rgba(196,146,254,1) 0%, rgba(149,231,232,0.7931547619047619) 43%);
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            opacity: .8;
+            width: 100vw; 
+            height: 100vh; 
+            position: absolute; 
+            opacity: .8; 
             z-index: -4;
-            top: 0;
+            top: 0;    
         }
 
         .text-container{
@@ -41,7 +41,7 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 1rem;
-            width: 100vw;
+            width: 100vw; 
             height: 100vh;
         }
 				.logo{
@@ -56,15 +56,6 @@
             color: white;
 						text-transform: uppercase;
         }
-
-        /*.logo-container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 13rem;
-            height: 12vh;
-            border: 3px solid white;
-				}*/
 
         h1{
             text-transform: uppercase;
@@ -154,16 +145,16 @@
         @media only screen and (min-width: 600px) {
             .curtain{
             background: linear-gradient(0deg, rgba(196,146,254,1) 0%, rgba(149,231,232,0.7931547619047619) 43%);
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            opacity: .8;
+            width: 100vw; 
+            height: 100vh; 
+            position: absolute; 
+            opacity: .8; 
             z-index: -4;
-            top: 0;
-            clip-path: circle(56.4% at 19% 48%);
-       }
-           }
-
+            top: 0;     
+            clip-path: circle(56.4% at 19% 48%);         
+                }
+        }
+       
        @media only screen and (max-width: 600px) {
         .first-sec {
             margin-top: 20px;
@@ -173,7 +164,7 @@
         }
         h2{
             color: #262650;
-            letter-spacing: 1px;
+            letter-spacing: .5;
             font-size: 30px;
             margin-bottom: 1rem;
 			height: 4rem;
@@ -195,8 +186,9 @@
             margin-top: 60px;
             text-align: center;
         }
-
+            
     }
+
 
     </style>
 </head>
