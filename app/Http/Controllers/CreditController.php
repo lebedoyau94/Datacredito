@@ -29,7 +29,7 @@ class CreditController extends Controller
     public function __construct(UserService $userService)
     {
         $this->userService = $userService;
-        $this->middleware('guest')->only('tranquillity');
+        $this->middleware('guest')->only('redirectSecond');
         #$this->middleware('auth');
     }
 
