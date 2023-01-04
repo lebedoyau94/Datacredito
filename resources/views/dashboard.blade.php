@@ -29,14 +29,14 @@
         <nav>
 
             <div class="menu-text">
-                
+
                 <p>¡Hola!</p>
                 <p class="bold">Francisco Ramirez Cardona</p>
                 <p>francardona@gmail.com</p>
             </div>
 
-            
-            
+
+
             <ul>
                 <h5>Men&uacute;</h5>
                 <li>
@@ -161,7 +161,7 @@
     <section class="content-section">
 
         <div class="first-boxes">
-                    <form class= "logout" action="{{route('index1')}}" method="POST">
+                    <form class= "logout" action="{{route('logout')}}" method="POST">
                         @csrf
                     <input type="submit" value="Logout">
                 </div>
@@ -182,7 +182,7 @@
                 <div class="text-perfil">
                     <h5>Perfil Financiero: <span class="piloto-word">Piloto</span></h5>
                     <p>
-                        Sueñas con llegar m&aacute;s alto pero tus ingresos 
+                        Sueñas con llegar m&aacute;s alto pero tus ingresos
                         y las deudas actuales no te lo permiten. <br>Te brindaremos soluciones
                         financieras que le den aire a tus deudas y te permitan volar directo a tus sueños.
                     </p>
@@ -306,7 +306,7 @@
                 <div class="star">
                     <span class="bold">120</span>
                     <span>cuotas</span>
-                </div> 
+                </div>
 
                 <p class="bold tiny">55 cuotas a pagar</p>
 
@@ -334,7 +334,7 @@
 
                     <div class="recom-box">
                         <h6>Recompensa</h6>
-                        
+
                         <div class="circles-container">
                             <div class="little-circle purple">
                                 <p>Cuota</p>
@@ -391,7 +391,7 @@
                         </div>
                     </div>
 
-                
+
                     <div class="cuotas-box">
                         <h6>Recompensa</h6>
                         <div class="big-circle orange">
@@ -405,7 +405,7 @@
                     </div>
                 </div>
 
-            
+
 
 
             </div>
@@ -458,29 +458,29 @@
         <p>Hola</p>
     </section>
 
-    
+
 
     <script>
         const button = document.getElementById('btn_menu');
         const menu = document.querySelector('.menu')
         let isMenuOpen = false;
         menu.style.display = 'none';
-        
+
         button.addEventListener('click', function() {
-            
+
             if(isMenuOpen === false){
 
                 menu.style.display = 'block';
                 isMenuOpen = true;
-                
+
             } else{
-                
+
                 menu.style.display = 'none';
                 isMenuOpen = false;
             }
         });
 
-        
+
     </script>
 </body>
 </html>
