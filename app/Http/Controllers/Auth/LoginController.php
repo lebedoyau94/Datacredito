@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -36,5 +38,19 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function searchUser(Request $request){
+        $email = $request->email;
+        $existencia = DB::table('users')
+        ->select('email')
+        ->where('email', '===', $email)
+        ->get();
+
+        if (count($existencia) >= 1){
+            return $email;
+        } else {
+            
+        }
     }
 }

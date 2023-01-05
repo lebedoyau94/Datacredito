@@ -71,6 +71,7 @@ h1{
 .soluciones{
     color: #46546a;
     cursor: pointer;
+    display: none;
 }
 
 .perfil-box{
@@ -397,7 +398,6 @@ h1{
     flex-direction: column;
     align-items: center;
     margin-right: 1rem;
-    width: 70%;
 }
 
 .recom-box h6, .cuotas-box h6{
@@ -419,7 +419,6 @@ h1{
     justify-content: space-around;
     margin: 1rem 10px 1rem 10px;
     height: 200px;
-    width: 45%;
 }
 
 .last-container{
@@ -465,7 +464,7 @@ nav ul{
     flex-direction: column;
     justify-content: space-around;
     margin: 1rem;
-    height: 150px;
+    height: 230px;
 }
 
 nav ul li{
@@ -493,6 +492,10 @@ nav ul li a{
     font-size: 20px;
 }
 
+.menu-text p{
+    font-size: 14px;
+}
+
 .menu-section button{
     background-color: transparent;
     width: 2rem;
@@ -509,7 +512,6 @@ nav ul li a{
 }
 
 .container-number-cuotas{
-    width: 40%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -836,23 +838,40 @@ nav ul li a{
     
 }
 
-/* @media only screen and (min-width: 1440px){
-    body{
-        display: grid;
-        grid-template-areas: "menu vida soluciones";
-        grid-template-columns: 1fr 2fr 2fr;
+@media only screen and (max-width: 480px){
+    .container-number-cuotas{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .content-section{
-        grid-area: vida;
+    .progress-box {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 150px;
     }
 
-    .grid-box {
-        display: grid;
-        grid-template-columns: 300px 150px;
+    .recom-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 1rem;
+    }
+
+    .cuotas-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: space-around;
+        margin: 1rem 10px 1rem 10px;
+        height: 200px;
     }
-} */
+}
 
 @media only screen and (min-width: 1024px){
 
@@ -1054,6 +1073,16 @@ nav ul li a{
     .leyendas{
         font-size: 10px;
     }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    a {
+        font-size: 15px;
+    }
 }
 
 input[type=submit]{
@@ -1072,4 +1101,13 @@ input[type=submit]{
     .content2{
         height: 100%;
         width: 35%;
+    }
+
+    #Capa_1{
+        height: 15px;
+        width: 15px;
+    }
+
+    li{
+        margin-top: 10px;
     }
