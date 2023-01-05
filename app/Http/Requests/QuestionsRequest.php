@@ -24,16 +24,16 @@ class QuestionsRequest extends FormRequest
     public function rules()
     {
         return [
-            "income"        => "required|string",
-            "be_assigned"   => "required|string",
+            "income_range"       => "required|string",
+            "allocate_payment"   => "required|string",
         ];
     }
 
     public function attributes()
     {
         return [
-            "be_assigned" => "destinar al pago",
-            "income"      => "ingresos actualmente",
+            "allocate_payment"  => "destinar al pago",
+            "income_range"      => "ingresos actualmente",
         ];
     }
 }

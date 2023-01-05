@@ -7,23 +7,23 @@
             <title>Sueño | Crédito</title>
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
             <style>
-        
+
                 .text-container{
                     color: #262650;
                 }
-        
+
                 .percent-sec{
                     margin: 2rem 2rem 0 2rem;
                 }
-        
+
                 .percent{
                     margin-right: 10px;
                 }
-        
+
                 input[type=submit]{
                     margin: 1rem 0;
                 }
-        
+
                 @media only screen and (max-width: 600px) {
                     .percent{
                     border: 3px solid #262650;
@@ -57,10 +57,13 @@
             <h3>¿C&uacute;entanos c&uacute;al es tu sueño?</h3>
             <select id="" name="dreams">
                 <option value="">Seleccione una opción</option>
-                <option value="carro">Carro</option>
-                <option value="casa">Casa</option>
-                <option value="viaje">Viaje</option>
+                <option value="car">Carro</option>
+                <option value="home">Casa</option>
+                <option value="travel">Viaje</option>
             </select>
+            @error('dreams')
+                <div class="is-invalid">{{ $message }}</div>
+            @enderror
         </section>
         <section class="btn-container">
             <input type="submit" value="Continuar">

@@ -1,18 +1,15 @@
 <?php namespace App\Services;
 
-use App\Repositories\{UserRepository};
+use App\Repositories\{CreditUserRepository};
 use Illuminate\Support\Facades\{Cache, DB};
-use Illuminate\Support\{Arr, Collection, Str};
+use Illuminate\Support\{Collection, Str};
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\{Response};
 
-/**
- * @property CreditUserService $creditUserService
- */
-class UserService extends UserRepository
+class CreditUserService extends CreditUserRepository
 {
     /**
-     * UserService Construct
+     * CreditUserService Construct
      */
     public function __construct()
     {
@@ -24,20 +21,16 @@ class UserService extends UserRepository
      *
      * @throws \Exception
      */
-    public function getCodeService(): ?Model
+    public function getIndexService(): ?Collection
     {
         try {
-            $payload = [
-                "email" => \request()->user()->email,
-                "phone" => \request()->user()->phone,
-                "code"  => \request("code"),
-            ];
-            if (!$user = $this->first($payload))
-                throw new \Exception("El codigo ingresado no es correcto, favor de verificar",Response::HTTP_UNPROCESSABLE_ENTITY);
-
-            $user->update(["email_verified_at" => \now()]);
-
-            return  $user;
+        
+            return $this->getRepository()
+                ->whereCompanyId(\company()->getKey())
+                ->when(\request("status"), function ($query){
+                    return $query->where("status",\toBoolean(\request("status")));
+                })
+                ->get();
 
         } catch (\Throwable $e) {
             $error = $e->getMessage() . " " . $e->getLine() . " " . $e->getFile();
@@ -52,16 +45,13 @@ class UserService extends UserRepository
      * @return Model|null
      * @throws \Exception
      */
-    public function storeCreditUserService(): ?Model
+    public function storeService(): ?Model
     {
         DB::beginTransaction();
         try {
-            $data = [
-                "tyc" => !!(\request("tyc") === "on")
-            ];
-            $payload = Arr::collapse([$data,\request()->except("tyc","_token")]);
-            $response = (new CreditUserService())->create([
-                "user_id" => \request()->user()->getKey()
+            $payload = [];
+            $response = $this->create([
+                "company_id" => \company()->getKey(),
             ],$payload);
 
             DB::commit();
@@ -80,16 +70,16 @@ class UserService extends UserRepository
     /**
      * Update the specified resource in storage.
      *
-     * @return Model|null
+     * @param string $id
+     * @return Model
      * @throws \Exception
      */
-    public function updateCreditUserService(): ?Model
+    public function updateService(string $id): ?Model
     {
         DB::beginTransaction();
         try {
-            $response = (new CreditUserService())->create([
-                "user_id" => \request()->user()->getKey()
-            ],\request()->except("_token"));
+            $payload = [];
+            $response = $this->create(["id" => $id],$payload);
 
             DB::commit();
 

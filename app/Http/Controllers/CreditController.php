@@ -3,16 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\BoxCheckStoreRequest;
-use App\Http\Requests\CodeStoreRequest;
 use App\Http\Requests\DashboardRequest;
 use App\Http\Requests\IndexCreditRequest;
 use App\Http\Requests\QuestionsRequest;
 use App\Http\Requests\SeventhRequest;
-use App\Http\Requests\ValidateBoxRequest;
 use App\Http\Requests\ValidateCodeRequest;
 use App\Services\UserService;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class CreditController extends Controller
 {
@@ -29,8 +25,8 @@ class CreditController extends Controller
     public function __construct(UserService $userService)
     {
         $this->userService = $userService;
-        $this->middleware('guest')->only('redirectSecond');
-        #$this->middleware('auth');
+        $this->middleware('guest')->only('index1');
+        //$this->middleware('auth')->only("redirectSecond");
     }
 
     /**
@@ -55,7 +51,10 @@ class CreditController extends Controller
 
 	public function redirectSecond(IndexCreditRequest $indexCreditRequest)
 	{
-        return view('second',["phone" => \request("phone")]);
+        if ($this->userService->first(["phone" => \request("phone")]))
+            return view('second',["phone" => \request("phone")]);
+
+        return view('opportunity');
     }
 
     /**
@@ -87,8 +86,14 @@ class CreditController extends Controller
      */
     public function redirectQuarter(ValidateCodeRequest $validateCodeRequest)
     {
-        if ($this->userService->getCodeService())
+        if ($user = $this->userService->getCodeService()){
+            if ($user->credit)
+                return view('dashboard');
+
             return view('quarter');
+        }
+
+        return view('error');
     }
     /**
      * Show the application dashboard.
@@ -107,25 +112,6 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function redirectFifth(BoxCheckStoreRequest $boxCheckRequest)
-    {
-        return view('fifth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function redirectSixth(QuestionsRequest $questionsRequest)
-    {
-        return view('sixth');
-    }
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function viewSixth()
     {
         return view('sixth');
@@ -135,7 +121,7 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function redirectSeventh(SeventhRequest $seventhRequest)
+    public function viewSeventh()
     {
         return view('seventh');
     }
@@ -143,9 +129,45 @@ class CreditController extends Controller
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
+     * @throws \Exception
+     */
+    public function redirectFifth(BoxCheckStoreRequest $boxCheckRequest)
+    {
+            if($this->userService->storeCreditUserService())
+                return view('fifth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     * @throws \Exception
+     */
+    public function redirectSixth(QuestionsRequest $questionsRequest)
+    {
+        if($this->userService->updateCreditUserService())
+            return view('sixth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function redirectSeventh(SeventhRequest $seventhRequest)
+    {
+        return view('seventh');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     * @throws \Exception
      */
     public function redirectDashboard(DashboardRequest $seventhRequest)
     {
-        return view('home');
+        if($this->userService->updateCreditUserService())
+            return view('dashboard');
     }
 }

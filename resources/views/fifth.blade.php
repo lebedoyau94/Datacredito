@@ -7,23 +7,23 @@
             <title>Rango | Crédito</title>
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
             <style>
-        
+
                 .text-container{
                     color: #262650;
                 }
-        
+
                 .percent-sec{
                     margin: 0 1rem;
                 }
-        
+
                 .percent{
                     margin-right: 10px;
                 }
-                
+
                 input[type=submit]{
                     margin: 1rem 10px;
                 }
-        
+
                 @media only screen and (max-width: 600px) {
                     .percent{
                     border: 3px solid #262650;
@@ -37,7 +37,7 @@
                     font-size: 25px;
                 }
             }
-        
+
 
     </style>
 </head>
@@ -56,25 +56,25 @@
     </section>
     <section class="question-container">
         <h3>¿C&uacute;al es su rango de ingresos actualmente?</h3>
-        <select id="" name="income">
+        <select id="" name="income_range">
             <option value="">Seleccione una opción</option>
             <option value="100">100</option>
             <option value="200">200</option>
             <option value="300">300</option>
         </select>
-        @error('income')
+        @error('income_range')
             <div class="is-invalid">{{ $message }}</div>
         @enderror
     </section>
     <section class="question-container">
         <h3>¿De sus ingresos actuales cuánto puede destinar al pago de su deuda?</h3>
-        <select id="" name="be_assigned">
+        <select id="" name="allocate_payment">
             <option value="">Seleccione una opción</option>
             <option value="50">50</option>
             <option value="150">150</option>
             <option value="250">250</option>
         </select>
-        @error('be_assigned')
+        @error('allocate_payment')
             <div class="is-invalid">{{ $message }}</div>
         @enderror
     </section>

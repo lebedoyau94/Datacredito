@@ -25,7 +25,7 @@
             font-size: 15px;
             margin: 0 1rem;
         }
-        
+
         .terms-box{
             font-size: 10px;
             display: flex;
@@ -97,7 +97,7 @@
             @csrf
             <section class="question-container">
                 <h3>¿C&uacute;al ha sido el motivo que le ha impedido continuar con sus pagos?</h3>
-                <select id="" name="motive">
+                <select id="" name="reason">
                     <option value="">Seleccione una opción</option>
                     <option value="none">Ninguno</option>
                     <option value="cash">Efectivo</option>
@@ -109,7 +109,7 @@
                 <input type="submit" value="Continuar">
             </section>
             <section class="checkBox-container">
-                <input type="checkbox" type="checkbox" name="active">
+                <input type="checkbox" type="checkbox" name="tyc">
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y condiciones</label><br>
                 @error('active')
                 <div class="is-invalid">{{ $message }}</div>

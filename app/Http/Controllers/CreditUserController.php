@@ -5,9 +5,22 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCreditUserRequest;
 use App\Http\Requests\UpdateCreditUserRequest;
 use App\Models\CreditUser;
+use App\Services\CreditUserService;
 
+/**
+ * @property CreditUserService $creditUserService
+ */
 class CreditUserController extends Controller
 {
+
+    /**
+     * @param CreditUserService $creditUserService
+     */
+    public function __construct(CreditUserService $creditUserService)
+    {
+        $this->creditUserService = $creditUserService;
+    }
+
     /**
      * Display a listing of the resource.
      *

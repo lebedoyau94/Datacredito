@@ -18,12 +18,13 @@ return new class extends Migration
             $table->foreignUuid("user_id")->constrained();
             $table->string("reason")->nullable();
             $table->decimal("income_range", 22, 4)->default(0);
-            $table->string("electricity_receipt")->default(0);
+            $table->decimal("allocate_payment", 22, 4)->default(0);
+            $table->string("electricity_receipt")->nullable();
             $table->string("water_bill")->nullable();
             $table->string("dreams")->nullable();
+            $table->boolean("tyc")->default(false);
             $table->softDeletes();
-            $table->timestamp("created_at");
-            $table->timestamp("updated_at");
+            $table->timestamps();
         });
     }
 

@@ -24,16 +24,16 @@ class BoxCheckStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'active' => 'required',
-            'motive' => 'required|string',
+            'tyc'    => 'required',
+            'reason' => 'required|string',
         ];
     }
 
     public function attributes()
     {
         return [
-            "active" => "terminos y condiciones",
-            "motive" => "motivo",
+            "tyc" => "terminos y condiciones",
+            "reason" => "motivo",
         ];
     }
 

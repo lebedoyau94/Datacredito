@@ -24,7 +24,13 @@ class DashboardRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "dreams"       => "required|string",
+        ];
+    }
+    public function attributes()
+    {
+        return [
+            "dreams"  => "sueño",
         ];
     }
 }
