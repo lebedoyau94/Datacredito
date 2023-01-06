@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    justify-content: center;
+}
+
+.container2{
+    background: rgb(216,191,216);
+    background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
+}
+
+.first-sec{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.first-sec h1 {
+margin: 1rem 0 0 0;
+color: #031d3a;
+font-size: 30px;
+text-align: center;
+}
+
+.first-content{
+    display: flex;
+    margin: 2rem 0 1rem 0;
+}
+
+.house-box{
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.house-text{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.house-text .subtitle{
+    font-size: 18px;
+    
+}
+
+.house-text p:nth-child(2){
+    font-size: 13px;
+}
+
+.second-sec, .third-sec{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.third-sec{
+    margin-top: 2rem;
+}
+
+.text-second-sec, .text-third-sec{
+    color: #031d3a;
+    margin: 0 0 1rem 0;
+}
+
+.text-second-sec p:nth-child(1), .text-third-sec p:nth-child(1){
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card{
+    display: flex;
+    background-color: white;
+    height: 90px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+.mini-box{
+    width: 5%;
+}
+
+.mini-box2{
+    margin-left: 10px;
+}
+
+.credito .mini-box:nth-child(1){
+    font-size: 12px;
+    color: rebeccapurple;
+}
+
+.credito .mini-box:nth-child(2){
+    font-size: 12px;
+    color:#031d3a;
+}
+
+.bigger{
+    font-size: 15px;
+    color: #001732;
+}
+
+.credito .mini-box:nth-child(4){
+    display: flex;
+    width: 30%;
+    align-items: center;
+}
+
+.credito input[type=submit], .tarjeta input[type=submit]{
+    height: auto;
+    width: 7rem;
+    margin: 0 0 0 1rem;
+    padding: .5rem .5rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.credito input[type=submit]{
+    background-color: #88c946;
+}
+
+.tarjeta input[type=submit]{
+    background-color: orange;
+}
+ 
+.tarjeta .mini-box:nth-child(2), .tarjeta .mini-box:nth-child(3){
+    font-size: 20px;
+}
+
+.fourth-sec{
+    width:  100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    color: #001732;
+}
+
+.fourth-sec h3{
+    margin-right: 4rem;
+    font-size: 30px;
+}
+
+.fourth-sec p{
+    font-size: 20px;
+    margin-right: 1rem;
+}
+
+@media only screen and (max-width: 425px){
+    .container2{
+    background: rgb(216,191,216);
+    background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
+    height: 100%;
+}
+
+.card{
+    width: 440px;
+}
+
+.parragraph-spacing{
+    margin-left: -10px;
+}
+
+.mini-box2{
+    margin-left: 10px;
+}
+
+
+}
+
+@media only screen and (min-width: 1024px){
+    .container2{
+    width: 40%;
+    background: rgb(216,191,216);
+    background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
+    height: 285.5vh;
+}
+
+.bigger{
+    font-size: 15px;
+    color: #001732;
+}
+
+.mini-box{
+    width: 20%;
+}
+
+.credito .mini-box:nth-child(1){
+    font-size: 15px;
+    color: rebeccapurple;
+}
+
+.credito .mini-box:nth-child(2){
+    font-size: 15px;
+    color:#031d3a;
+}
+
+.credito .mini-box:nth-child(4){
+    display: flex;
+    width: 45%;
+    align-items: center;
+}
+
+.tarjeta .mini-box:nth-child(2), .tarjeta .mini-box:nth-child(3){
+    font-size: 15px;
+}
+
+.credito input[type=submit], .tarjeta input[type=submit]{
+    height: auto;
+    width: 4rem;
+    margin: 0 0 0 1rem;
+    padding: .5rem .0rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+}
