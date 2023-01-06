@@ -182,10 +182,13 @@
             </div>
         </section>
         <section class="btn-container">
-            <input type="submit" value="Continuar">
-            <a href="{{route('login')}}">Omitir</a>
+            <input type="submit" value="Continuar">            
+        </form>
+            <form action="{{route('login')}}" method="POST">
+                @csrf
+                <input type="submit" value="Omitir">
+            </form>
         </section>
     </section>
-</form>
 </body>
 </html>

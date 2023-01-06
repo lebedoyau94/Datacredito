@@ -156,6 +156,11 @@ text-align: center;
 }
 
 @media only screen and (max-width: 425px){
+
+    body{
+        overflow-x: hidden;
+    }
+
     .container2{
     background: rgb(216,191,216);
     background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
@@ -163,17 +168,36 @@ text-align: center;
 }
 
 .card{
-    width: 440px;
+    width: 340px;
 }
 
 .parragraph-spacing{
     margin-left: -10px;
 }
 
+.mini-box{
+    font-size: 12px;
+}
 .mini-box2{
     margin-left: 10px;
+    font-size: 12px;
 }
 
+.credito input[type="submit"], .tarjeta input[type="submit"] {
+    height: auto;
+    width: 3rem;
+    margin: 0 0 0 1rem;
+    padding: .3rem .3rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 9px;
+}
+
+.bigger {
+    font-size: 11px;
+    color: #001732;
+    }
 
 }
 
