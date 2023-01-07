@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreHomeRequest;
-use App\Http\Requests\UpdateHomeRequest;
-use App\Models\Home;
+use App\Http\Requests\StoreCertificateRequest;
+use App\Http\Requests\UpdateCertificateRequest;
+use App\Models\Certificate;
 
-class HomeController extends Controller
+class CertificateController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class HomeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreHomeRequest  $request
+     * @param  \App\Http\Requests\StoreCertificateRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreHomeRequest $request)
+    public function store(StoreCertificateRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Models\CertificateController  $certificateController
      * @return \Illuminate\Http\Response
      */
-    public function show(Home $homeController)
+    public function show(CertificateController $certificateController)
     {
         //
     }
@@ -53,10 +53,10 @@ class HomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Models\CertificateController  $certificateController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Home $homeController)
+    public function edit(CertificateController $certificateController)
     {
         //
     }
@@ -64,11 +64,11 @@ class HomeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateHomeRequest  $request
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Http\Requests\UpdateCertificateRequest  $request
+     * @param  \App\Models\CertificateController  $certificateController
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateHomeRequest $request, Home $homeController)
+    public function update(UpdateCertificateRequest $request, CertificateController $certificateController)
     {
         //
     }
@@ -76,10 +76,10 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Models\CertificateController  $certificateController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Home $homeController)
+    public function destroy(CertificateController $certificateController)
     {
         //
     }

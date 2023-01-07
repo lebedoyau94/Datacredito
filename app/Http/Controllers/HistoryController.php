@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreHomeRequest;
-use App\Http\Requests\UpdateHomeRequest;
-use App\Models\Home;
+use App\Http\Requests\StoreHistoryRequest;
+use App\Http\Requests\UpdateHistoryRequest;
+use App\Models\History;
 
-class HomeController extends Controller
+class HistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class HomeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreHomeRequest  $request
+     * @param  \App\Http\Requests\StoreHistoryRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreHomeRequest $request)
+    public function store(StoreHistoryRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Models\History  $historyController
      * @return \Illuminate\Http\Response
      */
-    public function show(Home $homeController)
+    public function show(History $historyController)
     {
         //
     }
@@ -53,10 +53,10 @@ class HomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Models\History  $historyController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Home $homeController)
+    public function edit(History $historyController)
     {
         //
     }
@@ -64,11 +64,11 @@ class HomeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateHomeRequest  $request
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Http\Requests\UpdateHistoryRequest  $request
+     * @param  \App\Models\History  $historyController
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateHomeRequest $request, Home $homeController)
+    public function update(UpdateHistoryRequest $request, History $historyController)
     {
         //
     }
@@ -76,10 +76,10 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Models\History  $historyController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Home $homeController)
+    public function destroy(History $historyController)
     {
         //
     }

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreHomeRequest;
-use App\Http\Requests\UpdateHomeRequest;
-use App\Models\Home;
+use App\Http\Requests\StoreFinancialRequest;
+use App\Http\Requests\UpdateFinancialRequest;
+use App\Models\FinancialController;
 
-class HomeController extends Controller
+class FinancialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class HomeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreHomeRequest  $request
+     * @param  \App\Http\Requests\StoreFinancialRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreHomeRequest $request)
+    public function store(StoreFinancialRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Models\FinancialController  $financialController
      * @return \Illuminate\Http\Response
      */
-    public function show(Home $homeController)
+    public function show(FinancialController $financialController)
     {
         //
     }
@@ -53,10 +53,10 @@ class HomeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Models\FinancialController  $financialController
      * @return \Illuminate\Http\Response
      */
-    public function edit(Home $homeController)
+    public function edit(FinancialController $financialController)
     {
         //
     }
@@ -64,11 +64,11 @@ class HomeController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateHomeRequest  $request
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Http\Requests\UpdateFinancialRequest  $request
+     * @param  \App\Models\FinancialController  $financialController
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateHomeRequest $request, Home $homeController)
+    public function update(UpdateFinancialRequest $request, FinancialController $financialController)
     {
         //
     }
@@ -76,10 +76,10 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Home  $homeController
+     * @param  \App\Models\FinancialController  $financialController
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Home $homeController)
+    public function destroy(FinancialController $financialController)
     {
         //
     }
