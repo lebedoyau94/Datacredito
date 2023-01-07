@@ -80,9 +80,12 @@
     </section>
     <section class="btn-container">
         <input type="submit" value="Continuar">
-        <a href="{{route('login')}}">Omitir</a>
+    </form>
+    <form action="{{route('login')}}" method="POST">
+        @csrf
+        <input type="submit" value="Omitir">
+    </form>
     </section>
     </section>
-</form>
 </body>
 </html>
