@@ -144,6 +144,7 @@
 
         .fourth-line{
             margin: 2rem 0 0 0;
+            margin-bottom: 2rem;
         }
 
         .fourth-line input[type=text]{
@@ -179,6 +180,17 @@
             padding: 1.0rem;
             text-align: center;
             border: 2px solid #334a64;
+        }
+        input[type=email]{
+            background-color: transparent;
+            border-radius: 2px;
+            padding: 1.0rem;
+            text-align: center;
+            border: 2px solid #334a64;
+        }
+        .is-invalid {
+            color: red;
+            font-size: small;
         }
 
     </style>
@@ -216,80 +228,114 @@
         <div class="first-line">
             <div class="mini-box">
                 <label for="Nombres">Nombres</label>
-                <input type="text" name="name">
+                <input type="text" name="name" value="{{$name}}">
+                @error('name')
+                <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mini-box">
                 <label for="Apellidos">Apellidos</label>
-                <input type="text" name="surnames">
+                <input type="text" name="surnames" value="{{$surnames}}">
+                @error('surnames')
+                <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mini-box">
                 <label for="Id">Tipo de ID</label>
-                <input type="text" name="id_type">
+                <input type="text" name="id_type" value="{{$type}}">
+                @error('id_type')
+                <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mini-box">
                 <label for="Id">N&uacute;mero de ID</label>
-                <input type="text" name="id_number">
+                <input type="text" name="id_number" value="{{$number}}">
+                @error('id_number')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
         </div>
-        <div class="second-line">
+        <div class="second-line" >
             <div class="mini-box">
                 <label for="">N&uacute;mero de tel&eacute;fono</label>
-                <input type="text" name="phone">
+                <input type="text" name="phone" value="{{$phone}}">
+                @error('phone')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mini-box">
                 <label for="">Email</label>
-                <input type="text" name="email">
+                <input type="email" name="email" value="{{$email}}">
+                @error('email')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
         </div>
 
-        <h3>Datos de deudas</h3>
-
-        <div class="third-line">
-            <div class="mini-box">
-                <label for="Banco">Banco</label>
-                <select name="" id="">
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                </select>
+        {{--<h3>Datos de deudas</h3>
+        <div id="div-debts" style="margin-bottom: 2rem;">
+            <div class="third-line">
+                <div class="mini-box">
+                    <label for="Banco">Banco</label>
+                    <select name="bank" id="">
+                        <option value="">Option</option>
+                        <option value="">Option</option>
+                        <option value="">Option</option>
+                        <option value="">Option</option>
+                    </select>
+                </div>
+                <div class="mini-box">
+                    <label for="Tipo-credito">Tipo de cr&eacute;dito</label>
+                    <select name="type_credit" id="">
+                        <option value="">Option</option>
+                        <option value="">Option</option>
+                        <option value="">Option</option>
+                        <option value="">Option</option>
+                    </select>
+                </div>
+                <div class="mini-box">
+                    <label for="Dias-mora">D&iacute;as de mora</label>
+                    <select name="past_due" id="">
+                        <option value="">Option</option>
+                        <option value="">Option</option>
+                        <option value="">Option</option>
+                        <option value="">Option</option>
+                    </select>
+                </div>
+                <div class="mini-box">
+                    <label for="Id">Monto deuda</label>
+                    <input type="text" name="monto-deuda" id="">
+                </div>
             </div>
-            <div class="mini-box">
-                <label for="Tipo-credito">Tipo de cr&eacute;dito</label>
-                <select name="" id="">
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                </select>
+            <div class="fourth-line">
+                <div class="mini-box">
+                    <label for="Id">Numero de producto</label>
+                    <input type="text" name="product_number" id="">
+                </div>
             </div>
-            <div class="mini-box">
-                <label for="Dias-mora">D&iacute;as de mora</label>
-                <select name="" id="">
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                    <option value="">Option</option>
-                </select>
-            </div>
-            <div class="mini-box">
-                <label for="Id">Monto deuda</label>
-                <input type="text" name="monto-deuda" id="">
-            </div>
-        </div>
-
-        <div class="fourth-line">
-            <div class="mini-box">
-                <label for="Id">Numero de producto</label>
-                <input type="text" name="monto-deuda" id="">
-            </div>
-        </div>
-
+            <hr>
+        </div>--}}
         <div class="fifth-line">
-            <input type="button" value="Agregar otra deuda +">
+            <input type="button" value="Agregar otra deuda +" id="other_debts">
             <input type="submit" value="Enviar">
         </div>
     </form>
 </section>
+
+
+<script>
+    document.getElementById('other_debts').onclick = duplicate;
+    var i = 0;
+    var original = document.getElementById('div-debts');
+
+    function duplicate() {
+        alert("Agregando Modal")
+        var clone = original.cloneNode(true);
+        clone.id = "div-debts" + ++i;
+        original.parentNode.appendChild(clone);
+    }
+</script>
+
+
 </body>
 </html>

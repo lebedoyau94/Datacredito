@@ -15,7 +15,14 @@ class InfoUserController extends Controller
      */
     public function index()
     {
-        return view("information");
+        return view("information",[
+            "name"      => \old("name"),
+            "surnames"  => \old("surnames"),
+            "phone"     => \old("phone"),
+            "email"     => \old("email"),
+            "type"      => \old("id_type"),
+            "number"    => \old("id_number"),
+        ]);
     }
 
     /**
@@ -36,7 +43,7 @@ class InfoUserController extends Controller
      */
     public function store(StoreInfoUserRequest $request)
     {
-        dd("store info user");
+        \request()->dd();
     }
 
     /**
