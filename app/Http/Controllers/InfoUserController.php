@@ -11,7 +11,7 @@ class InfoUserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
@@ -36,7 +36,7 @@ class InfoUserController extends Controller
      */
     public function store(StoreInfoUserRequest $request)
     {
-        //
+        dd("store info user");
     }
 
     /**

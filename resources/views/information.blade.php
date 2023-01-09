@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro | Credito </title>
+    <!-- icon -->
+    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
 
     <style>
 
@@ -170,6 +172,15 @@
             border: none;
             cursor: pointer;
         }
+
+        input[type=text]{
+            background-color: transparent;
+            border-radius: 2px;
+            padding: 1.0rem;
+            text-align: center;
+            border: 2px solid #334a64;
+        }
+
     </style>
 </head>
 <body>
@@ -200,35 +211,34 @@
 <section class="form-box">
     <h2>Formulario de negociaci&oacute;n de cartera</h2>
 
-    <form action="">
-
+    <form action="{{route('information.store')}}" method="POST">
+        @csrf
         <div class="first-line">
             <div class="mini-box">
                 <label for="Nombres">Nombres</label>
-                <input type="text" name="Nombres" id="">
+                <input type="text" name="name">
             </div>
             <div class="mini-box">
                 <label for="Apellidos">Apellidos</label>
-                <input type="text" name="Apellidos" id="">
+                <input type="text" name="surnames">
             </div>
             <div class="mini-box">
                 <label for="Id">Tipo de ID</label>
-                <input type="text" name="Tipo-Id" id="">
+                <input type="text" name="id_type">
             </div>
             <div class="mini-box">
                 <label for="Id">N&uacute;mero de ID</label>
-                <input type="text" name="Numero-Id" id="">
+                <input type="text" name="id_number">
             </div>
         </div>
-
         <div class="second-line">
             <div class="mini-box">
                 <label for="">N&uacute;mero de tel&eacute;fono</label>
-                <input type="text" name="Numero-telefono" id="">
+                <input type="text" name="phone">
             </div>
             <div class="mini-box">
                 <label for="">Email</label>
-                <input type="text" name="Email" id="">
+                <input type="text" name="email">
             </div>
         </div>
 
