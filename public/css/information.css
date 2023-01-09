@@ -1,0 +1,299 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body{
+    background: rgb(216,191,216);
+    background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+}
+
+.logo-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22.0rem;
+    height: 10.0rem;
+    border: 3px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin: 1.0rem 0 0 0;
+}
+
+.text-container{
+    text-align: center;
+    margin: 2.0rem 3.0rem 3.0rem 3.0rem;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    color: #334a64;
+    width: 50%;
+}
+
+.text-container .title {
+    font-size: 3.0rem;
+}
+
+.text-container .paragraph {
+    font-size: 2.0rem;
+    margin: 1rem 0 0 0;
+}
+
+.tasa-big-box{
+    width: 50%;
+    border: 2px solid #334a64;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.0rem;
+}
+
+.box{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigger{
+    font-size: 3.0rem;
+}
+
+.form-box{
+    margin: 2rem 0 0 0;
+    width: 70%;
+    height: auto;
+}
+
+.form-box h2{
+    text-align: center;
+    font-size: 18px;
+    color: #334a64;
+}
+
+.first-line{
+    display: flex;
+    width: 100%;
+    margin: 2rem 0 0 0;
+    justify-content: space-between;
+}
+
+.mini-box{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #334a64;
+}
+
+.second-line{
+    display: flex;
+}
+
+.second-line .mini-box:nth-child(1){
+    margin: 0 9rem 0 0;
+}
+
+input[type=text], select{
+    width: 20rem;
+    height: 3rem;
+}
+
+.third-line{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 0 0;
+}
+
+.form-box h3{
+    margin: 2rem 0 0 0;
+    font-size: 16px;
+    color: #334a64;
+}
+
+.fourth-line{
+    margin: 2rem 0 0 0;
+    margin-bottom: 2rem;
+}
+
+.fourth-line input[type=text]{
+    width: 25rem;
+}
+
+.fifth-line{
+    margin: 3rem 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifth-line input[type=button]{
+    background-color: transparent;
+    border: 2px solid #334a64;
+    padding: 1rem;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.fifth-line input[type=submit]{
+    background-color: #334a64;
+    padding: 1rem 3rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=text]{
+    background-color: white;
+    border-radius: 6px;
+    padding: 1.0rem;
+    text-align: center;
+}
+
+.typeId input[type=text]{
+    background-color: white;
+    border-radius: 6px;
+    padding: 1.0rem;
+    text-align: center;
+    width: 10rem;
+}
+
+.nombreApellido input[type=text]{
+    background-color: white;
+    border-radius: 6px;
+    padding: 1.0rem;
+    text-align: center;
+    width: 28rem;
+}
+
+input[type=email]{
+    background-color: white;
+    border-radius: 6px;
+    padding: 1.0rem;
+    text-align: center;
+    width: 28rem;
+}
+.is-invalid {
+    color: red;
+    font-size: small;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .second-line{
+        margin: 2rem 0 0 0;
+    }
+
+    .second-line .mini-box:nth-child(1) {
+        margin: 0 5rem 0 0;
+    }
+
+    input[type=email]{
+        padding: .5rem;
+        width: 32rem;
+    }
+
+    .tasa-big-box{
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    body{
+        height: 100%;
+    }
+
+    .text-container .title {
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+
+    .text-container {
+        width: 80%;
+    }
+
+    .text-container .paragraph {
+        font-size: 1.3rem;
+        margin: 1rem 0 0 0;
+    }
+
+    .tasa-big-box {
+        width: 95%;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .bigger {
+        font-size: 2rem;
+    }
+
+    .form-box {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-line {
+        flex-direction: column;
+    }
+
+    .nombreApellido input[type="text"] {
+        width: 90%;
+    }
+
+    .mini-box {
+        font-size: 12px;
+        margin-bottom: 10px !important;
+    }
+
+    .second-line {
+        flex-direction: column;
+    }
+
+    input[type="email"] {
+        padding: .5rem;
+    }
+
+    .fifth-line input[type="submit"] {
+        margin-top: 10px;
+        height: 35px;
+        border-radius: 15px;
+        border: none;
+        padding: 5px 25px;
+        color: white;
+        background-color:  #262650;
+        font-weight: bold;
+        cursor: pointer;
+        width: 30%;
+        align-self: center;;
+    }
+
+    .fifth-line input[type="button"] {
+        width: 50%;
+        
+    }
+
+    .fifth-line {
+        flex-direction: column;
+    }
+}
