@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oportunity | Credito</title>
+    <!-- icon -->
+    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
+
     <style>
 
         *{
@@ -94,11 +97,20 @@
             border: 2px solid #334a64;
         }
 
-        .inputs-container input[type=text]:nth-child(2){
+        .btn-link{
+            background-color: transparent;
+            border-radius: 5px;
+            padding: 1.0rem;
+            text-align: center;
+            border: 2px solid #334a64;
+            cursor: pointer;
+        }
+
+        .inputs-container .btn-link:nth-child(2){
             margin: 0rem 2.0rem;
         }
 
-        .inputs-container input[type=text]:nth-child(3){
+        .inputs-container .btn-link:nth-child(3){
             margin: 2.0rem 2.0rem;
         }
 
@@ -142,13 +154,13 @@
                 width: auto;
             }
 
-            .inputs-container input[type=text]:nth-child(2){
+            .inputs-container .btn-link:nth-child(2){
                 width: auto;
                 margin: 0rem 2.0rem;
                 font-size: 2.0rem;
             }
 
-            .inputs-container input[type=text]:nth-child(3){
+            .inputs-container .btn-link:nth-child(3){
                 width: auto;
                 margin: 0rem 2.0rem;
                 font-size: 2.0rem;
@@ -160,7 +172,7 @@
                 font-size: 1.5rem;
             }
 
-            input[type=text]{
+            .btn-link{
                 padding: 2.0rem;
             }
         }
@@ -206,8 +218,18 @@
     <div class="recomendado-box">
         <span>Recomendado</span>
     </div>
-    <input type="text" value="Solicitar compra de cartera">
-    <input type="text" value="Continuar a página principal">
+    <button class="btn-link">
+        <a  href="{{route('information.index')}}">
+            Solicitar compra de cartera
+        </a>
+    </button>
+    <button class="btn-link">
+        <a  href="#">
+            Continuar a página principal
+        </a>
+    </button>
+    {{--<input type="text" value="Solicitar compra de cartera">
+    <input type="text" value="Continuar a página principal">--}}
 </section>
 
 </body>

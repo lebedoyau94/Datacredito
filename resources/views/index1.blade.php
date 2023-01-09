@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Inicio | Credito</title>
+    <!-- icon -->
+    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
             body{
@@ -14,11 +17,11 @@
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            width: 100vw; 
-            height: 100vh; 
-            background-image: url('https://cdn.glitch.global/4796cf83-89b2-4901-b670-e7515e355baf/girl-is-jumping.jpg?v=1671237362508');  
-            background-position: center; 
-            background-repeat: no-repeat; 
+            width: 100vw;
+            height: 100vh;
+            background-image: url('https://cdn.glitch.global/4796cf83-89b2-4901-b670-e7515e355baf/girl-is-jumping.jpg?v=1671237362508');
+            background-position: center;
+            background-repeat: no-repeat;
             background-size: cover;
 			font-family: 'Roboto', sans-serif;
 			background-color: #cfebf9;
@@ -27,12 +30,12 @@
 
         .curtain{
             background: linear-gradient(0deg, rgba(196,146,254,1) 0%, rgba(149,231,232,0.7931547619047619) 43%);
-            width: 100vw; 
-            height: 100vh; 
-            position: absolute; 
-            opacity: .8; 
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            opacity: .8;
             z-index: -4;
-            top: 0;    
+            top: 0;
         }
 
         .text-container{
@@ -41,7 +44,7 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 1rem;
-            width: 100vw; 
+            width: 100vw;
             height: 100vh;
         }
 				.logo{
@@ -145,16 +148,16 @@
         @media only screen and (min-width: 600px) {
             .curtain{
             background: linear-gradient(0deg, rgba(196,146,254,1) 0%, rgba(149,231,232,0.7931547619047619) 43%);
-            width: 100vw; 
-            height: 100vh; 
-            position: absolute; 
-            opacity: .8; 
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            opacity: .8;
             z-index: -4;
-            top: 0;     
-            clip-path: circle(56.4% at 19% 48%);         
+            top: 0;
+            clip-path: circle(56.4% at 19% 48%);
                 }
         }
-       
+
        @media only screen and (max-width: 600px) {
         .first-sec {
             margin-top: 20px;
@@ -186,7 +189,7 @@
             margin-top: 60px;
             text-align: center;
         }
-            
+
     }
 
 
