@@ -40,21 +40,21 @@
     <form action="{{route('information.store')}}" method="POST">
         @csrf
         <div class="first-line">
-            <div class="mini-box">
+            <div class="mini-box nombreApellido">
                 <label for="Nombres">Nombres</label>
                 <input type="text" name="name" value="{{$name}}">
                 @error('name')
                 <div class="is-invalid">{{ $message }}</div>
                 @enderror
             </div>
-            <div class="mini-box">
+            <div class="mini-box nombreApellido">
                 <label for="Apellidos">Apellidos</label>
                 <input type="text" name="surnames" value="{{$surnames}}">
                 @error('surnames')
                 <div class="is-invalid">{{ $message }}</div>
                 @enderror
             </div>
-            <div class="mini-box">
+            <div class="mini-box typeId">
                 <label for="Id">Tipo de ID</label>
                 <input type="text" name="id_type" value="{{$type}}">
                 @error('id_type')

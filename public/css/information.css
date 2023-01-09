@@ -21,6 +21,7 @@ body{
     align-items: center;
     height: 100vh;
     width: 100vw;
+    padding: 1rem;
 }
 
 .logo-box{
@@ -106,7 +107,6 @@ body{
 
 .second-line{
     display: flex;
-    margin: 2rem 0 0 0;
 }
 
 .second-line .mini-box:nth-child(1){
@@ -163,20 +163,137 @@ input[type=text], select{
 }
 
 input[type=text]{
-    background-color: transparent;
-    border-radius: 2px;
+    background-color: white;
+    border-radius: 6px;
     padding: 1.0rem;
     text-align: center;
-    border: 2px solid #334a64;
 }
-input[type=email]{
-    background-color: transparent;
-    border-radius: 2px;
+
+.typeId input[type=text]{
+    background-color: white;
+    border-radius: 6px;
     padding: 1.0rem;
     text-align: center;
-    border: 2px solid #334a64;
+    width: 10rem;
+}
+
+.nombreApellido input[type=text]{
+    background-color: white;
+    border-radius: 6px;
+    padding: 1.0rem;
+    text-align: center;
+    width: 28rem;
+}
+
+input[type=email]{
+    background-color: white;
+    border-radius: 6px;
+    padding: 1.0rem;
+    text-align: center;
+    width: 28rem;
 }
 .is-invalid {
     color: red;
     font-size: small;
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .second-line{
+        margin: 2rem 0 0 0;
+    }
+
+    .second-line .mini-box:nth-child(1) {
+        margin: 0 5rem 0 0;
+    }
+
+    input[type=email]{
+        padding: .5rem;
+        width: 32rem;
+    }
+
+    .tasa-big-box{
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    body{
+        height: 100%;
+    }
+
+    .text-container .title {
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+
+    .text-container {
+        width: 80%;
+    }
+
+    .text-container .paragraph {
+        font-size: 1.3rem;
+        margin: 1rem 0 0 0;
+    }
+
+    .tasa-big-box {
+        width: 95%;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .bigger {
+        font-size: 2rem;
+    }
+
+    .form-box {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-line {
+        flex-direction: column;
+    }
+
+    .nombreApellido input[type="text"] {
+        width: 90%;
+    }
+
+    .mini-box {
+        font-size: 12px;
+        margin-bottom: 10px !important;
+    }
+
+    .second-line {
+        flex-direction: column;
+    }
+
+    input[type="email"] {
+        padding: .5rem;
+    }
+
+    .fifth-line input[type="submit"] {
+        margin-top: 10px;
+        height: 35px;
+        border-radius: 15px;
+        border: none;
+        padding: 5px 25px;
+        color: white;
+        background-color:  #262650;
+        font-weight: bold;
+        cursor: pointer;
+        width: 30%;
+        align-self: center;;
+    }
+
+    .fifth-line input[type="button"] {
+        width: 50%;
+        
+    }
+
+    .fifth-line {
+        flex-direction: column;
+    }
 }
