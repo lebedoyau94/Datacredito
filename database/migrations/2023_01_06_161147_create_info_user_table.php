@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('info_users', function (Blueprint $table) {
-            $table->id();
+            $table->uuid("id")->primary()->index();
+            $table->foreignUuid("user_id")->constrained();
+            $table->string("type")->nullable();
+            $table->string("number")->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

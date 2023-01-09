@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreInfoUserRequest;
 use App\Http\Requests\UpdateInfoUserRequest;
 use App\Models\InfoUser;
+use App\Services\InfoUserService;
 
+/**
+ * @property InfoUserService $infoUserService
+ */
 class InfoUserController extends Controller
 {
+    public function __construct(InfoUserService $infoUserService)
+    {
+        $this->infoUserService = $infoUserService;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -38,12 +46,23 @@ class InfoUserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreInfoUserRequest  $request
-     * @return \Illuminate\Http\Response
+     * @param \App\Http\Requests\StoreInfoUserRequest $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @throws \Exception
      */
     public function store(StoreInfoUserRequest $request)
     {
-        \request()->dd();
+        if ($this->infoUserService->storeService()){
+            return view("information",[
+                "name"      => \request("name"),
+                "surnames"  => \request("surnames"),
+                "phone"     => \request("phone"),
+                "email"     => \request("email"),
+                "type"      => \request("id_type"),
+                "number"    => \request("id_number"),
+            ]);
+        }
+
     }
 
     /**

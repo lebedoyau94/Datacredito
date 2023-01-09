@@ -50,4 +50,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(CreditUser::class);
     }
+    public function info()
+    {
+        return $this->hasOne(InfoUser::class);
+    }
 }
