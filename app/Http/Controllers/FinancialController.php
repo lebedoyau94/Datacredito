@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreFinancialRequest;
 use App\Http\Requests\UpdateFinancialRequest;
-use App\Models\FinancialController;
+use App\Models\Financial;
 
 class FinancialController extends Controller
 {
@@ -15,7 +15,7 @@ class FinancialController extends Controller
      */
     public function index()
     {
-        //
+        return view('financial');
     }
 
     /**

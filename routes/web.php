@@ -56,6 +56,10 @@ Route::post('/employment', [App\Http\Controllers\EmploymentController::class, 'e
 Route::post('/financial', [App\Http\Controllers\FinancialController::class, 'financial'])->name('financial');*/
 
 Auth::routes();
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
+Route::resource('dashboard', HomeController::class)->parameter("dashboard","id");
 Route::resource('information', InfoUserController::class)->parameter("information","id");
+Route::resource('history', HistoryController::class)->parameter("history","id");
+Route::resource('certificate', CertificateController::class)->parameter("certificate","id");
+Route::resource('employment', EmploymentController::class)->parameter("employment","id");
+Route::resource('financial', FinancialController::class)->parameter("financial","id");
