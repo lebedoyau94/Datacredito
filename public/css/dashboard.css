@@ -700,7 +700,7 @@ nav ul li a{
     }
 
     .menu-text {
-        height: 100px;
+        height: 150px;
     }
 
     .last-part-menu{
@@ -1082,6 +1082,10 @@ nav ul li a{
     a {
         font-size: 15px;
     }
+
+    li a:hover{
+        color: #909393;
+    }
 }
 
 input[type=submit]{
@@ -1093,7 +1097,8 @@ input[type=submit]{
         background-color:  #262650;
         font-weight: bold;
         cursor: pointer;
-        margin: 15px;
+        margin: 15px auto;
+        display: flex;
 
     }
 
@@ -1122,3 +1127,7 @@ input[type=submit]{
     }
 
     .cls{fill:#fff;}
+
+    a:hover{
+        color: #909393;
+    }

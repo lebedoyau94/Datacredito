@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEmploymentRequest;
 use App\Http\Requests\UpdateEmploymentRequest;
-use App\Models\EmploymentController;
+use App\Models\Employment;
 
 class EmploymentController extends Controller
 {
@@ -15,7 +15,7 @@ class EmploymentController extends Controller
      */
     public function index()
     {
-        //
+        return view('employment');
     }
 
     /**

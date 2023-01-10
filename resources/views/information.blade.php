@@ -86,7 +86,7 @@
             </div>
         </div>
 
-        {{--<h3>Datos de deudas</h3>
+        <h3>Datos de deudas</h3>
         <div id="div-debts" style="margin-bottom: 2rem;">
             <div class="third-line">
                 <div class="mini-box">
@@ -128,7 +128,7 @@
                 </div>
             </div>
             <hr>
-        </div>--}}
+        </div>
         <div class="fifth-line">
             <input type="button" value="Agregar otra deuda +" id="other_debts">
             <input type="submit" value="Enviar">

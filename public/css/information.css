@@ -19,7 +19,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     padding: 1rem;
 }
@@ -116,6 +116,8 @@ body{
 input[type=text], select{
     width: 20rem;
     height: 3rem;
+    background-color: white;
+    border-radius: 6px;
 }
 
 .third-line{
@@ -128,10 +130,10 @@ input[type=text], select{
     margin: 2rem 0 0 0;
     font-size: 16px;
     color: #334a64;
+    text-align: center;
 }
 
 .fourth-line{
-    margin: 2rem 0 0 0;
     margin-bottom: 2rem;
 }
 
@@ -197,6 +199,10 @@ input[type=email]{
     font-size: small;
 }
 
+.numero {
+    width: 28rem;
+}
+
 @media only screen and (min-width: 1024px) {
 
     .second-line{
@@ -204,16 +210,21 @@ input[type=email]{
     }
 
     .second-line .mini-box:nth-child(1) {
-        margin: 0 5rem 0 0;
+        margin: 0 10.5rem 0 0;
     }
 
     input[type=email]{
         padding: .5rem;
-        width: 32rem;
+        width: 28.5rem;
     }
 
     .tasa-big-box{
         padding: 1rem;
+    }
+
+    .fourth-line {
+        margin: 2rem 0 0 0;
+        margin-bottom: 2rem;
     }
 }
 
@@ -295,5 +306,13 @@ input[type=email]{
 
     .fifth-line {
         flex-direction: column;
+    }
+
+    .third-line {
+        flex-direction: column;
+    }
+
+    .fourth-line {
+        margin-bottom: 2rem;
     }
 }

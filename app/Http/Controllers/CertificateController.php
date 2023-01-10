@@ -15,7 +15,7 @@ class CertificateController extends Controller
      */
     public function index()
     {
-        //
+        return view('certificate');
     }
 
     /**
