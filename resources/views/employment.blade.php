@@ -160,7 +160,7 @@
             Contenido 1
     </section>
     <div class="content2">
-        Contenido 2
+        @extends('vista-casa')
     </div>
 
     <script>
