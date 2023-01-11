@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEmploymentRequest;
 use App\Http\Requests\UpdateEmploymentRequest;
-use App\Models\Employment;
 
 class EmploymentController extends Controller
 {

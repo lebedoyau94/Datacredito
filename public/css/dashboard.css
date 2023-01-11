@@ -1132,3 +1132,477 @@ input[type=submit]{
     a:hover{
         color: #909393;
     }
+
+    /*CSS history*/
+
+    .history-box{
+        display: flex;
+        width: 100%;
+        margin: 10px 5px;
+        padding: 5px;
+        justify-content: center;
+    }
+
+    .historias-box{
+        display: grid;
+        grid-template-columns: repeat(4,minmax(100px, 300px));
+        width: 85%;
+    }
+
+    .history-info-box{
+        display: flex;
+        font-size: 12px;
+        margin: 1rem 0;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mini-history-box{
+        margin: 0 0.5rem;
+        border: 1px solid grey;
+        height: 180px;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: repeat(4,minmax(100px, 300px));
+        width: 90%;
+    }
+
+    .history-information{
+        font-size: 12px;
+        margin: 1rem 0;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prestamo-boxs{
+    display: flex;
+    align-items: center;
+    background-color: #3c4b62;
+    width: 50%;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin: 1rem 8px 0;
+    height: 30px;
+    font-size: 16px;
+}
+
+    .acuerdo-box{
+    display: flex;
+    align-items: center;
+    background-color: #800080;
+    width: 50%;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin: 1rem 5px 0;
+    height: 30px;
+    font-size: 16px;
+}
+
+    .boxes{
+        background-color: transparent;
+        cursor: none;
+        color: #323f53;
+        border: none;
+        font-size: 30px;
+        display: flex;
+        width: 40%;
+    }
+
+    .grid-tres{
+        display: grid;
+        grid-template-columns: repeat(3,minmax(50px, 150px));
+        width: 40%;
+    }
+
+    .histories{
+        justify-content: space-around;
+        text-align: center;
+        height: 50px;
+        color: #46556a;
+        font-size: 12px;
+        align-items: center;
+        margin-top: 10px
+    }
+
+    .osc{
+        font-weight: bold;
+    }
+
+    .maxi-history-box{
+        margin: 0 0.5rem;
+        border: 1px solid grey;
+        height: 180px;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: repeat(5,minmax(100px, 200px));
+        width: 90%;
+    }
+
+    .estate-box{
+    display: flex;
+    align-items: center;
+    background-color: #48e120;
+    width: 70%;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin: 1rem 5px 0;
+    height: 30px;
+    font-size: 16px;
+}
+
+.recomendate-box{
+    display: flex;
+    align-items: center;
+    background-color: #f6a700;
+    width: 70%;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin: 1rem 5px 0;
+    height: 30px;
+    font-size: 16px;
+}
+
+.boxess{
+        background-color: transparent;
+        cursor: none;
+        color: #323f53;
+        border: none;
+        font-size: 30px;
+        display: flex;
+        width: 80%;
+    }
+
+    .history-informations{
+        display: flex;
+        font-size: 12px;
+        margin: 1rem 0;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .acuerdos-box{
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        width: 70%;
+        justify-content: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        color: #3c4b62;
+        margin: 1rem 5px 0;
+        height: 30px;
+        font-size: 16px;
+        border: 1px solid #3c4b62;
+    }
+
+    .vehicle-box{
+    display: flex;
+    align-items: center;
+    background-color: #3c4b62;
+    width: 20%;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin: 1rem 5px 0;
+    height: 30px;
+    font-size: 16px;
+}
+
+.m-box{
+    display: flex;
+}
+
+.mo-boxes{
+    background: transparent;
+    border: 1px solid #3c4b62;
+    margin: 10px 5px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #3c4b62;
+    font-size: 10px;
+}
+
+.m-boxes{
+    border: 1px solid #800080;
+    background: #800080;
+    margin: 10px 5px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #f7f6f9;
+    font-size: 10px;
+}
+
+.mo-boxes, .m-boxes h5{
+    font-size: 15px;
+}
+
+.mo-boxes, .m-boxes p{
+    font-size: 10px;
+}
+
+.center{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3c4b62;
+    margin-top: 35px;
+}
+
+.dot-container{
+    background: linear-gradient(90deg, rgba(179,175,240,1) 0%, rgba(232,136,219,1) 100%);
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+}
+
+.dot-his{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(50px, 150px));
+}
+
+.grid-box-dos{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+    }
+
+    .perfil-box-dos{
+        width: 400px;
+        display: flex;
+    }
+
+    .text-perfil-dos{
+        margin-left: 1rem;
+    }
+
+    .text-perfil-dos p{
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .text-perfil-dos h5{
+        font-size: 15px;
+    }
+
+    .button-m{
+        border: 1px solid #3c4b62;
+        font-size: 10px;
+        text-decoration: none;
+        padding: 5px;
+        color: #3c4b62;
+    }
+
+    .button-md{
+        border: 1px solid #3c4b62;
+        font-size: 10px;
+        text-decoration: none;
+        padding: 5px;
+        color: #3c4b62;
+        margin-left: 57px;
+    }
+
+    .perfil-box-box{
+        margin: 10px 10px 10px 10px;
+        align-items: start;
+        width: 400px;
+        display: flex;
+        margin-top: 30px;
+    }
+
+    .perfil-box-box-box{
+        text-decoration: none;
+    }
+
+
+@media only screen and (max-width: 760px){
+    .grid-dos{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(50px, 150px));
+        width: 100%;
+    }
+
+    .historias-box {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(50px, 80px));
+    width: 100%;
+    }
+    
+    .mini-history-box {
+    grid-template-columns: repeat(4,minmax(50px, 80px));
+    width: 100%;
+    }
+
+    .grid-tres {
+    grid-template-columns: repeat(3,minmax(100px, 150px));
+}
+
+    .vida, .historias-box, .mini-history-box, .maxi-history-box, .boxes, .boxess, .vehicle-box, .grid-box-dos, .perfil-box-dos{
+        display: none;
+    }
+
+    .history-info-box{
+    flex-direction: column;
+    text-align: center;
+}
+
+    .history-info-box h5{
+    font-size: 15px;
+}
+
+    .grid-tres {
+    width: 100%;
+    }
+
+    .prestamo-boxs{
+        height: 40px;
+    }
+
+    .acuerdo-box{
+        height: 25px;
+        width: 40%;
+    }
+
+    .boxesss{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boxessss{
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .estate-box{
+        width: 50%;
+    }
+
+    .recomendate-box{
+        width: 50%;
+    }
+
+    .dot-container2{
+    border: 1px solid gray;
+    background: transparent;
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+    }
+
+    .grid-dos2{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(150px, 200px));
+    width: 100%;
+}
+
+.prestamo-boxs2{
+    display: flex;
+    align-items: center;
+    background-color: #3c4b62;
+    width: 50%;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin: 1rem 8px 0;
+    height: 30px;
+    font-size: 16px;
+}
+
+.acuerdo-box2{
+    display: flex;
+    align-items: center;
+    background-color: #800080;
+    width: 50%;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin: 1rem 5px 0;
+    height: 30px;
+    font-size: 16px;
+}
+
+.perfil-box-dos{
+    margin-top: 40px;
+    width: 400px;
+    display: flex;
+}
+
+.text-perfil-tres{
+    margin-left: 2rem;
+    font-size: 14px;
+    color: #3c4b62;
+}
+
+.text-perfil-tres p{
+    font-weight: bold;
+    margin-top: 15px;
+}
+}
+
+@media only screen and (min-width: 800px){
+    .history-box{
+        height: 50%;
+    }
+
+    .m-box, .center, .dot-container, .boxessss, .dot-his, .dot-container2, .prestamo-boxs2, .acuerdo-box2, .text-perfil-tres{
+        display: none;
+    }
+
+    .perfil-box-dos{
+        margin: 10px 10px 10px -50px;
+        align-items: start;
+        width: 400px;
+        display: flex;
+    }
+
+    .perfil-box-box{
+        visibility: hidden;
+        margin-bottom: -150px;
+    }
+
+}
+
+    #Capa_4{
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #Capa_5{
+        width: 120px;
+        height: 60px;
+    }
+
+    #Capa_6{
+        height: 100px;
+        width: 200px;
+    }
+
+    .salir{
+        font-size: 15px;
+        text-decoration: none;
+        border: 1px solid white;
+        color: white;
+        text-align: center;
+        padding: 5px;
+        margin-top: 10px;
+    }

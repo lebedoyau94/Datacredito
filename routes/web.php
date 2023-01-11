@@ -58,7 +58,7 @@ Route::post('/financial', [App\Http\Controllers\FinancialController::class, 'fin
 Auth::routes();
 
 Route::resource('dashboard', HomeController::class)->parameter("dashboard","id");
-Route::resource('information', InfoUserController::class)->parameter("information","id");
+Route::resource('info', InfoUserController::class)->parameter("info","id");
 Route::resource('history', HistoryController::class)->parameter("history","id");
 Route::resource('certificate', CertificateController::class)->parameter("certificate","id");
 Route::resource('employment', EmploymentController::class)->parameter("employment","id");

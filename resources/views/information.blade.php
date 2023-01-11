@@ -39,7 +39,7 @@
 <section class="form-box">
     <h2>Formulario de negociaci&oacute;n de cartera</h2>
 
-    <form action="{{route('information.store')}}" method="POST">
+    <form action="{{route('info.store')}}" method="POST">
         @csrf
         <div class="first-line">
             <div class="mini-box nombreApellido">

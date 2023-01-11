@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreFinancialRequest;
 use App\Http\Requests\UpdateFinancialRequest;
-use App\Models\Financial;
 
 class FinancialController extends Controller
 {
