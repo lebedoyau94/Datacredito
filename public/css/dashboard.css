@@ -41,6 +41,7 @@ h1{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow-x: hidden;
+    padding-bottom: 20px;
 }
 
 .first-boxes{

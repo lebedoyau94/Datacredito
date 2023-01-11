@@ -206,7 +206,7 @@ text-align: center;
     width: 40%;
     background: rgb(216,191,216);
     background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
-    height: 285.5vh;
+    height: 100%;
 }
 
 .bigger{
