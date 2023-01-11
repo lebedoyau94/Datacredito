@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreInfoUserRequest;
 use App\Http\Requests\UpdateInfoUserRequest;
 use App\Models\InfoUser;
+use App\Models\User;
 use App\Services\InfoUserService;
 
 /**
@@ -40,7 +41,14 @@ class InfoUserController extends Controller
      */
     public function create()
     {
-        //
+        return view("information",[
+            "name"      => \old("name"),
+            "surnames"  => \old("surnames"),
+            "phone"     => \old("phone"),
+            "email"     => \old("email"),
+            "type"      => \old("id_type"),
+            "number"    => \old("id_number"),
+        ]);
     }
 
     /**
@@ -84,7 +92,14 @@ class InfoUserController extends Controller
      */
     public function edit(InfoUser $infoUserController)
     {
-        //
+        return view("info", [
+            "name"      => \old("name"),
+            "surnames"  => \old("surnames"),
+            "phone"     => \old("phone"),
+            "email"     => \old("email"),
+            "type"      => \old("id_type"),
+            "number"    => \old("id_number"),
+        ]);
     }
 
     /**
