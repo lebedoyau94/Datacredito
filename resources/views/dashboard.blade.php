@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Crédito</title>
+
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <script src="https://kit.fontawesome.com/2e3d4c9f14.js" crossorigin="anonymous"></script>
 </head>
@@ -30,8 +31,12 @@
         <nav>
             <div class="menu-text">
                 <p>¡Hola!</p>
+                
+                @if(auth()->user())
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p>{{Auth::user()->email}}</p>
+                @endif
+                
                 <form class= "logout" action="{{route('logout')}}" method="POST">
                     @csrf
                     <input type="submit" value="Cerrar sesión">
@@ -108,8 +113,10 @@
             <div class="menu-text">
                 <h5>Men&uacute;</h5>
                 <p>¡Hola!</p>
+                @if(auth()->user())
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p><small>{{Auth::user()->email}}</small></p>
+                @endif
                 <form class= "logout" action="{{route('logout')}}" method="POST">
                     @csrf
                     <input type="submit" value="Cerrar sesión">
