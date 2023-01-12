@@ -36,8 +36,11 @@
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p>{{Auth::user()->email}}</p>
                 @endif
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <input type="submit" class="salir" value="Cerrar sesión">
+                </form>
                 
-                <a class="salir" href="logout">Cerrar sesión</a>
             </div>
             <ul>
                 <h5>Men&uacute;</h5>
@@ -114,7 +117,10 @@
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p><small>{{Auth::user()->email}}</small></p>
                 @endif
-                <a class="salir" href="logout">Cerrar sesión</a>
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <input type="submit" class="salir" value="Cerrar sesión">
+                </form>
             </div>
             <ul>
                 <h5>Men&uacute;</h5>
