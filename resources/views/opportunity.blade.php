@@ -28,7 +28,7 @@
         <span>Recomendado</span>
     </div>
     <button class="btn-link">
-        <a  href="{{route('information.index')}}">
+        <a  href="{{route('info.create')}}">
             Solicitar compra de cartera
         </a>
     </button>
