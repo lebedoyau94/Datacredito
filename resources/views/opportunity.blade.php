@@ -33,7 +33,7 @@
         </a>
     </button>
     <button class="btn-link">
-        <a  href="#">
+        <a  href="{{route('main.index')}}">
             Continuar a página principal
         </a>
     </button>

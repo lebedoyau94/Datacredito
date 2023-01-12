@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     <style>
 
-        input[type=submit]{
+        .submit{
             margin: 1rem 0;
         }
 
@@ -106,7 +106,7 @@
                 @error('motive')
                 <div class="is-invalid">{{ $message }}</div>
                 @enderror
-                <input type="submit" value="Continuar">
+                <input type="submit" class="submit" value="Continuar">
             </section>
             <section class="checkBox-container">
                 <input type="checkbox" type="checkbox" name="tyc">

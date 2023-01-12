@@ -20,7 +20,7 @@
                     margin-right: 10px;
                 }
 
-                input[type=submit]{
+                .submit{
                     margin: 1rem 10px;
                 }
 
@@ -79,11 +79,11 @@
         @enderror
     </section>
     <section class="btn-container">
-        <input type="submit" value="Continuar">
+        <input type="submit" class="submit" value="Continuar">
     </form>
     <form action="{{route('login')}}" method="POST">
         @csrf
-        <input type="submit" value="Omitir">
+        <input type="submit" class="submit" value="Omitir">
     </form>
     </section>
     </section>

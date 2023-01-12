@@ -54,7 +54,7 @@
                     text-align: center;
                 }
         
-                input[type=submit]{
+                .submit{
                     margin: 5px 0;
                 }
         
@@ -100,7 +100,7 @@
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
             </div>
-            <input type="submit" value="Ingresar">
+            <input type="submit" class="submit" value="Ingresar">
         </section>
 
         <section class="phone-box">
@@ -115,7 +115,7 @@
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
             </div>
-            <input type="submit" value="Ingresar">
+            <input type="submit" class="submit" value="Ingresar">
         </section>
     </form>
 

@@ -20,7 +20,7 @@
                     margin-right: 10px;
                 }
 
-                input[type=submit]{
+                .submit{
                     margin: 1rem 0;
                 }
 
@@ -66,7 +66,7 @@
             @enderror
         </section>
         <section class="btn-container">
-            <input type="submit" value="Continuar">
+            <input type="submit" class="submit" value="Continuar">
         </section>
     </section>
 </form>

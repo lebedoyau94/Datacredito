@@ -32,7 +32,10 @@
                 <p>¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p>{{Auth::user()->email}}</p>
-                <a class="salir" href="logout">Cerrar sesión</a>
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <input type="submit" class="salir" value="Cerrar sesión">
+                </form>
             </div>
             <ul>
                 <h5>Men&uacute;</h5>
@@ -107,7 +110,10 @@
                 <p>¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p><small>{{Auth::user()->email}}</small></p>
-                <a class="salir" href="logout">Cerrar sesión</a>
+                <form action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <input type="submit" class="salir" value="Cerrar sesión">
+                </form>
             </div>
             <ul>
                 <h5>Men&uacute;</h5>

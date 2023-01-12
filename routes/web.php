@@ -7,6 +7,7 @@ use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\EmploymentController;
 use App\Http\Controllers\FinancialController;
+use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -63,3 +64,4 @@ Route::resource('history', HistoryController::class)->parameter("history","id");
 Route::resource('certificate', CertificateController::class)->parameter("certificate","id");
 Route::resource('employment', EmploymentController::class)->parameter("employment","id");
 Route::resource('financial', FinancialController::class)->parameter("financial","id");
+Route::resource('main', MainController::class)->parameter("main", "id");
