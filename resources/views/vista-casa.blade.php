@@ -49,7 +49,7 @@
                 </div>
                 <div class="mini-box parragraph-spacing">
                     <p>Conoce m&aacute;s</p>
-                    <input type="submit" value="Lo Quiero">
+                    <input type="submit" class="submit" value="Lo Quiero">
                 </div>
             </div>
         </section>
@@ -73,7 +73,7 @@
                     <p>Tasa preferencial</p>
                 </div>
                 <div class="mini-box2">
-                    <input type="submit" value="Lo Quiero">
+                    <input type="submit" class="submit" value="Lo Quiero">
                 </div>
             </div>
         </section>

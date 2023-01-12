@@ -1089,7 +1089,7 @@ nav ul li a{
     }
 }
 
-input[type=submit]{
+.submit{
         height: 35px;
         border-radius: 15px;
         border: none;
@@ -1605,4 +1605,7 @@ input[type=submit]{
         text-align: center;
         padding: 5px;
         margin-top: 10px;
+        background-color: transparent;
+        cursor: pointer;
+        width: 100%;
     }
