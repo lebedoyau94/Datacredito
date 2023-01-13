@@ -212,7 +212,7 @@ h1{
     width: 50%;
     font-size: 12px;
     background-color: #f7992a;
-    height: 25px;
+    height: 30px;
     margin: 5px 5px 0 0;
     display: flex;
     align-items: center;
@@ -220,6 +220,7 @@ h1{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color: #414d60;
+    align-self: end;
 }
 
 .acuerdo-box{
@@ -1012,6 +1013,7 @@ nav ul li a{
         border-top-right-radius: 5px;
         height: 30px;
         margin-top: 1rem;
+        font-size: 13px;
     }
 
     .prestamo-box {

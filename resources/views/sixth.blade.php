@@ -6,6 +6,8 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
             <title>Recibo | Crédito</title>
+            <!-- icon -->
+    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
             <style>
         
                 .text-container{

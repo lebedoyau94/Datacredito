@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Crédito</title>
-
+    <title>Menú | Créditos</title>
+    <!-- icon -->
+    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <script src="https://kit.fontawesome.com/2e3d4c9f14.js" crossorigin="anonymous"></script>
 </head>

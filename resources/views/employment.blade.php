@@ -4,9 +4,216 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación financiera</title>
+    <title>Empleo | Crédito</title>
+    <!-- icon -->
+    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <script src="https://kit.fontawesome.com/2e3d4c9f14.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bodyy{
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow-x: hidden;
+            flex-direction: column;
+            padding: 0 2rem 2rem;
+            color: #324963;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .container{
+            background-color: rgb(255, 255, 255);
+            width: 60%;
+            height: auto;
+            padding: 0 2rem 2rem;
+            color: #324963;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .first-p {
+            width: 100%;
+            margin: 1rem 0 2rem 0;
+        }
+
+        .first-p h3 {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .first-p p {
+            font-size: 18px;
+        }
+
+        .sec-p {
+            width: 50%;
+            font-size: 23px;
+        }
+
+        .input-container {
+            margin: 2rem 0 0 0;
+        }
+
+        .input-container select,
+        .sec-input-box select {
+            margin: 1rem 0 0 0;
+            height: 2.3rem;
+            width: 15rem;
+        }
+
+        .double-input-container {
+            display: flex;
+            margin: 1rem 0 0 0;
+            align-items: center;
+        }
+
+        .first-input-box input[type="text"],
+        .sec-input-box input[type="text"] {
+            margin: 1rem 0 0 0;
+            height: 2rem;
+            width: 20rem;
+        }
+
+        .sec-input-box {
+            margin-left: 1rem;
+        }
+
+        .adjuntar-box {
+            width: 100%;
+            margin: 1rem 0 0 0;
+            display: flex;
+        }
+
+        .adjuntar-box h2 {
+            font-size: 20px;
+        }
+
+        .archivo-box,
+        .recibo-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container h3 {
+            margin: 1rem 0 0 0;
+        }
+
+        .archivo-box {
+            margin: 0 0 0 1rem;
+        }
+
+        .recibo-box input[type="text"] {
+            padding: 10px;
+            background-color: transparent;
+            border: 2px solid #262650;
+            color: #262650;
+            width: 10rem;
+            text-align: center;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .gray {
+            color: grey;
+        }
+
+        .upper {
+            text-transform: uppercase;
+        }
+
+        .tiny {
+            font-size: 11px;
+        }
+
+        .checkBox-container {
+            text-align: center;
+            font-size: 16px;
+            margin: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .checkBox-container label {
+            margin-left: 1rem;
+        }
+
+        .btn-container {
+            display: flex;
+            margin: 2rem 0 0 0;
+            align-items: center;
+        }
+
+        .btn-container input[type=submit] {
+            text-align: center;
+            padding: 15px 1px;
+            background-color: #262650;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 8rem;
+        }
+
+        .modal {
+            position: absolute;
+            bottom: -50px;
+            width: 500px;
+            background-color: white;
+            font-size: 25px;
+            border: 1px solid #262650;
+        }
+
+        .exit-boxx{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            background-color: #262650;
+            color: white;
+        }
+
+        .exit-box span {
+            margin: 5px;
+            font-size: 25px;
+        }
+
+        .text-content {
+            padding-left: 2rem;
+            width: 80%;
+            margin: 1rem 0;
+        }
+
+        .logo-container {
+            margin-top: 1rem;
+            border: 1px solid #262650;
+            padding: 1rem;
+            width: 100px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        @media only screen and (min-width: 1024px){
+            .bodyy{
+                width: 55%;
+            }
+        }
+
+            @media only screen and (max-width: 800px){
+            .bodyy{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <section class="menu-section">
@@ -156,9 +363,88 @@
             </ul>
         </nav>
     </section>
-    <section class="content-section">
-            Contenido 1
+            <div class="bodyy">
+        <div class="first-p">
+            <h3>Empleo</h3>
+            <p>Queremos ayudarte a mejorar tus ingresos.</p>
+        </div>
+
+        <div class="sec-p">
+            <h3>Con&eacute;ctate con nuestra red de aliados</h3>
+            <p>Para brindarte las mejores opciones de empleo necesitamos</p>
+        </div>
+
+        <div class="input-container">
+            <p>¿Cu&aacute;l es tu nivel de escolaridad?</p>
+            <select name="" id="">
+                <option value=""></option>
+                <option value="option">option</option>
+                <option value="option">option</option>
+                <option value="option">option</option>
+            </select>
+        </div>
+
+        <div class="double-input-container">
+            <div class="first-input-box">
+                <p>Escribe tu profesi&oacute;n o actividad laboral reciente</p>
+                <input type="text" />
+            </div>
+
+            <div class="sec-input-box">
+                <p>Años de experiencia</p>
+                <select name="" id="">
+                    <option value=""></option>
+                    <option value="option">option</option>
+                    <option value="option">option</option>
+                    <option value="option">option</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>Adjunta tu hoja de vida en formato pdf o word</h3>
+
+        <div class="adjuntar-box">
+            <div class="recibo-box">
+                <input type="text" value="Adjuntar archivo" />
+                <span class="gray tiny">El formato no debe superar un peso de 3 mb</span>
+            </div>
+
+            <div class="archivo-box">
+                <p class="gray upper">Nombre archivo.</p>
+                <span>Eliminar</span>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <input type="submit" value="Enviar" id="openModal"/>
+            <div class="checkBox-container">
+                <input type="checkbox" id="" name="" value="" />
+                <label for="">Para continuar debes de aceptar t&eacute;rminos y
+                    condiciones</label>
+            </div>
+        </div>
     </section>
+
+    <div class="modal" id="modal">
+        <div class="exit-boxx">
+            <span id="close">X</span>
+        </div>
+
+        <div class="text-content">
+            <div class="text-box">
+                <p>¡Hola!</p>
+                <p>
+                    Ya hemos recibido tu hoja de vida, recibir&aacute;s noticias
+                    prontamente.
+                </p>
+            </div>
+
+            <div class="logo-container">
+                <p>Logo</p>
+            </div>
+        </div>
+    </div>
+            </div>
     <div class="content2">
         @extends('vista-casa')
     </div>
@@ -179,7 +465,19 @@
             }
         });
 
+        let closeBtn = document.getElementById('close');
+    let modal = document.getElementById('modal');
+    let openBtn = document.getElementById('openModal');
 
+    modal.style.display = 'none';
+
+    closeBtn.addEventListener('click', function(){
+        modal.style.display = 'none';
+    });
+
+    openBtn.addEventListener('click', function(){
+        modal.style.display = 'block';
+    });
     </script>
 </body>
 </html>
