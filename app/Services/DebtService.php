@@ -1,15 +1,15 @@
 <?php namespace App\Services;
 
-use App\Repositories\{InfoUserRepository};
-use Illuminate\Support\Facades\{Cache, DB, Hash};
-use Illuminate\Support\{Arr, Collection, Str};
+use App\Repositories\{DebtRepository};
+use Illuminate\Support\Facades\{Cache, DB};
+use Illuminate\Support\{Collection, Str};
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\{Response};
 
-class InfoUserService extends InfoUserRepository
+class DebtService extends DebtRepository
 {
     /**
-     * InfoUserService Construct
+     * DebtService Construct
      */
     public function __construct()
     {
@@ -24,7 +24,7 @@ class InfoUserService extends InfoUserRepository
     public function getIndexService(): ?Collection
     {
         try {
-
+        
             return $this->getRepository()
                 ->whereCompanyId(\company()->getKey())
                 ->when(\request("status"), function ($query){
@@ -49,37 +49,14 @@ class InfoUserService extends InfoUserRepository
     {
         DB::beginTransaction();
         try {
-            $payload = [
-                "type"     => \request("id_type"),
-                "number"   => \request("id_number"),
-            ];
-            $payloadUser = [
-                "name"      => \request("name"). " ".\request("surnames"),
-                'password'  => Hash::make(\request("phone")),
-            ];
-            $data = Arr::collapse([$payloadUser,\request()->except("id_type","id_number","name","surnames","_token")]);
-            $user     = ( new UserService())->create([
-                "email" => \request("email")
-            ],$data);
-
-            $this->create(["user_id" => $user->getKey()],$payload);
-
-            for ($i = 0; $i < count(\request("bank")); $i++){
-                $payload = [
-                    "user_id"           => $user->getKey(),
-                    "bank"              => \request("bank")[$i],
-                    "type_credit"       => \request("type_credit")[$i],
-                    "past_due"          => \request("past_due")[$i],
-                    "amount"            => \request("amount")[$i],
-                    "product_number"    => \request("product_number")[$i],
-                ];
-                (new DebtService())->getRepository()->create($payload);
-            }
-
+            $payload = [];
+            $response = $this->create([
+                "company_id" => \company()->getKey(),
+            ],$payload);
 
             DB::commit();
 
-            return $user;
+            return $response;
 
         } catch (\Throwable $e) {
             $error = $e->getMessage() . " " . $e->getLine() . " " . $e->getFile();

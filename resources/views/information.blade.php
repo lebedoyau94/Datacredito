@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro | Credito </title>
+    <title>Registro | {{config("app.name")}} </title>
     <!-- icon -->
     <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
     <!-- css -->
@@ -88,52 +89,53 @@
             </div>
         </div>
 
+        <div class="fifth-line">
+            <input type="button" value="Agregar otra deuda +" id="other_debts">
+            <input type="submit" value="Enviar">
+        </div>
+
         <h3>Datos de deudas</h3>
         <div id="div-debts" style="margin-bottom: 2rem;">
             <div class="third-line">
                 <div class="mini-box">
                     <label for="Banco">Banco</label>
-                    <select name="bank" id="">
-                        <option value="">Option</option>
-                        <option value="">Option</option>
-                        <option value="">Option</option>
-                        <option value="">Option</option>
+                    <select name="bank[]" id="">
+                        <option value="bank_first">Banco 1</option>
+                        <option value="bank_second">Banco 2</option>
+                        <option value="bank_third">Banco 3</option>
+                        <option value="bank_fourth">Banco 4</option>
                     </select>
                 </div>
                 <div class="mini-box">
                     <label for="Tipo-credito">Tipo de cr&eacute;dito</label>
-                    <select name="type_credit" id="">
-                        <option value="">Option</option>
-                        <option value="">Option</option>
-                        <option value="">Option</option>
-                        <option value="">Option</option>
+                    <select name="type_credit[]" id="">
+                        <option value="credit_one">Credito 1</option>
+                        <option value="credit_twoe">Credito 2</option>
+                        <option value="credit_three">Credito 3</option>
+                        <option value="credit_four">Credito 4</option>
                     </select>
                 </div>
                 <div class="mini-box">
                     <label for="Dias-mora">D&iacute;as de mora</label>
-                    <select name="past_due" id="">
-                        <option value="">Option</option>
-                        <option value="">Option</option>
-                        <option value="">Option</option>
-                        <option value="">Option</option>
+                    <select name="past_due[]" id="">
+                        <option value="60">60</option>
+                        <option value="100">100</option>
+                        <option value="150">150</option>
+                        <option value="200">200</option>
                     </select>
                 </div>
                 <div class="mini-box">
                     <label for="Id">Monto deuda</label>
-                    <input type="text" name="monto-deuda" id="">
+                    <input type="text" name="amount[]" id="">
                 </div>
             </div>
             <div class="fourth-line">
                 <div class="mini-box">
                     <label for="Id">Numero de producto</label>
-                    <input type="text" name="product_number" id="">
+                    <input type="text" name="product_number[]" id="">
                 </div>
             </div>
             <hr>
-        </div>
-        <div class="fifth-line">
-            <input type="button" value="Agregar otra deuda +" id="other_debts">
-            <input type="submit" value="Enviar">
         </div>
     </form>
 </section>
@@ -143,9 +145,7 @@
     document.getElementById('other_debts').onclick = duplicate;
     var i = 0;
     var original = document.getElementById('div-debts');
-
     function duplicate() {
-        alert("Agregando Modal")
         var clone = original.cloneNode(true);
         clone.id = "div-debts" + ++i;
         original.parentNode.appendChild(clone);
