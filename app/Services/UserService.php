@@ -1,7 +1,8 @@
 <?php namespace App\Services;
 
+use App\Models\User;
 use App\Repositories\{UserRepository};
-use Illuminate\Support\Facades\{Cache, DB};
+use Illuminate\Support\Facades\{Auth, Cache, DB};
 use Illuminate\Support\{Arr, Collection, Str};
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\{Response};
@@ -27,15 +28,12 @@ class UserService extends UserRepository
     public function getCodeService(): ?Model
     {
         try {
-            $payload = [
-                "email" => \request()->user()->email,
-                "phone" => \request()->user()->phone,
-                "code"  => \request("code"),
-            ];
-            if (!$user = $this->first($payload))
+
+            if (!$user = User::firstWhere(\request()->except("_token")))
                 throw new \Exception("El codigo ingresado no es correcto, favor de verificar",Response::HTTP_UNPROCESSABLE_ENTITY);
 
             $user->update(["email_verified_at" => \now()]);
+            Auth::guard()->login($user);
 
             return  $user;
 
@@ -102,6 +100,13 @@ class UserService extends UserRepository
 
             throw new \Exception($e->getMessage(),Response::HTTP_BAD_REQUEST);
         }
+    }
+
+    public function updateService(string $id, $data)
+    {
+
+        $user = $this->create(["id" => $id],$data);
+
     }
 
 }

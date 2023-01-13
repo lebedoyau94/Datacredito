@@ -8,7 +8,13 @@ use App\Http\Requests\IndexCreditRequest;
 use App\Http\Requests\QuestionsRequest;
 use App\Http\Requests\SeventhRequest;
 use App\Http\Requests\ValidateCodeRequest;
+use App\Mail\WelcomeCreditMail;
 use App\Services\UserService;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class CreditController extends Controller
 {
@@ -46,17 +52,54 @@ class CreditController extends Controller
      */
     public function tranquillity()
     {
-        return view('second',["phone" => \old("phone")]);
+        if ($user = $this->userService->first(["phone" => \old("phone")])){
+            $mail_segments    = explode("@", $user->email);
+            $mail_segments[0] = substr($user->email,0,3).str_repeat("*", strlen($mail_segments[0]));
+            $email = implode("@", $mail_segments);
+
+            return view('second',[
+                "phone" => \old("phone"),
+                "email" => $email
+            ]);
+        }
+
+        return view('index1');
 	}
 
 	public function redirectSecond(IndexCreditRequest $indexCreditRequest)
 	{
-        if ($this->userService->first(["phone" => \request("phone")]))
-            return view('second',["phone" => \request("phone")]);
+        if ($user = $this->userService->first(["phone" => \request("phone")])){
+            $mail_segments    = explode("@", $user->email);
+            $mail_segments[0] = substr($user->email,0,3).str_repeat("*", strlen($mail_segments[0]));
+            $email = implode("@", $mail_segments);
+
+            return view('second',[
+                "phone" => \request("phone"),
+                "email" => $email
+            ]);
+        }
 
         return view('opportunity');
     }
 
+    /**
+     * @return Application|Factory|View
+     * @throws \Exception
+     */
+    public function redirectThird()
+    {
+        $user = $this->userService->first(\request()->except("_token"));
+        if (!$user)
+            throw new \Exception("No concuerda el correo o celular ingresado, favor de verificar");
+
+        $user = $this->userService->create(["id" => $user->getKey()],["code" => Str::random(10)]);
+        Mail::to($user->email)->send(new WelcomeCreditMail($user));
+
+        return view('third',[
+            "phone" => $user->phone,
+            "email" => $user->email,
+        ]);
+    }
     /**
      * Show the application dashboard.
      *
@@ -64,7 +107,10 @@ class CreditController extends Controller
      */
     public function viewCode()
     {
-        return view('third');
+        return view('third',[
+            "email" => \old("email"),
+            "phone" => \old("phone")
+        ]);
     }
     /**
      * Show the application dashboard.
@@ -157,17 +203,5 @@ class CreditController extends Controller
     public function redirectSeventh(SeventhRequest $seventhRequest)
     {
         return view('seventh');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     * @throws \Exception
-     */
-    public function redirectDashboard(DashboardRequest $seventhRequest)
-    {
-        if($this->userService->updateCreditUserService())
-            return view('dashboard');
     }
 }

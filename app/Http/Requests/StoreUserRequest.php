@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ValidateCodeRequest extends FormRequest
+class StoreUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,18 +24,20 @@ class ValidateCodeRequest extends FormRequest
     public function rules()
     {
         return [
-            "code"  => "required|string",
-            "email" => "required",
-            "phone" => "required",
+            'name'      => ['nullable', 'string', 'max:255'],
+            'email'     => ['required', 'string', 'email', 'max:255'],
+            'phone'     => ['required', 'numeric'],
+            'password'  => ['nullable', 'string', 'min:8', 'confirmed'],
         ];
     }
 
     public function attributes()
     {
         return [
-            "code"  => "codigo",
-            "email" => "correo electronico",
-            "phone" => "celular",
+            'name'      => "nombre completo",
+            'email'     => "correo electronico",
+            'phone'     => "celular",
+            'password'  => "password",
         ];
     }
 }

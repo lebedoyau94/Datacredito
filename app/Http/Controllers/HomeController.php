@@ -5,17 +5,23 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreHomeRequest;
 use App\Http\Requests\UpdateHomeRequest;
 use App\Models\Home;
+use App\Services\UserService;
 
+/**
+ * @property UserService $userService
+ */
 class HomeController extends Controller
 {
-    public function __construct()
+
+    public function __construct(UserService $userService)
     {
+        $this->userService = $userService;
         $this->middleware("auth");
     }
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function index()
     {
@@ -35,12 +41,14 @@ class HomeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreHomeRequest  $request
-     * @return \Illuminate\Http\Response
+     * @param \App\Http\Requests\StoreHomeRequest $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     * @throws \Exception
      */
     public function store(StoreHomeRequest $request)
     {
-        //
+        if($this->userService->updateCreditUserService())
+            return view('dashboard');
     }
 
     /**

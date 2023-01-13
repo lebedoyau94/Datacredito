@@ -8,23 +8,23 @@
             <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
             <style>
-        
+
                 .second-sec{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     font-size: 15px;
                 }
-        
+
                 h2{
                     color:  #262650;
                 }
-        
+
                 .second-sec p{
                     margin: 0 25px;
                     text-align: center;
                 }
-        
+
                 .third-sec{
                     font-weight: bold;
                     margin: 1rem 20px;
@@ -32,7 +32,7 @@
                     font-size: 15px;
                     color: #262650;
                 }
-        
+
                 input[type=text]{
                     padding: 13px 70px;
                     height: 10px;
@@ -41,8 +41,8 @@
                     margin: 5px 0;
                     text-align: center;
                 }
-                
-        
+
+
                 .btn-box button{
                     margin-top: 1rem;
                     padding: 5px 10px;
@@ -73,6 +73,9 @@
 			@csrf
             <p>Hemos enviado un c&oacute;digo de acceso a tu email</p>
             <input type="text" placeholder="Ingresar código" name="code">
+            <input type="hidden"  name="email" value="{{$email}}">
+            <input type="hidden"  name="phone" value="{{$phone}}">
+
             @error('code')
                 <div class="is-invalid">{{ $message }}</div>
             @enderror

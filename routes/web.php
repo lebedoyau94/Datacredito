@@ -8,6 +8,7 @@ use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\EmploymentController;
 use App\Http\Controllers\FinancialController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,27 +39,18 @@ Route::get('/attachment', [App\Http\Controllers\CreditController::class, 'viewSi
 Route::get('/sixth', [App\Http\Controllers\CreditController::class, 'sixth'])->name('sixth');
 Route::get('/dreams', [App\Http\Controllers\CreditController::class, 'viewSeventh'])->name('view.seventh');
 
-/*Route::get('/history', [App\Http\Controllers\HistoryController::class, 'history'])->name('history');
-Route::get('/certificate', [App\Http\Controllers\CertificateController::class, 'certificate'])->name('certificate');
-Route::get('/employment', [App\Http\Controllers\EmploymentController::class, 'employment'])->name('employment');
-Route::get('/financial', [App\Http\Controllers\FinancialController::class, 'financial'])->name('financial');*/
-
 Route::post('/tranquillity', [App\Http\Controllers\CreditController::class, 'redirectSecond'])->name('redirect.second');
+Route::post('/code', [App\Http\Controllers\CreditController::class, 'redirectThird'])->name('redirect.third');
 Route::post('/validate', [App\Http\Controllers\CreditController::class, 'redirectQuarter'])->name('redirect.quarter');
 Route::post('/range', [App\Http\Controllers\CreditController::class, 'redirectFifth'])->name('redirect.fifth');
 Route::post('/attachment', [App\Http\Controllers\CreditController::class, 'redirectSixth'])->name('redirect.sixth');
 Route::post('/dreams', [App\Http\Controllers\CreditController::class, 'redirectSeventh'])->name('redirect.seventh');
-Route::post('/dashboard', [App\Http\Controllers\CreditController::class, 'redirectDashboard'])->name('redirect.dashboard');
-
-/*Route::post('/information', [App\Http\Controllers\InfoUserController::class, 'info'])->name('info');
-Route::post('/history', [App\Http\Controllers\HistoryController::class, 'history'])->name('history');
-Route::post('/certificate', [App\Http\Controllers\CertificateController::class, 'certificate'])->name('certificate');
-Route::post('/employment', [App\Http\Controllers\EmploymentController::class, 'employment'])->name('employment');
-Route::post('/financial', [App\Http\Controllers\FinancialController::class, 'financial'])->name('financial');*/
+//Route::post('/dashboard', [App\Http\Controllers\CreditController::class, 'redirectDashboard'])->name('redirect.dashboard');
 
 Auth::routes();
 
-Route::resource('dashboard', HomeController::class)->parameter("dashboard","id");
+Route::resource('user', UserController::class)->parameter("user","id");
+Route::resource('dashboard',HomeController::class)->parameter("dashboard","id");
 Route::resource('info', InfoUserController::class)->parameter("info","id");
 Route::resource('history', HistoryController::class)->parameter("history","id");
 Route::resource('certificate', CertificateController::class)->parameter("certificate","id");

@@ -41,7 +41,7 @@
     </style>
 </head>
 <body>
-<form action="{{route('redirect.dashboard')}}" method="POST">
+<form action="{{route('dashboard.store')}}" method="POST">
     @csrf
     <section class="text-container">
         <section class="logo-container">

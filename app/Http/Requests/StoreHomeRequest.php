@@ -13,7 +13,7 @@ class StoreHomeRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,13 @@ class StoreHomeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "dreams"       => "required|string",
+        ];
+    }
+    public function attributes()
+    {
+        return [
+            "dreams"  => "sueño",
         ];
     }
 }
