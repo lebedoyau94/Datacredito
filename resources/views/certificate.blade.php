@@ -4,9 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educación financiera</title>
+    <title>Certificados | Crédito</title>
+    <!-- icon -->
+    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <script src="https://kit.fontawesome.com/2e3d4c9f14.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            background-color: rgb(255, 255, 255);
+            width: 55%;
+            padding: 1rem 2rem 2rem;
+            color: #324963;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            overflow-x: hidden;
+        }
+
+        .first-form-container {
+            margin: 2rem 0 0 0;
+        }
+
+        .first-form-container h3 {
+            font-weight: lighter;
+        }
+
+        .select-container p {
+            margin: 1rem 0 0 0;
+        }
+
+        .select-container select,
+        .dirigido-input input[type=text] {
+            height: 2.3rem;
+            width: 15rem;
+        }
+
+
+        .checkbox-round {
+            width: 1.3em;
+            height: 1.3em;
+            background-color: white;
+            border-radius: 50%;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+            appearance: none;
+            -webkit-appearance: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .checkbox-round:checked {
+            background-color: blue;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sec-form-container {
+            width: 100%;
+        }
+
+        .sec-form-container .select-container select {
+            width: 20rem;
+        }
+
+        .third-form-container {
+            display: flex;
+            margin: 1rem 0 0 0;
+        }
+
+        .dirigido-input {
+            margin: 1rem 0 0 0;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type=submit] {
+            text-align: center;
+            padding: 10px 1px;
+            background-color: #262650;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+            width: 7rem;
+            margin: 1rem 0 0 0;
+        }
+
+        @media only screen and (max-width: 800px){
+            .content{
+                width: 100%;
+                height: 100%;
+            }
+
+            body {
+            display: flex;
+            flex-direction: column;
+            }
+
+            .third-form-container {
+            flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <section class="menu-section">
@@ -156,8 +271,85 @@
             </ul>
         </nav>
     </section>
-    <section class="content-section">
-            Contenido 1
+    <section class="content">
+        <div class="title-container">
+            <h3>Certificados</h3>
+            <p>Descarga paz y salvos, certificados al d&iacute;a</p>
+        </div>
+
+        <div class="first-form-container">
+            <h3>Seleccione los datos para generar la certificaci&oacute;n</h3>
+
+            <div class="flex-container">
+                <div class="select-container">
+                    <p>Tipo de certificado</p>
+                    <select name="" id="">
+                        <option value=""></option>
+                        <option value="option">option</option>
+                        <option value="option">option</option>
+                        <option value="option">option</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" class="checkbox-round" />
+                    <label for="">Con saldo</label>
+                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" class="checkbox-round" />
+                    <label for="">Sin saldo</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec-form-container">
+            <div class="select-container">
+                <p>Ciudad de emisi&oacute;n</p>
+                <select name="" id="">
+                    <option value=""></option>
+                    <option value="option">option</option>
+                    <option value="option">option</option>
+                    <option value="option">option</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="third-form-container">
+
+            <div class="select-container">
+                <label>Fecha desde</label>
+                <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2022-12-31">
+            </div>
+
+            <div class="select-container">
+                <label>Fecha hasta</label>
+                <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2022-12-31">
+            </div>
+
+            <div class="flex-column">
+                <div class="select-container flex-column">
+                    <label for="">Dirigo a</label>
+                    <select name="" id="">
+                        <option value=""></option>
+                        <option value="option">option</option>
+                        <option value="option">option</option>
+                        <option value="option">option</option>
+                    </select>
+                </div>
+
+                <div class="select-container dirigido-input">
+                    <label>¿A qui&eacute;n va dirigido?</label>
+                    <input type="text">
+                </div>
+
+                <div class="select-container">
+                    <input type="submit" value="Descargar">
+                </div>
+
+            </div>
+
+        </div>
     </section>
     <div class="content2">
         @extends('vista-casa')
@@ -178,8 +370,6 @@
                 isMenuOpen = false;
             }
         });
-
-
     </script>
 </body>
 </html>

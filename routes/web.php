@@ -9,6 +9,7 @@ use App\Http\Controllers\EmploymentController;
 use App\Http\Controllers\FinancialController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,3 +58,4 @@ Route::resource('certificate', CertificateController::class)->parameter("certifi
 Route::resource('employment', EmploymentController::class)->parameter("employment","id");
 Route::resource('financial', FinancialController::class)->parameter("financial","id");
 Route::resource('main', MainController::class)->parameter("main", "id");
+Route::resource('videos', VideoController::class)->parameter("video", "id");
