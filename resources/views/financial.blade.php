@@ -9,6 +9,15 @@
     <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <script src="https://kit.fontawesome.com/2e3d4c9f14.js" crossorigin="anonymous"></script>
+    <style>
+            @media only screen and (max-width: 800px){
+                body{
+                    display: flex !important;
+                    flex-direction: column !important;
+            }
+        }
+
+    </style>
 </head>
 <body>
     <section class="menu-section">

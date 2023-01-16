@@ -66,6 +66,16 @@
             text-align: justify;
         }
 
+        @media only screen and (max-width: 800px){
+                .container{
+                    width: 100%;
+            }
+
+                .video-box {
+                    flex-direction: column;
+}
+        }
+
     </style>
 </head>
 <body>

@@ -192,15 +192,6 @@
             margin: 1rem 0;
         }
 
-        .logo-container {
-            margin-top: 1rem;
-            border: 1px solid #262650;
-            padding: 1rem;
-            width: 100px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
         @media only screen and (min-width: 1024px){
             .bodyy{
                 width: 55%;

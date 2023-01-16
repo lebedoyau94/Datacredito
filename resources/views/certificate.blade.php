@@ -94,18 +94,6 @@
             flex-direction: column;
         }
 
-        input[type=submit] {
-            text-align: center;
-            padding: 10px 1px;
-            background-color: #262650;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            font-size: 14px;
-            width: 7rem;
-            margin: 1rem 0 0 0;
-        }
-
         @media only screen and (max-width: 800px){
             .content{
                 width: 100%;
