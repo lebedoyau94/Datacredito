@@ -94,6 +94,20 @@
             flex-direction: column;
         }
 
+        input[type="text"], select{
+            width: 20rem;
+            height: 3rem;
+            background-color: white;
+            border-radius: 6px;
+        }
+
+        input[type="date"]{
+            width: 8rem;
+            height: 2rem;
+            background-color: white;
+            border-radius: 6px;
+        }
+
         @media only screen and (max-width: 800px){
             .content{
                 width: 100%;
@@ -333,7 +347,7 @@
                 </div>
 
                 <div class="select-container">
-                    <input type="submit" value="Descargar">
+                    <input type="submit" value="Descargar" class="submit">
                 </div>
 
             </div>

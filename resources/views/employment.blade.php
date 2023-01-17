@@ -151,17 +151,6 @@
             align-items: center;
         }
 
-        .btn-container input[type=submit] {
-            text-align: center;
-            padding: 15px 1px;
-            background-color: #262650;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            font-size: 14px;
-            width: 8rem;
-        }
-
         .modal {
             position: absolute;
             bottom: -50px;
@@ -438,7 +427,7 @@
         </div>
 
         <div class="btn-container">
-            <input type="submit" value="Enviar" id="openModal"/>
+            <input type="submit" value="Enviar" id="openModal" class="submit"/>
             <div class="checkBox-container">
                 <input type="checkbox" id="" name="" value="" />
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y
