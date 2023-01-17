@@ -23,7 +23,7 @@
         .content {
             background-color: rgb(255, 255, 255);
             width: 55%;
-            padding: 1rem 2rem 2rem;
+            padding: 1px 15px;
             color: #324963;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -92,18 +92,6 @@
         .flex-column {
             display: flex;
             flex-direction: column;
-        }
-
-        input[type=submit] {
-            text-align: center;
-            padding: 10px 1px;
-            background-color: #262650;
-            border: none;
-            color: white;
-            border-radius: 5px;
-            font-size: 14px;
-            width: 7rem;
-            margin: 1rem 0 0 0;
         }
 
         @media only screen and (max-width: 800px){
@@ -272,10 +260,11 @@
         </nav>
     </section>
     <section class="content">
-        <div class="title-container">
-            <h3>Certificados</h3>
+        <div class="vida box">
+            <h5>Certificados</h5>
             <p>Descarga paz y salvos, certificados al d&iacute;a</p>
         </div>
+
 
         <div class="first-form-container">
             <h3>Seleccione los datos para generar la certificaci&oacute;n</h3>

@@ -22,7 +22,6 @@
             background-color: white;
             width: 60%;
             height: auto;
-            padding: 2rem;
             color:  #324963;
             height: 100%;
             display: flex;
@@ -66,13 +65,77 @@
             text-align: justify;
         }
 
+        .vida {
+            background-color: transparent;
+            cursor: none;
+            color: #323f53;
+            border: none;
+            font-size: 30px;
+        }
+
+        .box {
+            width: 50%;
+            margin: 10px 5px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        @media only screen and (max-width: 800px){
+                .container{
+                    width: 100%;
+                    padding-top: -2rem;
+            }
+
+                .video-box {
+                    flex-direction: column;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+            }
+
+                .vida {
+                    background-color: transparent;
+                    cursor: none;
+                    color: #323f53;
+                    border: none;
+                    font-size: 30px;
+            }
+        }
+
+        @media only screen and (min-width: 1024px){
+                .vida {
+                    font-size: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    align-self: start;
+        }
+
+        .box p{
+            text-align: start;
+            margin-left: 15px;
+        }
+
+        .container{
+            padding: 1px 15px;
+        }
+    }
+
     </style>
 </head>
 <body>
     <section class="container">
 
-        <div class="text-container">
-            <h2>Eduaci&oacute;n financiera</h2>
+        <div class="m-box">
+            <div  class="m-boxes">
+                <h5>Educación financiera</h5>
+                <p>Contenido especializado para mejorar tu perfil financiero</p>
+            </div>
+            <div class="mo-boxes">
+                <h5>Soluciones financieras</h5>
+                <p>Beneﬁcios, posibilidades de pago y crédito</p>
+            </div>
+        </div>
+        <div class="vida box">
+            <h5>Eduaci&oacute;n financiera</h5>
             <p>Contenido especializado para mejorar tu perfil financiero</p>
         </div>
 

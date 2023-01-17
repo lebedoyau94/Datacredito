@@ -17,7 +17,6 @@
 
         .bodyy{
             display: flex;
-            justify-content: center;
             background-color: white;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
@@ -54,7 +53,6 @@
         }
 
         .sec-p {
-            width: 50%;
             font-size: 23px;
         }
 
@@ -192,25 +190,38 @@
             margin: 1rem 0;
         }
 
-        .logo-container {
-            margin-top: 1rem;
-            border: 1px solid #262650;
-            padding: 1rem;
-            width: 100px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
         @media only screen and (min-width: 1024px){
             .bodyy{
                 width: 55%;
             }
+
+            .sec-p {
+            width: 50%;
+            font-size: 18px;
+        }
         }
 
             @media only screen and (max-width: 800px){
             .bodyy{
                 width: 100%;
                 height: 100%;
+                justify-content: center;
+            }
+
+            .double-input-container {               
+                align-items: start;
+                flex-direction: column;
+            }
+
+            .sec-input-box {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 0px;
+            }
+
+            .modal{
+                width: 70%;
+                height: 70%;
             }
         }
     </style>
@@ -364,8 +375,19 @@
         </nav>
     </section>
             <div class="bodyy">
-        <div class="first-p">
-            <h3>Empleo</h3>
+                <div class="m-box">
+                    <div  class="m-boxes">
+                        <h5>Empleo</h5>
+                        <p>Queremos ayudarte a mejorar tus ingresos</p>
+                    </div>
+                    <div class="mo-boxes">
+                        <h5>Soluciones financieras</h5>
+                        <p>Beneﬁcios, posibilidades de pago y crédito</p>
+                    </div>
+                </div>
+
+        <div class="vida box">
+            <h5>Empleo</h5>
             <p>Queremos ayudarte a mejorar tus ingresos.</p>
         </div>
 
