@@ -195,7 +195,7 @@
             <p>Actualizar y modificar datos</p>
         </div>
 
-        <div class="vida box">
+        <div class="vida box bold">
             <p>Historial de soluciones tomadas</p>
         </div>
 

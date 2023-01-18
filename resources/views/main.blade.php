@@ -14,6 +14,64 @@
         ul{
             height: 90px !important;
         }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8rem;
+            height: 9vh;
+            border: 1px solid white;
+        }
+
+        .menu-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 1rem;
+            height: 40px;
+            color: white;
+        }
+
+        .center-container{
+            margin-top: 50px;
+        }
+
+        .modals {
+            position: absolute;
+            right: 30px;
+            bottom: 100px;
+            width: 600px;
+            height: 760px;
+            margin: 1rem 0;
+            background-color: #ffffff;
+            border: 1px solid #324963;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 610px;
+        }
+
+        .deudas{
+            width: 90%;
+            height: 200px;
+            overflow-y: scroll;
+        }
+
+        .is-invalid {
+        color: red;
+        font-size: 9px;
+        }
+
+        input[type="text"] {
+        background-color: white;
+        border-radius: 6px;
+        text-align: center;
+        width: 6rem;
+        max-width: 6rem;
+        height: 1.1rem;
+    }
     </style>
 </head>
 <body class="bodys">
@@ -40,17 +98,11 @@
         <nav>
             <div class="menu-text">
                 <p>¡Hola!</p>
-                {{--<p class="bold">{{Auth::user()->name}}</p>
-                <p>{{Auth::user()->email}}</p>
-                <form action="{{route('logout')}}" method="POST">
-                    @csrf
-                    <input type="submit" class="salir" value="Cerrar sesión">
-                </form>--}}
             </div>
             <ul>
                 <h5>Men&uacute;</h5>
                 <li>
-                    <a href="{{route("dashboard.index")}}">
+                    <a href="{{route("main.index")}}">
                         <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.63 31.63"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M31.32,5.46h2.91a4,4,0,0,1,4.15,4.15c0,1.93,0,3.85,0,5.78a4.05,4.05,0,0,1-4.14,4.16H28.43a4,4,0,0,1-4.13-4.13c0-1.94,0-3.88,0-5.82a4.07,4.07,0,0,1,4.16-4.14Zm4.67,7c0-1,0-1.93,0-2.9a1.67,1.67,0,0,0-1.72-1.72H28.42a1.67,1.67,0,0,0-1.74,1.71c0,2,0,3.92,0,5.89a1.66,1.66,0,0,0,1.73,1.71q2.93,0,5.85,0A1.65,1.65,0,0,0,36,15.42C36,14.44,36,13.46,36,12.47Z" transform="translate(-6.75 -5.46)"/><path class="cls-1" d="M38.38,30.06v2.87a4,4,0,0,1-4.14,4.16H28.43A4,4,0,0,1,24.3,33c0-2,0-3.93,0-5.89A4,4,0,0,1,28.38,23c2,0,3.95,0,5.93,0a4,4,0,0,1,4.07,4.11C38.39,28.1,38.38,29.08,38.38,30.06Zm-7,4.64h2.91A1.66,1.66,0,0,0,36,33q0-2.92,0-5.85a1.66,1.66,0,0,0-1.7-1.74c-2,0-3.93,0-5.89,0a1.67,1.67,0,0,0-1.72,1.72c0,1.95,0,3.91,0,5.86a1.67,1.67,0,0,0,1.74,1.73Z" transform="translate(-6.75 -5.46)"/><path class="cls-1" d="M13.8,37.09H10.93a4,4,0,0,1-4.17-4.16c0-1.92,0-3.85,0-5.78A4,4,0,0,1,10.9,23c1.93,0,3.85,0,5.78,0a4.06,4.06,0,0,1,4.16,4.18c0,1.91,0,3.83,0,5.74a4.05,4.05,0,0,1-4.17,4.17Zm0-2.39h2.95A1.65,1.65,0,0,0,18.45,33c0-2,0-4,0-5.93a1.64,1.64,0,0,0-1.7-1.7c-2,0-3.93,0-5.89,0a1.67,1.67,0,0,0-1.72,1.72V33a1.66,1.66,0,0,0,1.74,1.73Z" transform="translate(-6.75 -5.46)"/><path class="cls-1" d="M13.81,5.46h2.87a4.06,4.06,0,0,1,4.16,4.15c0,1.93,0,3.87,0,5.81a4.06,4.06,0,0,1-4.14,4.13H10.89a4,4,0,0,1-4.13-4.17c0-1.92,0-3.85,0-5.77a4,4,0,0,1,4.15-4.15Zm-4.67,7v2.95a1.66,1.66,0,0,0,1.69,1.71c2,0,3.95,0,5.93,0a1.64,1.64,0,0,0,1.69-1.7c0-2,0-3.93,0-5.89a1.65,1.65,0,0,0-1.72-1.72H10.88A1.66,1.66,0,0,0,9.14,9.59Z" transform="translate(-6.75 -5.46)"/></svg>
                         Life Board
                     </a>
@@ -63,12 +115,6 @@
             <div class="menu-text">
                 <h5>Men&uacute;</h5>
                 <p>¡Hola!</p>
-                {{--<p class="bold">{{Auth::user()->name}}</p>
-                <p><small>{{Auth::user()->email}}</small></p>
-                <form action="{{route('logout')}}" method="POST">
-                    @csrf
-                    <input type="submit" class="salir" value="Cerrar sesión">
-                </form>--}}
             </div>
             <ul>
                 <h5>Men&uacute;</h5>
@@ -243,7 +289,7 @@
             </section>
         </section>
 
-        <div class="modal" id="modal">
+        <div class="modals" id="modal">
             <div class="exit">
                 <span id="close">X</span>
             </div>
@@ -251,96 +297,115 @@
             <section class="form-box">
                 <h2>Formulario de negociaci&oacute;n de cartera</h2>
 
-                <form action="">
+                <form action="{{route('info.store')}}" method="POST">
+                    @csrf
 
                     <div class="first-line">
                         <div class="mini-box">
                             <label for="Nombres">Nombres</label>
-                            <input type="text" name="Nombres" id="">
+                            <input type="text" name="name" id="">
+                            @error('name')
+                                <div class="is-invalid">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mini-box">
                             <label for="Apellidos">Apellidos</label>
-                            <input type="text" name="Apellidos" id="">
+                            <input type="text" name="surnames" id="">
+                            @error('surnames')
+                                <div class="is-invalid">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mini-box">
                             <label for="Id">Tipo de ID</label>
-                            <input type="text" name="Tipo-Id" id="">
+                            <input type="text" name="id_type" id="">
+                            @error('id_type')
+                                <div class="is-invalid">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mini-box">
                             <label for="Id">N&uacute;mero de ID</label>
-                            <input type="text" name="Numero-Id" id="">
+                            <input type="text" name="id_number" id="">
+                            @error('id_number')
+                                <div class="is-invalid">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="second-line">
                         <div class="mini-box">
                             <label for="">N&uacute;mero de tel&eacute;fono</label>
-                            <input type="text" name="Numero-telefono" id="">
+                            <input type="text" name="phone" id="">
+                            @error('phone')
+                                <div class="is-invalid">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="mini-box">
                             <label for="">Email</label>
-                            <input type="text" name="Email" id="">
-                        </div>
-                    </div>
-
-                    <h3>Datos de deudas</h3>
-
-                    <div class="third-line">
-                        <div class="mini-box">
-                            <label for="Banco">Banco</label>
-                            <select name="" id="">
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                            </select>
-                        </div>
-                        <div class="mini-box">
-                            <label for="Tipo-credito">Tipo de cr&eacute;dito</label>
-                            <select name="" id="">
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                            </select>
-                        </div>
-                        <div class="mini-box">
-                            <label for="Dias-mora">D&iacute;as de mora</label>
-                            <select name="" id="">
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                                <option value="">Option</option>
-                            </select>
-                        </div>
-                        <div class="mini-box">
-                            <label for="Id">Monto deuda</label>
-                            <input type="text" name="monto-deuda" id="">
-                        </div>
-                    </div>
-
-                    <div class="fourth-line">
-                        <div class="mini-box">
-                            <label for="Id">Numero de producto</label>
-                            <input type="text" name="monto-deuda" id="">
+                            <input type="text" name="email" id="">
+                            @error('email')
+                                <div class="is-invalid">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="fifth-line">
-                        <input type="button" value="Agregar otra deuda +">
+                        <input type="button" value="Agregar otra deuda +" id="other_debts">
                         <input type="submit" value="Enviar">
                     </div>
 
-                    <div class="logo-box">
-                        <div class="logo-container">
-                            <p>Logo</p>
+                    <h3>Datos de deudas</h3>
+
+        <div class="deudas">
+            <div id="div-debts" style="margin-bottom: 1rem;">
+                <div class="third-line">
+                        <div class="mini-box">
+                            <label for="Banco">Banco</label>
+                            <select name="bank[]" id="">
+                                <option value="bank_first">Banco 1</option>
+                                <option value="bank_second">Banco 2</option>
+                                <option value="bank_third">Banco 3</option>
+                                <option value="bank_fourth">Banco 4</option>
+                            </select>
+                        </div>
+                        <div class="mini-box">
+                            <label for="Tipo-credito">Tipo de cr&eacute;dito</label>
+                            <select name="type_credit[]" id="">
+                                <option value="credit_one">Credito 1</option>
+                                <option value="credit_twoe">Credito 2</option>
+                                <option value="credit_three">Credito 3</option>
+                                <option value="credit_four">Credito 4</option>
+                            </select>
+                        </div>
+                        <div class="mini-box">
+                            <label for="Dias-mora">D&iacute;as de mora</label>
+                            <select name="past_due[]" id="">
+                                <option value="60">60</option>
+                                <option value="100">100</option>
+                                <option value="150">150</option>
+                                <option value="200">200</option>
+                            </select>
+                        </div>
+                        <div class="mini-box">
+                            <label for="Id">Monto deuda</label>
+                            <input type="text" name="amount[]" id="">
                         </div>
                     </div>
+                    <div class="fourth-line">
+                        <div class="mini-box">
+                            <label for="Id">Numero de producto</label>
+                            <input type="text" name="product_number[]" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
                 </form>
-
+                <div class="logo-box">
+                    <div class="logo-container">
+                        <p>Logo</p>
+                    </div>
             </section>
-
         </div>
+    </div>
     </section>
     @extends('right-side')
 
@@ -368,13 +433,20 @@
 
         closeBtn.addEventListener('click', function(){
             modal.style.display = 'none';
-        })
+        });
 
         openBtn.addEventListener('click', function(){
             modal.style.display = 'block';
-        })
+        });
 
-
+        document.getElementById('other_debts').onclick = duplicate;
+        var i = 0;
+        var original = document.getElementById('div-debts');
+        function duplicate() {
+        var clone = original.cloneNode(true);
+        clone.id = "div-debts" + ++i;
+        original.parentNode.appendChild(clone);
+    }
     </script>
 </body>
 </html>
