@@ -52,6 +52,26 @@
             align-items: center;
             max-width: 610px;
         }
+
+        .deudas{
+            width: 90%;
+            height: 200px;
+            overflow-y: scroll;
+        }
+
+        .is-invalid {
+        color: red;
+        font-size: 9px;
+        }
+
+        input[type="text"] {
+        background-color: white;
+        border-radius: 6px;
+        text-align: center;
+        width: 6rem;
+        max-width: 6rem;
+        height: 1.1rem;
+    }
     </style>
 </head>
 <body class="bodys">
@@ -328,10 +348,16 @@
                         </div>
                     </div>
 
+                    <div class="fifth-line">
+                        <input type="button" value="Agregar otra deuda +" id="other_debts">
+                        <input type="submit" value="Enviar">
+                    </div>
+
                     <h3>Datos de deudas</h3>
 
+        <div class="deudas">
+            <div id="div-debts" style="margin-bottom: 1rem;">
                 <div class="third-line">
-                    <div id="div-debts" style="margin-bottom: 2rem;">
                         <div class="mini-box">
                             <label for="Banco">Banco</label>
                             <select name="bank[]" id="">
@@ -363,31 +389,23 @@
                             <label for="Id">Monto deuda</label>
                             <input type="text" name="amount[]" id="">
                         </div>
-
+                    </div>
                     <div class="fourth-line">
                         <div class="mini-box">
                             <label for="Id">Numero de producto</label>
                             <input type="text" name="product_number[]" id="">
                         </div>
-                        </div>
                     </div>
                 </div>
-
-                    <div class="fifth-line">
-                        <input type="button" value="Agregar otra deuda +" id="other_debts">
-                        <input type="submit" value="Enviar">
-                    </div>
-
-                    <div class="logo-box">
-                        <div class="logo-container">
-                            <p>Logo</p>
-                        </div>
-                </div>
+            </div>
                 </form>
-
+                <div class="logo-box">
+                    <div class="logo-container">
+                        <p>Logo</p>
+                    </div>
             </section>
-
         </div>
+    </div>
     </section>
     @extends('right-side')
 
