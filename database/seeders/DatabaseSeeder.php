@@ -16,12 +16,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user = new User();
-
-        $user->email = 'omardavila0104@gmail.com';
-        $user->phone = '+584128885798';
-        $user->code = '123456';
-
-        $user->save();
+        $this->call(UserSeeder::class);
     }
 }
