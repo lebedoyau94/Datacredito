@@ -36,6 +36,22 @@
         .center-container{
             margin-top: 50px;
         }
+
+        .modals {
+            position: absolute;
+            right: 30px;
+            bottom: 100px;
+            width: 600px;
+            height: 760px;
+            margin: 1rem 0;
+            background-color: #ffffff;
+            border: 1px solid #324963;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 610px;
+        }
     </style>
 </head>
 <body class="bodys">
@@ -253,7 +269,7 @@
             </section>
         </section>
 
-        <div class="modal" id="modal">
+        <div class="modals" id="modal">
             <div class="exit">
                 <span id="close">X</span>
             </div>
@@ -314,7 +330,8 @@
 
                     <h3>Datos de deudas</h3>
 
-                    <div class="third-line">
+                <div class="third-line">
+                    <div id="div-debts" style="margin-bottom: 2rem;">
                         <div class="mini-box">
                             <label for="Banco">Banco</label>
                             <select name="bank[]" id="">
@@ -346,17 +363,18 @@
                             <label for="Id">Monto deuda</label>
                             <input type="text" name="amount[]" id="">
                         </div>
-                    </div>
 
                     <div class="fourth-line">
                         <div class="mini-box">
                             <label for="Id">Numero de producto</label>
                             <input type="text" name="product_number[]" id="">
                         </div>
+                        </div>
                     </div>
+                </div>
 
                     <div class="fifth-line">
-                        <input type="button" value="Agregar otra deuda +">
+                        <input type="button" value="Agregar otra deuda +" id="other_debts">
                         <input type="submit" value="Enviar">
                     </div>
 
@@ -364,7 +382,7 @@
                         <div class="logo-container">
                             <p>Logo</p>
                         </div>
-                    </div>
+                </div>
                 </form>
 
             </section>
@@ -397,13 +415,20 @@
 
         closeBtn.addEventListener('click', function(){
             modal.style.display = 'none';
-        })
+        });
 
         openBtn.addEventListener('click', function(){
             modal.style.display = 'block';
-        })
+        });
 
-
+        document.getElementById('other_debts').onclick = duplicate;
+        var i = 0;
+        var original = document.getElementById('div-debts');
+        function duplicate() {
+        var clone = original.cloneNode(true);
+        clone.id = "div-debts" + ++i;
+        original.parentNode.appendChild(clone);
+    }
     </script>
 </body>
 </html>
