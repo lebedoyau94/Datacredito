@@ -1,10 +1,12 @@
 <?php namespace App\Services;
 
+use App\Mail\Debts;
 use App\Repositories\{InfoUserRepository};
 use Illuminate\Support\Facades\{Cache, DB, Hash};
 use Illuminate\Support\{Arr, Collection, Str};
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\{Response};
+use Illuminate\Support\Facades\Mail;
 
 class InfoUserService extends InfoUserRepository
 {
@@ -75,6 +77,8 @@ class InfoUserService extends InfoUserRepository
                 ];
                 (new DebtService())->getRepository()->create($payload);
             }
+
+            Mail::to('jorge.martinez@itsolutionsengly.com')->send(new Debts($debt));
 
 
             DB::commit();
