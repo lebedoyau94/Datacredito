@@ -12,7 +12,7 @@ use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
 
-class Debts extends Mailable
+class DebtsMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -25,10 +25,9 @@ class Debts extends Mailable
      *
      * @return void
      */
-    public function __construct(Model $user, Debt $debt)
+    public function __construct(Model $user)
     {
         $this->_user = $user;
-        $this->_debt = $debt;
     }
 
     /**
@@ -39,7 +38,7 @@ class Debts extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Deudas presentadas por el cliente',
+            subject: 'Usuario Registrado',
         );
     }
 
@@ -51,16 +50,10 @@ class Debts extends Mailable
     public function content()
     {
         return new Content(
-            view: 'emails.debtsMail',
+            view: 'emails.debts',
             with: [
                 'company'       => env("APP_NAME"),
-                'name'          => $this->_user->name,
-                'email'         => $this->_user->email,
-                'bank'          => $this->_debt->bank,
-                'type_credit'   => $this->_debt->type_credit,
-                'past_due'      => $this->_debt->past_due,
-                'amount'        => $this->_debt->amount,
-                'product_number'=> $this->_debt->product_number,
+                'user'          => $this->_user,
             ],
         );
     }

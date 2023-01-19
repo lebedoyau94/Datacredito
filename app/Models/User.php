@@ -54,4 +54,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(InfoUser::class);
     }
+    public function debts()
+    {
+        return $this->hasMany(Debt::class);
+    }
 }

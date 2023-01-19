@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Confirmation</title>
+    <title>Deudas</title>
     <style>
         /* -------------------------------------
     GLOBAL
@@ -266,26 +266,45 @@
                             <table width="100%" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="aligncenter content-block">
-                                        Estas son las deudas presentadas por <strong>{{$name}}:</strong>
+                                        Estas son las deudas presentadas por <strong>{{$user->name}}:</strong>
+                                        <p>
+                                            Email: <strong>{{$user->email}}</strong>
+                                        </p>
+                                        <p>
+                                            Telefono: <strong>{{$user->phone}}</strong>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter content-block">
+                                        Datos de deudas
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="aligncenter content-block">
+                                        <table border="1" width="100%" cellpadding="0" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Banco</th>
+                                                    <th>Credito</th>
+                                                    <th>Dias</th>
+                                                    <th>Monto</th>
+                                                    <th>Numero</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach($user->debts as $debt)
+                                                    <tr>
+                                                        <td>{{$debt->bank}}</td>
+                                                        <td>{{$debt->type_credit}}</td>
+                                                        <td>{{$debt->past_due}}</td>
+                                                        <td>{{$debt->amount}}</td>
+                                                        <td>{{$debt->product_number}}</td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
 
-                                        <p>
-                                            Email: <strong>{{$email}}</strong>
-                                        </p>
-                                        <p>
-                                            Banco: <strong>{{$bank}}</strong>
-                                        </p>
-                                        <p>
-                                            Tipo de crédito: <strong>{{$type_credit}}</strong>
-                                        </p>
-                                        <p>
-                                            Tiempo de retardo: <strong>{{$past_due}}</strong>
-                                        </p>
-                                        <p>
-                                            Monto: <strong>{{$amount}}</strong>
-                                        </p>
-                                        <p>
-                                            Número de producto: <strong>{{$product_number}}</strong>
-                                        </p>
+                                        </table>
                                     </td>
                                 </tr>
                                 <tr>
