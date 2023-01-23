@@ -6,8 +6,11 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Tranquilidad | Credito</title>
             <!-- icon -->
-    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
+            <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">     
             <style>
 
                 .second-sec{
@@ -31,6 +34,8 @@
 
                 .third-sec p{
                     color:  #262650;
+                    width: 300px;
+                    margin-top: 50px;
                 }
 
                 h2{
@@ -62,7 +67,7 @@
 
                 .btn-box button{
                     margin-top: 1rem;
-                    padding: 5px 20px;
+                    padding: 10px 40px;
                     background-color: transparent;
                     border: 2px solid #262650;
                     color: #262650;
@@ -81,7 +86,9 @@
 
         <section class="second-sec">
             <h2>Tu tranquilidad es primero</h2>
+            <div class="leyend">
             <p>Para brindarte las mejores soluciones debemos confirmar tu identidad, enviaremos un c&oacute;digo de acceso al email o n&uacute;mero telef&oacute;nico registrado</p>
+            </div>
         </section>
 
         <section class="third-sec">
@@ -106,7 +113,9 @@
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="align">
             <input type="submit" class="submit" value="Ingresar">
+            </div>
         </section>
 
         <section class="phone-box">
@@ -121,7 +130,9 @@
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
             </div>
+            <div class="align">
             <input type="submit" class="submit" value="Ingresar">
+            </div>
         </section>
     </form>
 
