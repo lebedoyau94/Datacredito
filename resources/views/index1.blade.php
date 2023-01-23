@@ -7,8 +7,9 @@
     <title>Inicio | Credito</title>
     <!-- icon -->
     <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <style>
             body{
             margin: 0;
@@ -19,17 +20,18 @@
             flex-direction: column;
             width: 100vw;
             height: 100vh;
-            background-image: url('https://cdn.glitch.global/4796cf83-89b2-4901-b670-e7515e355baf/girl-is-jumping.jpg?v=1671237362508');
+            background-image: url('/assets/img/index.png');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-			font-family: 'Roboto', sans-serif;
+			font-family: 'Rubik', sans-serif;
 			background-color: #cfebf9;
 
         }
 
         .curtain{
-            background: linear-gradient(0deg, rgba(196,146,254,1) 0%, rgba(149,231,232,0.7931547619047619) 43%);
+            background: rgb(170,234,255);
+            background: linear-gradient(127deg, rgba(170,234,255,1) 61%, rgba(179,175,240,0.9564138691077072) 80%);
             width: 100vw;
             height: 100vh;
             position: absolute;
@@ -57,7 +59,7 @@
             align-items: center;
             font-size: 30px;
             color: white;
-						text-transform: uppercase;
+			text-transform: uppercase;
         }
 
         h1{
@@ -114,6 +116,7 @@
             color: white;
             background-color:  #262650;
             cursor: pointer;
+            margin-left: 15px;
         }
 
         .last-line{
@@ -124,11 +127,13 @@
             color: #314961;
             font-size: 15px;
         }
-				.mt-5 {
+		.mt-5 {
             margin-top: 100px;
         }
         .mt-3 {
             margin-top: 60px;
+            text-align: center;
+            padding-right: 140px;
         }
         .mt-2 {
             margin-top: 40px;
@@ -145,6 +150,15 @@
             color: red;
             font-size: small;
         }
+        .container-p{
+        width: 80%;
+        }
+        .container-l{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        }
         @media only screen and (min-width: 600px) {
             .curtain{
             background: linear-gradient(0deg, rgba(196,146,254,1) 0%, rgba(149,231,232,0.7931547619047619) 43%);
@@ -158,7 +172,7 @@
                 }
         }
 
-       @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 600px) {
         .first-sec {
             margin-top: 20px;
             margin-left: 100px;
@@ -200,16 +214,17 @@
     <div class="curtain"></div>
 
 		<section class="first-sec">
-        <div class="logo">
-            <p>Logo</p>
-        </div>
+            <div class="container-l">
+                <div class="logo">
+                    <p>Logo</p>
+                </div>
+            </div>      
         <h2>Felicidad es <br> vivir sin deudas</h2>
-				<p>Descubre opciones y facilidades de pago para tus deudas </p>
-				<p>actuales. </p>
-        <p>Conoce tu estado financiero, puntaje en datacrédito</p>
-				<p>y recompesas por tus pagos. </p>
-        <p>Aprende de educación financiera y te ayudamos a conseguir</p>
-				<p>un empleo.</p>
+        <div class="container-p">
+			<p>Descubre opciones y facilidades de pago para tus deudas actuales. </p>
+            <p>Conoce tu estado financiero, puntaje en datacrédito y recompesas por tus pagos. </p>
+            <p>Aprende de educación financiera y te ayudamos a conseguir un empleo.</p>
+        </div>
 				<div class="mt-1">
 					<form action="{{route('redirect.second')}}" method="POST">
 						@csrf
