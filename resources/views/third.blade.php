@@ -51,6 +51,10 @@
                     width: 100px;
                 }
 
+                input[type="submit"]{
+                    margin-left: 15px;
+                }
+
 
                 .btn-box button{
                     padding: 7px 15px;
@@ -66,8 +70,15 @@
                     display: flex;
                     flex-direction: column;
                     align-items: end;
-                    width: 350px;
-                }       
+                    width: 365px;
+                }
+                
+                @media only screen and (max-width: 600px) {
+                        .logo-container{
+                            margin-top: 50px;
+                        }
+                    }
+
 
 
     </style>

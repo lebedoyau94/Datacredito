@@ -9,8 +9,10 @@
     <!-- icon -->
     <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
     <!-- css -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/information.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 <section class="logo-box">
@@ -89,11 +91,6 @@
             </div>
         </div>
 
-        <div class="fifth-line">
-            <input type="button" value="Agregar otra deuda +" id="other_debts">
-            <input type="submit" value="Enviar">
-        </div>
-
         <h3>Datos de deudas</h3>
         <div id="div-debts" style="margin-bottom: 2rem;">
             <div class="third-line">
@@ -129,7 +126,7 @@
                     <input type="text" name="amount[]" id="">
                 </div>
             </div>
-            <div class="fourth-line">
+            <div class="fourth-line" class="">
                 <div class="mini-box">
                     <label for="Id">Numero de producto</label>
                     <input type="text" name="product_number[]" id="">
@@ -137,16 +134,28 @@
             </div>
             <hr>
         </div>
+
+        <div id="before">
+            <div></div>
+        </div>
+
+        <div class="fifth-line">
+            <input type="button" value="Agregar otra deuda +" id="other_debts">
+            <input type="submit" value="Enviar">
+        </div>
     </form>
 </section>
 
 
 <script>
+    var before = document.getElementById("before");
+    console.log(before.children.length);
     document.getElementById('other_debts').onclick = duplicate;
     var i = 0;
     var original = document.getElementById('div-debts');
     function duplicate() {
         var clone = original.cloneNode(true);
+        before.insertBefore(original,before.children[0]);
         clone.id = "div-debts" + ++i;
         original.parentNode.appendChild(clone);
     }
