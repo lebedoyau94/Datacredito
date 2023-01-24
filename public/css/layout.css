@@ -8,7 +8,8 @@ body{
     width: 100vw; 
     height: 100vh; 
     font-family: 'Rubik', sans-serif;
-    background-color:  rgba(223,239,253,1);
+    background: rgb(208,226,245);
+    background: linear-gradient(127deg, rgba(208,226,245,1) 77%, rgba(179,175,240,0.9564138691077072) 94%);
 }
 
 .logo-container{
@@ -16,7 +17,7 @@ body{
     justify-content: center;
     align-items: center;
     width: 13rem;
-    height: 12vh;
+    height: 9vh;
     border: 3px solid white;
     margin-top: 50px;
     margin-bottom: 30px;
@@ -147,7 +148,8 @@ h1{
 }
 
 .leyend{
-    width: 700px;
+    width: 660px;
+    color: #262650;
 }
     
 .align{

@@ -72,6 +72,7 @@
                     border: 2px solid #262650;
                     color: #262650;
                     font-weight: bold;
+                    margin-left: 40px;
                 }
 
 
