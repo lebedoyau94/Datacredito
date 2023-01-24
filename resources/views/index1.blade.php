@@ -173,11 +173,21 @@
         }
 
         @media only screen and (max-width: 600px) {
+            body{
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                align-items: center;
+            }
+
         .first-sec {
             margin-top: 20px;
-            margin-left: 100px;
+            margin-left: 0px;
             margin-bottom: 0px;
             z-index: 10;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
         h2{
             color: #262650;
@@ -185,7 +195,7 @@
             font-size: 30px;
             margin-bottom: 1rem;
 			height: 4rem;
-            text-align: center;
+            text-align: start;
         }
         .logo{
             border: 3px solid white;
@@ -202,7 +212,36 @@
         .mt-3 {
             margin-top: 60px;
             text-align: center;
+            padding-right: 0px;
         }
+
+        .curtain{
+                background: linear-gradient(127deg, rgba(170,234,255,1) 61%, rgba(179,175,240,0.9564138691077072) 80%);
+                height: 136%;
+                width: 100%;
+        }
+
+        .container-p{
+            text-align: center;
+        }
+
+        .container-l{
+            text-align: center;
+        }
+
+        .mt-1{
+            align-items: center;
+        }
+
+        input[type="text"]{
+            display: flex;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+}
 
     }
 
