@@ -13,6 +13,10 @@
             <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">  
             <style>
 
+                .logo-container{
+                    margin-top: 170px;
+                }
+
                 .second-sec{
                     display: flex;
                     flex-direction: column;
@@ -44,23 +48,25 @@
                     border: none;
                     margin: 5px 0;
                     text-align: center;
+                    width: 100px;
                 }
 
 
                 .btn-box button{
-                    padding: 10px 30px;
+                    padding: 7px 15px;
                     background-color: transparent;
                     border: 2px solid #262650;
                     color: #262650;
                     font-weight: bold;
                     cursor: pointer;
+                    font-size: 9px;
                 }
 
                 .btn-box{
                     display: flex;
                     flex-direction: column;
                     align-items: end;
-                    width: 450p;
+                    width: 350px;
                 }       
 
 
