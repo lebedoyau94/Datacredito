@@ -20,13 +20,13 @@
 
         .right-container{
             width: 30%;
-            background-image: url('https://images.pexels.com/photos/1906658/pexels-photo-1906658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image: url('/assets/img/Fondo4.png');
             background-repeat: no-repeat;
-            background-size:contain;
+            background-size: cover;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 95vh;
+            height: 100%;
         }
 
         .first-sec{
@@ -34,8 +34,20 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 30%;
+            height: 25%;
             justify-content: end;
+        }
+
+        .first-sec h1{
+            font-size: 40px;
+            width: 250px;
+        }
+
+        .first-sec p{
+            font-size: 20px;
+            width: 251px;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
         .text-first{
@@ -54,6 +66,11 @@
             font-size: 20px;
             padding: 5rem 0;
             align-self: center;
+        }
+
+        .second-sec p{
+            font-size: 15px;
+            font-weight: bold;
         }
 
         @media only screen and (max-width: 800px){
@@ -97,22 +114,5 @@
             <p>Creemos en las segundas oportunidades</p>
         </section>
     </section>
-
-    <script>
-        const button = document.getElementById('btn_menu');
-        const menu = document.querySelector('.menu')
-        let isMenuOpen = false;
-        menu.style.display = 'none';
-        button.addEventListener('click', function() {
-
-            if(isMenuOpen === false){
-                menu.style.display = 'block';
-                isMenuOpen = true;
-            } else{
-                menu.style.display = 'none';
-                isMenuOpen = false;
-            }
-        });
-    </script>
 </body>
 </html>

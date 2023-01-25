@@ -149,7 +149,6 @@
 
 <script>
     var before = document.getElementById("before");
-    console.log(before.children.length);
     document.getElementById('other_debts').onclick = duplicate;
     var i = 0;
     var original = document.getElementById('div-debts');
