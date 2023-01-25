@@ -20,7 +20,8 @@
 
 <section class="text-container">
     <p class="title">¡Una oportunidad para ti!</p>
-    <p class="paragraph">Actualmente no estamos administrando tus deudas, pero lo queremos hacer, registra tus datos y los de tus deudas para negociar la compra de tu cartera.</p>
+    <p class="paragraph">Actualmente no estamos administrando tus deudas, pero lo queremos hacer, <br> </p>
+    <p class="paragraph"> tus datos y los de tus deudas para negociar la compra de tu cartera.</p>
 </section>
 
 <section class="inputs-container">

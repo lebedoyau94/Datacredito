@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
 .bodys{
@@ -10,7 +11,6 @@
 
 .center-container-c{
     height: 95vh;
-    margin: .5rem;
     display: grid;
     grid-template-rows: 1fr 3fr;
 }
@@ -21,7 +21,6 @@
     background-color: white;
     border-top-left-radius: 10px;
     color: #51657b;
-    border: 1px solid #51657b;
     border-bottom: none;
 }
 
@@ -85,15 +84,13 @@
 }
 
 .gradient-section{
-    padding: 1rem 2rem 0rem 2rem;
-    height: auto;
     background-color: white;
     border-bottom-left-radius: 10px;
     background: rgb(216,191,216);
     background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
     color: #51657b;
-    border: 1px solid #51657b;
     border-top: none;
+    margin-top: 30px;
 }
 
 .gradient-section h4{
@@ -119,7 +116,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 2rem 0;
 }
 
 .text-card-sec{
@@ -141,6 +137,8 @@
     justify-content: space-around;
     border-radius: 5px;
     font-size: 15px;
+    align-self: center;
+    margin-bottom: 20px;
 }
 
 .mini-box{
@@ -163,6 +161,7 @@
     border: none;
     border-radius: 5px;
     color: white;
+    width: 6rem;
 }
 
 
@@ -179,6 +178,7 @@
     background-color: #324963;
     height: 5%;
     align-items: center;
+    border-radius: none;
 }
 
 .exit span{
@@ -204,9 +204,9 @@
 }
 
 .form-box {
-    width: 97%;
     height: auto;
     padding: 0 10px;
+    margin-top: 20px;
 }
 
 .form-box h2{
@@ -223,9 +223,9 @@
 }
 
 input[type=text], select {
-    width: 6rem;
-    max-width: 6rem;
-    height: 1.1rem;
+    width: 8rem;
+    max-width: 8rem;
+    height: 1.6rem;
 }
 
 .mini-box{
@@ -242,7 +242,7 @@ input[type=text], select {
 }
 
 .second-line .mini-box:nth-child(1){
-    margin: 0 9rem 0 0;
+    margin: 0 3.4rem 0 0;
 }
 
 .third-line{
@@ -315,9 +315,11 @@ input[type=text], select {
 }
 
 @media only screen and (max-width: 800px){
-    body{
+    .bodys{
         display: flex;
         flex-direction: column;
+        height: auto;
+        overflow-x: hidden;
     }
 
     .white-section{
@@ -352,6 +354,38 @@ input[type=text], select {
     .tarjeta input[type="submit"] {
         padding: .5rem .5rem;
     }
+
+    .content-section-m{
+        height: 212vh;
+    }
+
+    .long-card{
+        width: 100%;
+    }
+
+    .gradient-section{
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    .modals {
+        width: 300px;
+        max-width: 350px;
+        margin-left: 10px;
+        margin: 1rem 0;
+        margin-top: 400px;
+    }
+
+    input[type="text"] {
+        width: 3.5rem;
+        max-width: 3.5rem;
+        height: 1.6rem;
+    }
+
+    input[type=text], select {
+        width: 3.5rem;
+        max-width: 3.5rem;
+        height: 1.6rem;
+    }
 }
 
 .perfil-financiero{
@@ -364,5 +398,34 @@ input[type=text], select {
 @media only screen and (min-width: 1024px){
     .perfil-financiero{
         display: none;
+    }
+
+    .content-section-m{
+        width: 55%;
+        height: 100vh;
+    }
+
+    .icon-text-box{
+        padding-right: 60%;
+    }
+
+    .long-card{
+        width: 80%;
+    }
+
+    .gradient-section{
+        padding: 1rem 0rem 0rem 2rem;
+    }
+
+    .modals {
+        width: 800px;
+        max-width: 850px;
+        margin-left: 80px;
+    }
+
+    input[type="text"] {
+        width: 10rem;
+        max-width: 10rem;
+        height: 1.6rem;
     }
 }
