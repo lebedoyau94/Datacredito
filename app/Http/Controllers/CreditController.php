@@ -201,7 +201,8 @@ class CreditController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function redirectSeventh(SeventhRequest $seventhRequest)
-    {
-        return view('seventh');
+    {   
+        if($this->userService->updateCreditUserServiceFile())
+            return view('seventh');
     }
 }

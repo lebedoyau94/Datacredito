@@ -73,8 +73,8 @@ class InfoUserService extends InfoUserRepository
                     "bank"              => \request("bank")[$i],
                     "type_credit"       => \request("type_credit")[$i],
                     "past_due"          => \request("past_due")[$i],
-                    "amount"            => \request("amount")[$i],
-                    "product_number"    => \request("product_number")[$i],
+                    "amount"            => \request()->has("amount"),
+                    "product_number"    => \request()->has("product_number"),
                 ];
                 (new DebtService())->getRepository()->create($payload);
             }

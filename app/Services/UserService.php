@@ -109,4 +109,45 @@ class UserService extends UserRepository
 
     }
 
+    /*
+    */
+    public function updateCreditUserServiceFile(): ?Model
+    {
+        DB::beginTransaction();
+        
+        try {
+            $mime = ['png','jpg','jpeg'];
+            
+            $request = \request()->file();
+            
+            if (!in_array(mb_strtolower($request['receipt_two']->getClientOriginalExtension()),$mime)){
+                throw new \Exception('Format does not correspond to the established one, please verify', Response::HTTP_UNPROCESSABLE_ENTITY);
+            }
+            if (!in_array(mb_strtolower($request['receipt']->getClientOriginalExtension()),$mime)){
+                throw new \Exception('Format does not correspond to the established one, please verify', Response::HTTP_UNPROCESSABLE_ENTITY);
+            }
+            
+            $nameFileWa= \request()->user()->getKey().'_watter.'.$request['receipt_two']->getClientOriginalExtension();
+            $nameFileEl= \request()->user()->getKey().'_electricity.'.$request['receipt']->getClientOriginalExtension();
+            $payload=[
+                "electricity_receipt"=>"receipts/".$nameFileEl,
+                "water_bill"=>"receipts/".$nameFileWa
+            ];
+            
+            $request['receipt_two']->move(storage_path("app/public/receipts"),$nameFileWa);
+            $request['receipt']->move(storage_path("app/public/receipts"),$nameFileEl);
+            
+            $response = (new CreditUserService())->create([
+                "user_id" => \request()->user()->getKey()
+            ],$payload);
+            DB::commit();
+            return $response;
+        }catch(\Throwable $e) {
+            $error = $e->getMessage() . " " . $e->getLine() . " " . $e->getFile();
+            \Log::error($error);
+            DB::rollback();
+            throw new \Exception($e->getMessage(),Response::HTTP_BAD_REQUEST);
+        }
+    }
+
 }

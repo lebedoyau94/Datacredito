@@ -50,28 +50,18 @@
                 }
         
                 .upload-box{
-                    width: 16rem;
-                    max-width: 25rem;
+                    width: 45rem;
+                    max-width: 50rem;
                     display: flex;
                     justify-content: end;
                     margin-bottom: 2rem;
-                    height: 110px;
+                    height: 160px;
                 }
         
                 .first-box, .sec-box{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                }
-        
-                button{
-                    margin-top: 1rem;
-                    padding: 5px 20px;
-                    background-color: transparent;
-                    border: 2px solid #262650;
-                    color: #262650;
-                    font-weight: bold;
-                    cursor: pointer;
                 }
         
                 .second-sec{
@@ -140,11 +130,22 @@
                     font-size: 25px;
                     margin-right: 10px;
                 }
+            }
+        
+                    input[type=file]{
+                    margin-top: 1rem;
+                    padding: 10px 20px;
+                    background-color: transparent;
+                    border: 2px solid #262650;
+                    color: #262650;
+                    font-weight: bold;
+                    cursor: pointer;
+                    width: 200px;
                 }
     </style>
 </head>
 <body>
-<form action="{{route('redirect.seventh')}}" method="POST">
+<form action="{{route('redirect.seventh')}}" method="POST" enctype="multipart/form-data">
     @csrf
     <section class="text-container">
         <section class="logo-container">
@@ -167,10 +168,12 @@
 
                 <div class="sec-box">
                     <p>Recibo de electricidad</p>
-                    <button>Ajuntar archivo</button>
+                    <input type="file" name="receipt" id="">
                     <span>El formato no debe superar un peso de 3 mb</span>
+                    @error('receipt')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
                 </div>
-        </section>
         <section class="upload-box">
             <div class="first-box">
                 <p>Nombre archivo.</p>
@@ -179,10 +182,15 @@
 
             <div class="sec-box">
                 <p>Recibo de agua</p>
-                <button>Ajuntar archivo</button>
+                <input type="file" name="receipt_two" id="">
                 <span>El formato no debe superar un peso de 3 mb</span>
+                @error('receipt_two')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
         </section>
+    
+    </section>
         <section class="btn-container">
             <input type="submit" class="submit" value="Continuar">            
         </form>
