@@ -6,8 +6,11 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Sueño | Crédito</title>
             <!-- icon -->
-    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
+            <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet"> 
             <style>
 
                 .text-container{
@@ -39,7 +42,39 @@
                     font-size: 25px;
                     margin-right: 10px;
                 }
-        }
+            }
+
+            @media only screen and (min-width: 800px) {
+
+                .second-sec {
+                    font-size: 12px;
+                    width: 25rem;
+                }
+
+                .percent-sec p{
+                    font-size: 1.5rem;
+                    width: 18rem;
+                }
+
+                .question-container {
+                    font-size: 1.2rem;
+                }
+
+                .question-container select{
+                    width: 22rem;
+                    padding: 14px 107px;
+                }
+
+                .logo-container{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 13rem; 
+                    height: 10vh; 
+                    border: 3px solid white;
+                    margin-top: 7rem;
+                }
+}
     </style>
 </head>
 <body>

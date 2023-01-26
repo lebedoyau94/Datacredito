@@ -7,7 +7,10 @@
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
             <title>Recibo | Crédito</title>
             <!-- icon -->
-    <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
+            <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">  
             <style>
         
                 .text-container{
@@ -19,8 +22,9 @@
                     justify-content: center;
                     align-items: center;
                     width: 13rem; 
-                    height: 12vh; 
+                    height: 10vh; 
                     border: 3px solid white;
+                    margin-top: 7rem;
                 }
         
                 h1{
@@ -50,11 +54,10 @@
                 }
         
                 .upload-box{
-                    width: 45rem;
+                    width: 50rem;
                     max-width: 50rem;
                     display: flex;
                     justify-content: end;
-                    margin-bottom: 2rem;
                     height: 160px;
                 }
         
@@ -86,7 +89,7 @@
                 }
         
                 .first-box{
-                    width: 78px;
+                    width: 9rem;
                     margin-right: 8px;
                 }
         
@@ -100,6 +103,7 @@
                     margin-bottom: 10px;
                     color: rgb(100, 100, 100);
                     text-align: start;
+                    width: 10rem;
                 }
         
                 .first-box span{
@@ -131,17 +135,50 @@
                     margin-right: 10px;
                 }
             }
-        
-                    input[type=file]{
-                    margin-top: 1rem;
-                    padding: 10px 20px;
-                    background-color: transparent;
-                    border: 2px solid #262650;
-                    color: #262650;
-                    font-weight: bold;
+
+            @media only screen and (min-width: 800px) {
+
+                .file-select {
+                    position: relative;
+                    display: inline-block;
                     cursor: pointer;
-                    width: 200px;
                 }
+
+                .file-select::before {
+                    background-color: transparent;
+                    color: #262650;
+                    border: 2px solid #262650;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 3px;
+                    content: 'ARJUNTAR ARCHIVO'; /* teXto por defecto */
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    cursor: pointer;
+                }     
+                
+                .file-select input[type="file"] {
+                    opacity: 0;
+                    width: 200px;
+                    height: 32px;
+                    display: inline-block;
+                    cursor: pointer;
+                }
+
+                .second-sec {
+                    font-size: 12px;
+                    width: 25rem;
+                }
+
+                .percent-sec p{
+                    font-size: 1.5rem;
+                    width: 18rem;
+                }
+            }
     </style>
 </head>
 <body>
@@ -168,7 +205,9 @@
 
                 <div class="sec-box">
                     <p>Recibo de electricidad</p>
-                    <input type="file" name="receipt" id="">
+                    <div class="file-select" id="src-file1" >
+                        <input type="file" name="receipt" id="">
+                    </div>
                     <span>El formato no debe superar un peso de 3 mb</span>
                     @error('receipt')
                     <div class="is-invalid">{{ $message }}</div>
@@ -182,7 +221,9 @@
 
             <div class="sec-box">
                 <p>Recibo de agua</p>
-                <input type="file" name="receipt_two" id="">
+                <div class="file-select" id="src-file1" >
+                    <input type="file" name="receipt_two" id="">
+                </div>
                 <span>El formato no debe superar un peso de 3 mb</span>
                 @error('receipt_two')
                     <div class="is-invalid">{{ $message }}</div>
