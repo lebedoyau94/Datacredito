@@ -4,18 +4,17 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreCreditUserRequest extends FormRequest
+class SixthRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    public function authorize()
+     public function authorize()
     {
         return true;
     }
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,21 +23,15 @@ class StoreCreditUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'reason' => 'nullable|max:255',
-            'income_range' => 'required|decimal',
-            'electricity_receipt' => 'required|max:3000',
-            'water_bill' => 'required|max:3000',
-            'dreams' => 'nullable|max:255',
+            'electricity_receipt' => 'required|image|mimes:jpeg,png,jpg|max:3000',
+            'water_bill' => 'required|image|mimes:jpeg,png,jpg|max:3000'
         ];
     }
     public function attributes()
     {
         return [
-            "reason" => "razón",
-            "income_range" => "rango de ingresos",
             "electricity_receipt" => "recibo de electricidad",
-            "water_bill" => "factura de agua",
-            "dreams" => "sueños",
+            "water_bill" => "factura de agua"
         ];
     }
 }

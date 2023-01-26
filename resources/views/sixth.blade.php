@@ -206,10 +206,10 @@
                 <div class="sec-box">
                     <p>Recibo de electricidad</p>
                     <div class="file-select" id="src-file1" >
-                        <input type="file" name="receipt" id="">
+                        <input type="file" name="electricity_receipt" id="">
                     </div>
                     <span>El formato no debe superar un peso de 3 mb</span>
-                    @error('receipt')
+                    @error('electricity_receipt')
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
                 </div>
@@ -222,10 +222,10 @@
             <div class="sec-box">
                 <p>Recibo de agua</p>
                 <div class="file-select" id="src-file1" >
-                    <input type="file" name="receipt_two" id="">
+                    <input type="file" name="water_bill" id="">
                 </div>
                 <span>El formato no debe superar un peso de 3 mb</span>
-                @error('receipt_two')
+                @error('water_bill')
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
             </div>
