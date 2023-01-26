@@ -8,6 +8,7 @@ use App\Http\Requests\IndexCreditRequest;
 use App\Http\Requests\QuestionsRequest;
 use App\Http\Requests\SeventhRequest;
 use App\Http\Requests\ValidateCodeRequest;
+use App\Http\Requests\SixthRequest;
 use App\Mail\WelcomeCreditMail;
 use App\Services\UserService;
 use Illuminate\Contracts\Foundation\Application;
@@ -189,7 +190,7 @@ class CreditController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      * @throws \Exception
      */
-    public function redirectSixth(QuestionsRequest $questionsRequest)
+    public function redirectSixth(SeventhRequest $seventhRequest)
     {
         if($this->userService->updateCreditUserService())
             return view('sixth');
@@ -200,7 +201,7 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function redirectSeventh(SeventhRequest $seventhRequest)
+    public function redirectSeventh(SixthRequest $sixthRequest)
     {   
         if($this->userService->updateCreditUserServiceFile())
             return view('seventh');

@@ -116,26 +116,16 @@ class UserService extends UserRepository
         DB::beginTransaction();
         
         try {
-            $mime = ['png','jpg','jpeg'];
-            
-            $request = \request()->file();
-            
-            if (!in_array(mb_strtolower($request['receipt_two']->getClientOriginalExtension()),$mime)){
-                throw new \Exception('Format does not correspond to the established one, please verify', Response::HTTP_UNPROCESSABLE_ENTITY);
-            }
-            if (!in_array(mb_strtolower($request['receipt']->getClientOriginalExtension()),$mime)){
-                throw new \Exception('Format does not correspond to the established one, please verify', Response::HTTP_UNPROCESSABLE_ENTITY);
-            }
-            
-            $nameFileWa= \request()->user()->getKey().'_watter.'.$request['receipt_two']->getClientOriginalExtension();
-            $nameFileEl= \request()->user()->getKey().'_electricity.'.$request['receipt']->getClientOriginalExtension();
+            $request = \request()->file();            
+            $nameFileWa= \request()->user()->getKey().'_watter.'.$request['water_bill']->getClientOriginalExtension();
+            $nameFileEl= \request()->user()->getKey().'_electricity.'.$request['electricity_receipt']->getClientOriginalExtension();
             $payload=[
                 "electricity_receipt"=>"receipts/".$nameFileEl,
                 "water_bill"=>"receipts/".$nameFileWa
             ];
             
-            $request['receipt_two']->move(storage_path("app/public/receipts"),$nameFileWa);
-            $request['receipt']->move(storage_path("app/public/receipts"),$nameFileEl);
+            $request['water_bill']->move(storage_path("app/public/receipts"),$nameFileWa);
+            $request['electricity_receipt']->move(storage_path("app/public/receipts"),$nameFileEl);
             
             $response = (new CreditUserService())->create([
                 "user_id" => \request()->user()->getKey()
