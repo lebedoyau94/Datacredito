@@ -8,6 +8,9 @@
             <!-- icon -->
     <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">  
             <style>
 
                 .text-container{
@@ -26,17 +29,70 @@
                     margin: 1rem 10px;
                 }
 
+                @media only screen and (min-width: 800px) {
+
+                .percent-sec p{
+                    width: 34%;
+                    font-size: 23px;
+                }
+
+                .grid-question{
+                display: grid;
+                grid-template-columns: repeat(2, minmax(300px, 355px));
+                }
+
+                .question-container {
+                text-align: center;
+                margin: 0 1rem;
+                display: flex;
+                flex-direction: column;
+                }
+
+                .question-container select{
+                    padding: 13px 90px;
+                }
+
+                #question{
+                    margin-top: 22px;
+                }
+
+                .logo-container{
+                    width: 250px;
+                    height: 90px;
+                    margin-top: 8rem;
+                }
+            }
+
                 @media only screen and (max-width: 600px) {
                     .percent{
                     border: 3px solid #262650;
-                    width: 8rem;
-                    height: 3rem;
+                    width: 4rem;
+                    height: 4rem;
                     border-radius: 50%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     font-weight: bold;
                     font-size: 25px;
+                }
+
+                .percent-sec{
+                    width: 100%;
+                }
+
+                .percent-sec p{
+                    width: 40%;
+                    font-size: 23px;
+                }
+
+                .question-container{
+                    width: 100%;
+                }
+
+                .question-container h3{
+                    width: 92%;
+                    text-align: center;
+                    font-size: 12px;
                 }
             }
 
@@ -56,9 +112,10 @@
         </div>
         <p>Gana este descuento en tus deudas respondiendo las siguientes preguntas</p>
     </section>
+    <div class="grid-question">
     <section class="question-container">
         <h3>¿C&uacute;al es su rango de ingresos actualmente?</h3>
-        <select id="" name="income_range">
+        <select id="question" name="income_range">
             <option value="">Seleccione una opción</option>
             <option value="100">100</option>
             <option value="200">200</option>
@@ -80,6 +137,7 @@
             <div class="is-invalid">{{ $message }}</div>
         @enderror
     </section>
+</div>
     <section class="btn-container">
         <input type="submit" class="submit" value="Continuar">
     </form>
