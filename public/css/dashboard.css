@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
 html, body {
@@ -52,7 +53,6 @@ h1{
 .box{
     border: 1px solid gray;
     width: 50%;
-    margin: 10px 5px;
     padding: 5px;
     border-radius: 5px;
     color: #f7f6f9;
@@ -125,7 +125,10 @@ h1{
 }
 
 .color-circle{
-    background-color: rgb(60,140,203);
+    background-image: url("/assets/img/450.png");
+    width: 147px;
+    height: 147px;
+    /*background-color: rgb(60,140,203);
     background: linear-gradient(90deg, rgba(60,140,203,1) 0%, rgba(143,122,181,1) 50%, rgba(223,71,147,1) 100%);
     border-radius: 50%;
     width: 120px;
@@ -133,7 +136,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    margin: 1rem 0;*/
 }
 
 .number-white{
@@ -153,8 +156,8 @@ h1{
     margin: 1rem .5rem; 
 }
 
-.recomendaciones-box h5, .deudas-box h5, .progress-box h5, .text-box h5{
-    text-align: center;
+.recomendaciones-box h5, .deudas-box h5, .text-box h5{
+    text-align: start;
     font-size: 16px;
     color: #3e4c63;
     font-weight: bold;
@@ -183,7 +186,7 @@ h1{
 }
 
 .deudas-box h5{
-    text-align: center;
+    text-align: start;
 }
 
 .prestamo-box{
@@ -295,6 +298,13 @@ h1{
     margin: 1rem 0 0 0;
 }
 
+.flex-prestamo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 20px 28px;
+}
+
 .star{
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     width: 60px;
@@ -333,7 +343,7 @@ h1{
 }
 
 .text-box{
-    text-align: center;
+    text-align: start;
 }
 
 .text-box p{
@@ -368,9 +378,10 @@ h1{
 .circles-container{
     display: flex;
     flex-wrap: wrap;
-    width: 105px;
-    height: 160px;
+    width: 100px;
+    height: 112px;
     margin: 1rem;
+    margin-right: 25px;
 }
 
 .little-circle{
@@ -495,10 +506,6 @@ nav ul li a{
     font-size: 20px;
 }
 
-.menu-text p{
-    font-size: 14px;
-}
-
 .menu-section button{
     background-color: transparent;
     width: 2rem;
@@ -532,6 +539,48 @@ nav ul li a{
     margin-top: 20px;
     font-size: 25px;
     font-weight: bold;
+}
+
+.circle-one{
+    position: relative;
+    left: 15px;
+}
+
+.circle-two{
+    position: relative;
+}
+
+.circle-tree{
+    position: relative;
+    left: 15px;
+    bottom: 10px;
+}
+
+.circle-four{
+    position: relative;
+    bottom: 10px;
+}
+
+.circle-five{
+    position: relative;
+    bottom: 22px;
+    left: 30px;
+}
+
+.acuerdo-box-s{
+    width: 50%;
+    font-size: 12px;
+    background-color: #d1d2d4;
+    height: 32px;
+    margin: 5px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: bold;
+    color: #414d60;
+    margin-top: 1rem;
 }
 
 
@@ -615,13 +664,13 @@ nav ul li a{
     }
 
     .color-circle {
-        width: 140px;
-        height: 140px;
+        width: 147x;
+        height: 146px;
     }
 
     .orange-box {
-        width: 15rem;
-        font-size: 18px;
+        width: 14rem;
+        font-size: 15px;
     }
 
     .container, 
@@ -635,11 +684,11 @@ nav ul li a{
     }
 
     .star {
-        width: 80px;
-        height: 80px;
-        right: 25px;
-        top: 0;
-        font-size: 10px;  
+        width: 40px;
+        height: 40px;
+        right: -12px;
+        top: -12;
+        font-size: 5px;  
     }
 
     .prestamo-box {
@@ -668,6 +717,10 @@ nav ul li a{
         grid-area: menu;
     }
 
+    .hello{
+        font-size: 1.5rem;
+    }
+
     .menu-section {
         display: none;
     }
@@ -680,7 +733,7 @@ nav ul li a{
     ul h5{
         margin: 1rem 0;
         color: white;
-        font-size: 15px;
+        font-size: 1.5rem;
     }
 
     li a span:nth-child(2){
@@ -692,14 +745,15 @@ nav ul li a{
         display: flex;
         justify-content: center;
         align-items: flex-end;
+        margin-top: 4rem;
     }
 
     .logo-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 8rem;
-        height: 9vh;
+        width: 6rem;
+        height: 7vh;
         border: 1px solid white;
     }
 
@@ -712,6 +766,7 @@ nav ul li a{
         margin-top: 20px;
         display: flex;
         flex-direction: column;
+        display: none;
 
     }
 
@@ -797,7 +852,7 @@ nav ul li a{
     .grid-box {
         display: grid;
         grid-template-columns: 300px 150px;
-        margin-top: -25px;
+        margin-top: -40px;
     }
     
     .perfil-box {
@@ -807,7 +862,8 @@ nav ul li a{
     }
 
     .orange-box {
-        width: 18rem;
+        width: 14rem;
+        margin-top: 10px;
     }
 
     .info-box {
@@ -828,7 +884,6 @@ nav ul li a{
 
     .vida {
         background-color: transparent;
-        cursor: none;
         color: #323f53;
         border: none;
         font-size: 30px;
@@ -838,6 +893,19 @@ nav ul li a{
         height: 25px;
         font-size: 20px;
         width: 380px;
+        margin: 0px;
+    }
+
+    .grid-prestamo-2{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(200px, 100px));
+        font-size: 11px;
+        padding-left: 30px;
+    }
+
+    .flex-prestamo-2{
+        display: flex;
+        margin-bottom: 10px;
     }
     
 }
@@ -885,6 +953,10 @@ nav ul li a{
         overflow-y: hidden;
     }
 
+    .circle-box{
+        height: 100%;
+    }
+
     .content-section{
         background-color: white;
         height: 100vh;
@@ -893,6 +965,7 @@ nav ul li a{
         border-top-right-radius: 10px;
         overflow-x: hidden;
         overflow-y: scroll;
+        padding: 2rem;
     }
 
     .menu-web {
@@ -905,13 +978,13 @@ nav ul li a{
 
     .grid-box {
         display: grid;
-        grid-template-columns: 300px 200px;
+        grid-template-columns: 200px 50px;
         justify-content: space-around;
     }
 
     .text-perfil {
         margin-left: 1rem;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .text-perfil p {
@@ -919,11 +992,13 @@ nav ul li a{
     }
 
     .vida {
-        font-size: 40px;
+        font-size: 28px;
     }
 
     .box p, .text-perfil p {
-        font-size: 16px;
+        font-size: 12px;
+        margin-top: .8rem;
+        padding-right: 2rem;
     }
 
     .info-box p {
@@ -932,7 +1007,7 @@ nav ul li a{
     }
 
     .recomendaciones-box h5, .deudas-box h5, .progress-box h5, .text-box h5 {
-        font-size: 25px;
+        font-size: 17px;
     }
 
     .container, .horizontal-box, .progress-box .long {
@@ -941,17 +1016,17 @@ nav ul li a{
     }
 
     .mini-text-box {
-        height: 380px;
+        height: auto;
     }
 
     .progress-bar {
-        height: 30px;
-        font-size: 20px;
-        width: 580px;
+        height: 20px;
+        font-size: 12px;
+        width: 300px;
     }
 
     .progress-box .tiny {
-        font-size: 16px;
+        font-size: 10px;
     }
 
     .grid-auto-columns {
@@ -1022,7 +1097,7 @@ nav ul li a{
     }
 
     .prestamo-box {
-        width:200px;
+        width:240px;
         margin-right: 10px;
         margin-left: 10px;
     }
@@ -1031,9 +1106,21 @@ nav ul li a{
         margin-left: 5px;
     }
 
+    .grid-prestamo p{
+        font-size: 8px;
+    }
+
+    .grid-prestamo{
+        display: grid;
+        grid-template-columns: repeat(6,minmax(50px, 76px));
+    }
+
     .recomendaciones-box {
         display: grid;
         grid-template-columns: repeat(4,minmax(100px, 300px));
+        height: 20%;
+        margin-top: -2rem;
+        margin-bottom: -3rem;
     }
 
     .recomendaciones-box .first-line, .recomendaciones-box .sec-line{
@@ -1042,10 +1129,10 @@ nav ul li a{
     }
 
     .recommed-box{
-        text-align: center;
+        text-align: start;
         color: #3c4b62;
         margin-top: 20px;
-        font-size: 25px;
+        font-size: 17px;
         font-weight: bold;
     }
 
@@ -1053,8 +1140,8 @@ nav ul li a{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 10px;
-        height: 400px;
+        height: auto;
+        width: 160px;
     }
     
     .flex-container1 {
@@ -1063,10 +1150,17 @@ nav ul li a{
     
     .flex-container2 {
         display: flex;
+        margin-left: 125px;
+        height: 18rem;
+    }
+
+    .cuotes{
+        font-weight: bold;
+        font-size: 10px;
     }
 
     .perfil-box {
-        margin: 10px 10px 10px -50px;
+        margin: 10px 10px 10px -95px;
         align-items: start;
         padding-top: 45px;
         width: 400px;
@@ -1078,7 +1172,7 @@ nav ul li a{
     }
 
     .leyendas{
-        font-size: 12px;
+        font-size: 9px;
     }
 
     nav ul li a {
@@ -1093,6 +1187,28 @@ nav ul li a{
 
     li a:hover{
         color: #909393;
+    }
+
+    .bold-long{
+        font-weight: long;
+        width: 80%;
+        font-size: 10px;
+        padding: 0px 10px;
+        text-align: center;
+    }
+
+    .progress-box{
+        width: 50%;
+        margin: 0;
+    }
+
+    .progress-box h5{
+        font-size: 12px;
+    }
+
+    .bolds{
+        font-weight: bold;
+        font-size: 10px;
     }
 }
 
