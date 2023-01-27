@@ -284,7 +284,7 @@ text-align: center;
 
 
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 600px){
 
     body{
         overflow-x: hidden;
@@ -329,9 +329,31 @@ input[type="submit"] {
 
     .prestamo-banc{
         font-size: 20px;
+        width: 50%;
     }
 
-}
+    .grid-tarjet{
+        overflow-x: scroll;
+        grid-template-columns: repeat(4,minmax(150px, 200px));
+    }
+
+    .second-sec, .third-sec {
+        align-items: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        }
+
+        .text-flex-sec{
+            width: 46%;
+        }
+
+        .perfil-box{
+            width: 100%;
+            margin: 0px;
+        }
+    }
+
 
 @media only screen and (min-width: 1024px){
     .container2{
@@ -398,4 +420,10 @@ input[type=submit]{
     font-size: 22px;
 }
 
+}
+
+@media only screen and (min-width: 1024px){
+    .hide{
+        display: none;
+    }
 }

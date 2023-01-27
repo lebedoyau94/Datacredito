@@ -13,6 +13,18 @@
     <main class="container2">
         
         <section class="first-sec">
+
+            <div class="m-box">
+                <div  class="m-boxes">
+                    <h5>Vida Financiera</h5>
+                    <p>Actualizar y modificar datos</p>
+                </div>
+                <div class="mo-boxes">
+                    <h5>Soluciones financieras</h5>
+                    <p>Beneﬁcios, posibilidades de pago y crédito</p>
+                </div>
+            </div>
+            
             <div class="vida box">
                 <h5>Soluciones Financieras</h5>
                 <p>Beneficios, posibilidades de pago y crédito</p>
