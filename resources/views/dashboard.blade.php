@@ -8,7 +8,13 @@
     <!-- icon -->
     <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">  
     <script src="https://kit.fontawesome.com/2e3d4c9f14.js" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
 </head>
 <body>
     <section class="menu-section">
@@ -31,7 +37,7 @@
         </div>
         <nav>
             <div class="menu-text">
-                <p>¡Hola!</p>
+                <p class="hello">¡Hola!</p>
                 
                 @if(auth()->user())
                 <p class="bold">{{Auth::user()->name}}</p>
@@ -192,14 +198,10 @@
             <div class="circle-box">
                 <h4>Score Datacr&eacute;dito</h4>
                 <div class="color-circle">
-                    <div class="white-circle">
-                        <div class="circle">
-                            <span class="number-white">450</span>
-                        </div>
                     </div>
-                </div>
-                <div class="orange-box">
-                    <p>¿Qu&eacute; significa este puntaje?</p>
+                    <div class="orange-box">
+                        <p>¿Qu&eacute; significa este puntaje?</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,12 +238,12 @@
 
         <div class="deudas-box">
             <h5>Tus deudas con nosotros</h5>
-            <div class="prestamo-box">
-                <h6>Pr&eacute;stamo Bancario</h6>
-                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
-            </div>
 
             <div class="boxes-container">
+                <div class="prestamo-box">
+                    <h6>Pr&eacute;stamo Bancario</h6>
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
+                </div>
                 <div class="estado-box">
                     <p>Estado: <span class="atrazado">Atrazado 120 d&iacute;as</span></p>
                 </div>
@@ -253,43 +255,37 @@
         </div>
 
         <div class="mini-text-box">
-            <div class="banc container">
-                <div class="banc">
-                    <p class="bold">Banco</p>
-                    <p>BBVA</p>
-                </div>
-
-                <div class="monto">
-                    <p class="bold">Monto pr&eacute;stamo</p>
-                    <p>$64.000.000</p>
-                </div>
-
-                <div class="cuotas">
-                    <p class="bold">N* Cuotas</p>
-                    <p>120</p>
-                </div>
-            </div>
-
-            <div class="monto container">
-                <div class="banc">
-                    <p class="bold">Monto pagado</p>
-                    <p>$34.000.000</p>
-                </div>
-
-                <div class="monto">
-                    <p class="bold">Cuotas pagadas</p>
-                    <p>55</p>
-                </div>
-
-                <div class="cuotas">
-                    <p class="bold">Cuotas atrazadas</p>
-                    <p>4</p>
-                </div>
-            </div>
-
-            <div class="horizontal-box">
-                <p><span class="bold">Fecha de pr&oacute;ximo: </span>00/00/2022</p>
-                <p><span class="bold">Monto a pagar:</span>$1.300.000</p>
+            <div class="flex-prestamo">
+                <div class="grid-prestamo">
+                    <div class="banc">
+                        <p class="bold">Banco</p>
+                        <p>BBVA</p>
+                    </div>
+    
+                    <div class="monto">
+                        <p class="bold">Monto pr&eacute;stamo</p>
+                        <p>$64.000.000</p>
+                    </div>
+    
+                    <div class="cuotas">
+                        <p class="bold">N* Cuotas</p>
+                        <p>120</p>
+                    </div>
+    
+                    <div class="banc">
+                        <p class="bold">Monto pagado</p>
+                        <p>$34.000.000</p>
+                    </div>
+    
+                    <div class="monto">
+                        <p class="bold">Cuotas pagadas</p>
+                        <p>55</p>
+                    </div>
+    
+                    <div class="cuotas">
+                        <p class="bold">Cuotas atrazadas</p>
+                        <p>4</p>
+                    </div>
             </div>
 
             <div class="progress-box">
@@ -304,15 +300,25 @@
                 </div>
 
                 <div class="star">
-                    <span class="bold">120</span>
+                    <span class="bolds">120</span>
                     <span>cuotas</span>
                 </div>
 
                 <p class="bold tiny">55 cuotas a pagar</p>
-
-                <p class="bold long">Est&aacute;s a la mitad de tu conquista, no te rindas, te ayudaremos con las mejores alternativas para que sigas cumpliendo.</p>
             </div>
         </div>
+        <div class="flex-prestamo-2">
+            <div class="grid-prestamo-2">
+                    <p><span>Fecha de pr&oacute;ximo: </span>00/00/2022</p>
+                    <p><span>Monto a pagar:</span>$1.300.000</p>
+            </div>
+            <p class="bold-long">Est&aacute;s a la mitad de tu conquista, no te rindas, te ayudaremos con las mejores alternativas para que sigas cumpliendo.</p>
+        </div>
+    </div>
+
+            
+
+            
 
 
         <div class="gradient-box">
@@ -336,30 +342,30 @@
                         <h6>Recompensa</h6>
 
                         <div class="circles-container">
-                            <div class="little-circle purple">
+                            <div class="little-circle purple circle-one">
                                 <p>Cuota</p>
                                 <span class="bold">63</span>
                             </div>
-                            <div class="little-circle green">
+                            <div class="little-circle green circle-two">
                                 <p>Cuota</p>
                                 <span class="bold">76</span>
                             </div>
-                            <div class="little-circle orange">
+                            <div class="little-circle orange circle-tree">
                                 <p>Cuota</p>
                                 <span class="bold">84</span>
                             </div>
-                            <div class="little-circle purple purple-second">
+                            <div class="little-circle purple purple-second circle-four">
                                 <p>Cuota</p>
                                 <span class="bold">63</span>
                             </div>
-                            <div class="little-circle green green-second">
+                            <div class="little-circle green green-second circle-five">
                                 <p>Cuota</p>
                                 <span class="bold">63</span>
                             </div>
                         </div>
 
                         <div class="text-circle-box">
-                            <span class="bold">Mitad de cuota</span>
+                            <span class="leyendas">Mitad de cuota</span>
                             <p class="leyendas">cumpliendo sin faltar a una cuota, recibe un descuento del 50% en estas cuotas, el resto lo pagamos nosotros. </p>
                         </div>
                     </div>
@@ -374,7 +380,7 @@
                             <p>Cuotas</p>
                         </div>
                         <div class="text-circle-box">
-                            <span class="bold">Disminuci&oacute;n de % interes</span>
+                            <span class="cuotes">Disminuci&oacute;n de % interes</span>
                             <p class="leyendas">Creemos en ti y queremos que sigas cumpliendo, gana una disminuci&oacute;n en el inter&eacute;s de 0.5%</p>
                         </div>
                     </div>
@@ -386,7 +392,7 @@
                             <p>Cuotas</p>
                         </div>
                         <div class="text-circle-box">
-                            <span class="bold">Cuota libre</span>
+                            <span class="cuotes">Cuota libre</span>
                             <p class="leyendas"p>Por cumplimiento en estas cuotas sin faltar, tu monto de pago es de $0 pesos.</p>
                         </div>
                     </div>
@@ -399,7 +405,7 @@
                             <p>Cuotas</p>
                         </div>
                         <div class="text-circle-box">
-                            <span class="bold">Cr&eacute;dito al instante</span>
+                            <span class="cuotes">Cr&eacute;dito al instante</span>
                             <p class="leyendas">Por tu cumplimiento te ofrecemos un cr&eacute;dito hasta de $200.000 pesos.</p>
                         </div>
                     </div>
@@ -425,7 +431,7 @@
                     <p>Estado: <span class="atrazado">Al d&iacute;a 0 d&iacute;as</span></p>
                 </div>
 
-                <div class="acuerdo-box">
+                <div class="acuerdo-box-s">
                     <p>Sin acuerdo con nosotros</p>
                 </div>
             </div>
@@ -442,7 +448,7 @@
                     <p>Estado: <span class="atrazado">Al d&iacute;a 0 d&iacute;as</span></p>
                 </div>
 
-                <div class="acuerdo-box">
+                <div class="acuerdo-box-s">
                     <p>Sin acuerdo con nosotros</p>
                 </div>
             </div>
