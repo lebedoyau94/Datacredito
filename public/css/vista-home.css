@@ -11,10 +11,11 @@ body{
 .container2{
     background: rgb(216,191,216);
     background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
+    overflow-y: scroll;
 }
 
 .first-sec{
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -29,7 +30,7 @@ text-align: center;
 
 .first-content{
     display: flex;
-    margin: 2rem 0 1rem 0;
+    padding: 0px 4rem;
 }
 
 .house-box{
@@ -47,39 +48,31 @@ text-align: center;
 }
 
 .house-text .subtitle{
-    font-size: 18px;
+    font-size: 16px;
     
 }
 
 .house-text p:nth-child(2){
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .second-sec, .third-sec{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-}
-
-.third-sec{
-    margin-top: 2rem;
+    height: auto;
 }
 
 .text-second-sec, .text-third-sec{
     color: #031d3a;
-    margin: 0 0 1rem 0;
-}
-
-.text-second-sec p:nth-child(1), .text-third-sec p:nth-child(1){
-    font-size: 18px;
-    margin-bottom: 5px;
+    margin: 1rem 0 1rem 0;
 }
 
 .card{
     display: flex;
     background-color: white;
-    height: 90px;
+    height: 60px;
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
@@ -90,7 +83,7 @@ text-align: center;
 }
 
 .mini-box2{
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .credito .mini-box:nth-child(1){
@@ -114,10 +107,9 @@ text-align: center;
     align-items: center;
 }
 
-.credito input[type=submit], .tarjeta input[type=submit]{
+.creditos input[type=submit], .tarjetas input[type=submit]{
     height: auto;
     width: 7rem;
-    margin: 0 0 0 1rem;
     padding: .5rem .5rem;
     border: none;
     border-radius: 5px;
@@ -156,6 +148,142 @@ text-align: center;
     margin-right: 1rem;
 }
 
+.grid-tarjet{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(100px, 200px));
+}
+
+.tarjet{
+    background-color: transparent;
+    display: flex;
+    border-radius: 8px;
+    height: 210px;
+    width: 135px;
+}
+
+.prestamo-banc{
+    display: flex;
+    align-items: center;
+    background-color: #3c4b62;
+    width: 100%;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin: .5rem 0 0 0;
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 30px;
+    font-size: 18px;
+}
+
+.line-one{
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    width: 7%;
+    height: 4%;
+    border-top-left-radius: 8px;
+    flex-direction: column;
+    position: absolute;
+}
+
+.line-two{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    width: 60%;
+    height: 25px;
+    bottom: 20px;
+    position: relative;
+    bottom: 8px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 8px;
+}
+
+.morado{
+    background-image: url('/assets/img/tag1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.naranja{
+    background-image: url('/assets/img/tag2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.verde{
+    background-image: url('/assets/img/tag3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.azul{
+    background-image: url('/assets/img/tag4.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.select-card{
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    align-content: end;
+    align-self: end;
+    height: 20%;
+    width: 100%;
+}
+
+.select-o{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.select-text{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tarjet-text{
+    background-color: black;
+    top: 50px;
+    height: 75%;
+}
+
+.text-tarjet{
+    width: 100%;
+    height: 100%;
+}
+
+.flex-second-sec{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    height: 30px;
+}
+
+.text-flex-sec{
+    background-color: #3c4b62;
+    justify-content: center;
+    border: 5px;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    width: 23%;
+    margin-right: 8px;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+
+
 @media only screen and (max-width: 425px){
 
     body{
@@ -184,10 +312,9 @@ text-align: center;
     font-size: 12px;
 }
 
-.credito input[type="submit"], .tarjeta input[type="submit"] {
+input[type="submit"] {
     height: auto;
-    width: 3rem;
-    margin: 0 0 0 1rem;
+    width: 7rem;
     padding: .3rem .3rem;
     border: none;
     border-radius: 5px;
@@ -200,6 +327,10 @@ text-align: center;
     color: #001732;
     }
 
+    .prestamo-banc{
+        font-size: 20px;
+    }
+
 }
 
 @media only screen and (min-width: 1024px){
@@ -208,6 +339,7 @@ text-align: center;
     background: rgb(216,191,216);
     background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
     height: 100%;
+    padding: 2rem;
 }
 
 .bigger{
@@ -239,14 +371,31 @@ text-align: center;
     font-size: 15px;
 }
 
-.credito input[type=submit], .tarjeta input[type=submit]{
+input[type=submit]{
     height: auto;
-    width: 4rem;
-    margin: 0 0 0 1rem;
+    width: 7rem;
     padding: .5rem .0rem;
     border: none;
     border-radius: 5px;
     color: white;
+}
+
+.prestamo-banc{
+    width: 180px;
+    margin-right: 10px;
+    margin-bottom: .5rem;
+}
+
+.text-third-sec h5{
+    font-size: 18px;
+}
+
+.text-third-sec p{
+    font-size: 12px;
+}
+
+.vida{
+    font-size: 22px;
 }
 
 }

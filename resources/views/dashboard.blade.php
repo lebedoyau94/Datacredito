@@ -461,7 +461,7 @@
         <p>Hola</p>
     </section>
     <div class="content2">
-        @extends('vista-casa')
+        @extends('vista-home')
     </div>
 
     <script>
