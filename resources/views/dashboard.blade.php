@@ -12,9 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">  
     <script src="https://kit.fontawesome.com/2e3d4c9f14.js" crossorigin="anonymous"></script>
-    <style>
-
-    </style>
 </head>
 <body>
     <section class="menu-section">
@@ -171,6 +168,17 @@
         </nav>
     </section>
     <section class="content-section">
+        <div class="m-box">
+            <div  class="m-boxes">
+                <h5>Vida Financiera</h5>
+                <p>Actualizar y modificar datos</p>
+            </div>
+            <div class="mo-boxes">
+                <h5>Soluciones financieras</h5>
+                <p>Beneﬁcios, posibilidades de pago y crédito</p>
+            </div>
+        </div>
+
             <div class="vida box">
                 <h5>Vida Financiera</h5>
                 <p>Estado de deudas y perfil financiero en el sector</p>
@@ -255,6 +263,70 @@
         </div>
 
         <div class="mini-text-box">
+            {{--Mobile--}}
+        <div class="hide">
+            <div class="flex-prestamo-m">
+                <div class="grid-prestamo-m">
+                    <div class="banc">
+                        <p class="bold">Banco</p>
+                        <p>BBVA</p>
+                    </div>
+    
+                    <div class="monto">
+                        <p class="bold">Monto pr&eacute;stamo</p>
+                        <p>$64.000.000</p>
+                    </div>
+    
+                    <div class="cuotas">
+                        <p class="bold">N* Cuotas</p>
+                        <p>120</p>
+                    </div>
+    
+                    <div class="banc">
+                        <p class="bold">Monto pagado</p>
+                        <p>$34.000.000</p>
+                    </div>
+    
+                    <div class="monto">
+                        <p class="bold">Cuotas pagadas</p>
+                        <p>55</p>
+                    </div>
+    
+                    <div class="cuotas">
+                        <p class="bold">Cuotas atrazadas</p>
+                        <p>4</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-prestamo-2-m">
+                <p><span>Fecha de pr&oacute;ximo: </span>00/00/2022</p>
+                <p><span>Monto a pagar:</span>$1.300.000</p>
+            </div>
+
+            <div class="progress-box">
+                <h5>Cumplimiento</h5>
+
+                <div class="progress-bar">
+                    <span>20%</span>
+                    <span>40%</span>
+                    <span>60%</span>
+                    <span>80%</span>
+                    <span>100%</span>
+                </div>
+
+                <div class="star">
+                    <span class="bolds">120</span>
+                    <span>cuotas</span>
+                </div>
+
+                <p class="bold tiny">55 cuotas a pagar</p>
+            </div>
+
+            <p class="banc letter">Est&aacute;s a la mitad de tu conquista, no te rindas, te ayudaremos con las mejores alternativas para que sigas cumpliendo.</p>
+
+        </div>
+            {{--Desktop--}}
             <div class="flex-prestamo">
                 <div class="grid-prestamo">
                     <div class="banc">
@@ -461,7 +533,7 @@
         <p>Hola</p>
     </section>
     <div class="content2">
-        @extends('vista-casa')
+        @extends('vista-home')
     </div>
 
     <script>

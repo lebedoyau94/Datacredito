@@ -52,10 +52,6 @@
                     padding: 13px 90px;
                 }
 
-                #question{
-                    margin-top: 22px;
-                }
-
                 .logo-container{
                     width: 250px;
                     height: 90px;
