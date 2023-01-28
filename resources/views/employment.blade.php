@@ -384,31 +384,41 @@
             <h3>Con&eacute;ctate con nuestra red de aliados</h3>
             <p>Para brindarte las mejores opciones de empleo necesitamos</p>
         </div>
-
+<form role="form" action="{{route('employment.store')}}" method="POST" enctype="multipart/form-data">
+    @csrf
         <div class="input-container">
             <p>¿Cu&aacute;l es tu nivel de escolaridad?</p>
-            <select name="" id="">
+            <select name="scholarship" id="" >
                 <option value=""></option>
                 <option value="option">option</option>
                 <option value="option">option</option>
                 <option value="option">option</option>
             </select>
+            @error('scholarship')
+                <div class="is-invalid">{{ $message }}</div>
+            @enderror
         </div>
 
         <div class="double-input-container">
             <div class="first-input-box">
                 <p>Escribe tu profesi&oacute;n o actividad laboral reciente</p>
-                <input type="text" />
+                <input type="text" name="profession" value="{{$profession}}"/>
+                @error('profession')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="sec-input-box">
                 <p>Años de experiencia</p>
-                <select name="" id="">
+                <select name="year_experincie" id="" >
                     <option value=""></option>
                     <option value="option">option</option>
                     <option value="option">option</option>
                     <option value="option">option</option>
                 </select>
+                @error('year_experincie')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
         </div>
 
@@ -416,8 +426,11 @@
 
         <div class="adjuntar-box">
             <div class="recibo-box">
-                <input type="text" value="Adjuntar archivo" />
+                <input type="file" name="file" value="Adjuntar archivo" />
                 <span class="gray tiny">El formato no debe superar un peso de 3 mb</span>
+                @error('file')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="archivo-box">
@@ -427,14 +440,19 @@
         </div>
 
         <div class="btn-container">
-            <input type="submit" value="Enviar" id="openModal" class="submit"/>
+            
+            <input type="submit" class="submit" value="Enviar" id="openModal">
             <div class="checkBox-container">
-                <input type="checkbox" id="" name="" value="" />
+                <input type="checkbox" id="" name="tyc" />
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y
                     condiciones</label>
+                @error('active')
+                    <div class="is-invalid">{{ $message }}</div>
+                @enderror
             </div>
         </div>
     </section>
+</form>
 
     <div class="modal" id="modal">
         <div class="exit-boxx">
