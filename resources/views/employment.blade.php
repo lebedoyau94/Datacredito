@@ -443,10 +443,10 @@
             
             <input type="submit" class="submit" value="Enviar" id="openModal">
             <div class="checkBox-container">
-                <input type="checkbox" id="" name="tyc" />
+                <input type="checkbox" id="" name="tyc" value="{{$tyc}}"/>
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y
                     condiciones</label>
-                @error('active')
+                @error('tyc')
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
             </div>
