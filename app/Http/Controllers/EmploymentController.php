@@ -4,9 +4,26 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreEmploymentRequest;
 use App\Http\Requests\UpdateEmploymentRequest;
+use App\Models\Employment;
+use App\Services\EmploymentUserService;
 
 class EmploymentController extends Controller
-{
+{   
+    /**
+     * @var UserService
+     */
+    private EmploymentUserService $employmentUserService;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct(EmploymentUserService $employmentUserService)
+    {
+        $this->employmentUserService = $employmentUserService;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +31,12 @@ class EmploymentController extends Controller
      */
     public function index()
     {
-        return view('employment');
+        $rows = array();
+        if ($employmenUser = $this->employmentUserService->first(["user_id" => \request()->user()->getKey()])){
+            $rows['profession'] =$employmenUser->profession;
+            $rows['tyc'] =$employmenUser->tyc;
+        }
+        return view('employment',$rows);
     }
 
     /**
@@ -34,8 +56,15 @@ class EmploymentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(StoreEmploymentRequest $request)
-    {
-        //
+    {   
+        $rows = array();
+        if ($employmenUser = $this->employmentUserService->first(["user_id" => \request()->user()->getKey()])){
+            $rows['profession'] =$employmenUser->profession;
+        }
+       
+        if($this->employmentUserService->storeService())
+            return view('employment',$rows);
+
     }
 
     /**

@@ -13,7 +13,7 @@ class StoreEmploymentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,22 @@ class StoreEmploymentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "scholarship"=>'required|string',
+            "profession"=>'required|string',
+            "year_experincie"=>'required|string',
+            "tyc"=>'required|string',
+            "file"=>'required|file|mimes:pdf,docx'
+        ];
+    }
+    public function attributes()
+    {
+        return [
+            "scholarship" => "nivel de escolaridad",
+            "profession" => "profesi&oacute;n",
+            "year_experincie" => "años de experinencia",
+            "tyc" => "terminos y condiciones",
+            "file" => "archivo"
+
         ];
     }
 }
