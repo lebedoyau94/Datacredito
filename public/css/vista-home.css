@@ -12,6 +12,8 @@ body{
     background: rgb(216,191,216);
     background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
     overflow-y: scroll;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
 }
 
 .first-sec{
@@ -83,7 +85,7 @@ text-align: center;
 }
 
 .mini-box2{
-    margin-left: 0px;
+    margin-right: 15px;
 }
 
 .credito .mini-box:nth-child(1){
@@ -108,11 +110,6 @@ text-align: center;
 }
 
 .creditos input[type=submit], .tarjetas input[type=submit]{
-    height: auto;
-    width: 7rem;
-    padding: .5rem .5rem;
-    border: none;
-    border-radius: 5px;
     color: white;
 }
 
@@ -123,7 +120,7 @@ text-align: center;
 .tarjeta input[type=submit]{
     background-color: orange;
 }
- 
+
 .tarjeta .mini-box:nth-child(2), .tarjeta .mini-box:nth-child(3){
     font-size: 20px;
 }
@@ -312,7 +309,7 @@ text-align: center;
     font-size: 12px;
 }
 
-input[type="submit"] {
+.want{
     height: auto;
     width: 7rem;
     padding: .3rem .3rem;
@@ -393,7 +390,7 @@ input[type="submit"] {
     font-size: 15px;
 }
 
-input[type=submit]{
+.want{
     height: auto;
     width: 7rem;
     padding: .5rem .0rem;
@@ -420,10 +417,18 @@ input[type=submit]{
     font-size: 22px;
 }
 
+.submit{
+    font-weight: 100;
+}
+
 }
 
 @media only screen and (min-width: 1024px){
     .hide{
         display: none;
     }
+}
+
+#wants{
+    margin-left: 15px;
 }

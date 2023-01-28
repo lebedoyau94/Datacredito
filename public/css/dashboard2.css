@@ -14,26 +14,24 @@ body{
 }
 
 .first-sec{
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
 }
 
-.first-sec h1 {
-margin: 1rem 0 0 0;
+.first-sec h2 {
+margin: 20px 70px;
 color: #031d3a;
 font-size: 30px;
-text-align: center;
 }
 
 .first-content{
     display: flex;
-    margin: 2rem 0 1rem 0;
+    padding: 0px 4rem;
 }
 
 .house-box{
-    padding: 1rem 0;
     display: flex;
     align-items: center;
 }
@@ -47,19 +45,17 @@ text-align: center;
 }
 
 .house-text .subtitle{
-    font-size: 18px;
+    font-size: 16px;
     
 }
 
 .house-text p:nth-child(2){
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .second-sec, .third-sec{
-    width: 90%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 }
 
 .third-sec{
@@ -69,6 +65,7 @@ text-align: center;
 .text-second-sec, .text-third-sec{
     color: #031d3a;
     margin: 0 0 1rem 0;
+    width: 84%;
 }
 
 .text-second-sec p:nth-child(1), .text-third-sec p:nth-child(1){
@@ -79,10 +76,11 @@ text-align: center;
 .card{
     display: flex;
     background-color: white;
-    height: 90px;
+    height: 60px;
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
+    padding: 20px;
 }
 
 .mini-box{
@@ -91,6 +89,7 @@ text-align: center;
 
 .mini-box2{
     margin-left: 10px;
+    width: 100%;
 }
 
 .credito .mini-box:nth-child(1){
@@ -144,16 +143,15 @@ text-align: center;
     align-items: center;
     height: 120px;
     color: #001732;
+    margin-top: 3rem;
 }
 
 .fourth-sec h3{
-    margin-right: 4rem;
     font-size: 30px;
 }
 
 .fourth-sec p{
     font-size: 20px;
-    margin-right: 1rem;
 }
 
 @media only screen and (max-width: 425px){
@@ -166,6 +164,8 @@ text-align: center;
     background: rgb(216,191,216);
     background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
     height: 100%;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
 }
 
 .card{
@@ -174,6 +174,7 @@ text-align: center;
 
 .parragraph-spacing{
     margin-left: -10px;
+    color: #031d3a;
 }
 
 .mini-box{
@@ -208,10 +209,13 @@ text-align: center;
     background: rgb(216,191,216);
     background: linear-gradient(0deg, rgba(216,191,216,1) 0%, rgba(223,239,253,1) 38%);
     height: 100%;
+    padding: 2rem;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
 }
 
 .bigger{
-    font-size: 15px;
+    font-size: 20px;
     color: #001732;
 }
 
@@ -241,12 +245,37 @@ text-align: center;
 
 .credito input[type=submit], .tarjeta input[type=submit]{
     height: auto;
-    width: 4rem;
+    width: 8rem;
     margin: 0 0 0 1rem;
     padding: .5rem .0rem;
     border: none;
     border-radius: 5px;
     color: white;
 }
+
+.text-second-sec h5, .text-third-sec h5{
+    font-size: 15px;
+    color: #031d3a;
+}
+
+.text-second-sec p, .text-third-sec p{
+    font-size: 12px;
+    color: #031d3a;
+}
+
+.parragraph-spacing h5{
+    font-size: 13px;
+    color: #001732;
+}
+
+.parragraph-spacing h6{
+    font-size: 8px;
+    color: #001732;
+}
+
+.second-sec, .third-sec{
+    margin-top: 4rem;
+}
+
 
 }

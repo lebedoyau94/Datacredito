@@ -38,7 +38,7 @@ h1{
 
 .content-section{
     background-color: white;
-    height: 100vh;
+    height: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow-x: hidden;
@@ -753,7 +753,7 @@ nav ul li a{
         justify-content: center;
         align-items: center;
         width: 6rem;
-        height: 7vh;
+        height: 9vh;
         border: 1px solid white;
     }
 
@@ -951,8 +951,8 @@ nav ul li a{
         background-color: white;
         height: 100vh;
         width: 55%;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
         overflow-x: hidden;
         overflow-y: scroll;
         padding: 2rem;
@@ -1259,7 +1259,7 @@ nav ul li a{
     .historias-box{
         display: grid;
         grid-template-columns: repeat(4,minmax(100px, 300px));
-        width: 85%;
+        width: 100%;
     }
 
     .history-info-box{
@@ -1269,6 +1269,7 @@ nav ul li a{
         width: auto;
         align-items: center;
         justify-content: center;
+        border-right: 1px solid #323f53;
     }
 
     .mini-history-box{
@@ -1278,7 +1279,8 @@ nav ul li a{
         overflow-y: scroll;
         display: grid;
         grid-template-columns: repeat(4,minmax(100px, 300px));
-        width: 90%;
+        width: 100%;
+        padding: 10px;
     }
 
     .history-information{
@@ -1354,7 +1356,7 @@ nav ul li a{
         overflow-y: scroll;
         display: grid;
         grid-template-columns: repeat(5,minmax(100px, 200px));
-        width: 90%;
+        width: 100%;
     }
 
     .estate-box{
@@ -1518,6 +1520,7 @@ nav ul li a{
         text-decoration: none;
         padding: 5px;
         color: #3c4b62;
+        width: 55px;
     }
 
     .button-md{
@@ -1526,7 +1529,7 @@ nav ul li a{
         text-decoration: none;
         padding: 5px;
         color: #3c4b62;
-        margin-left: 57px;
+        width: 55px;
     }
 
     .perfil-box-box{

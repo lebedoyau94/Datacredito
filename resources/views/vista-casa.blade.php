@@ -14,12 +14,12 @@
         
         <section class="first-sec">
 
-            <h1>Est&aacute;s m&aacute;s cerca de tus sueños</h1>
+            <h2>Estás más<br>cerca de tus sueños</h2>
 
             <div class="first-content">
 
                 <div class="house-box">
-                    <img src="{{asset('assets/img/Casa.png')}}" width="100px" height="100px">
+                    <img src="{{asset('assets/img/Casa.png')}}" width="60px" height="60px">
                 </div>
                 <div class="house-text">
                     <p class="subtitle">Mi Sueño</p>
@@ -34,7 +34,7 @@
         <section class="second-sec">
 
             <div class="text-second-sec">
-                <p>¡Felicitaciones! Recibe un cr&eacute;dito al instante por tu cumplimiento</p>
+                <h5>¡Felicitaciones! Recibe un cr&eacute;dito al instante por tu cumplimiento</h5>
                 <p>Un cr&eacute;dito es una gran forma de aumentar tu puntaje crediticio, aumentaremos el cupo al cumplir con el pago de tus obligaciones y el cr&eacute;dito.</p>
             </div>
 
@@ -44,14 +44,14 @@
                 </div>
                 <div class="mini-box parragraph-spacing">
                     <p class="bigger">1.2%</p>
-                    <p>de inter&eacute;s</p>
+                    <h5>de inter&eacute;s</h5>
                 </div>
                 <div class="mini-box parragraph-spacing">
-                    <p>Cupo de</p>
+                    <h5>Cupo de</h5>
                     <p class="bigger">$600.000</p>
                 </div>
                 <div class="mini-box parragraph-spacing">
-                    <p>Conoce m&aacute;s</p>
+                    <h5>Conoce m&aacute;s</h5>
                     <input type="submit" class="submit" value="Lo Quiero">
                 </div>
             </div>
@@ -60,20 +60,20 @@
         <section class="third-sec">
 
             <div class="text-third-sec">
-                <p>Compramos tu cartera</p>
+                <h5>Compramos tu cartera</h5>
                 <p>¿Te gusta nuestra experiencia? trae tus otras deudas, nosotros te la compramos.</p>
             </div>
 
             <div class="tarjeta card">
-                <div class="mini-box2">
-                    <p>Tasa de inter&eacute;s desde</p>
+                <div class="mini-box2 parragraph-spacing">
+                    <h6>Tasa de inter&eacute;s desde</h6>
                     <p class="bigger">1.5%</p>
                 </div>
-                <div class="mini-box2">
-                    <p>Sin comisi&oacute;n</p>
+                <div class="mini-box2 parragraph-spacing">
+                    <h5>Sin comisi&oacute;n</h5>
                 </div>
-                <div class="mini-box2">
-                    <p>Tasa preferencial</p>
+                <div class="mini-box2 parragraph-spacing">
+                    <h5>Tasa preferencial</h5>
                 </div>
                 <div class="mini-box2">
                     <input type="submit" class="submit" value="Lo Quiero">
