@@ -251,6 +251,8 @@ font-size: 30px;
     border: none;
     border-radius: 5px;
     color: white;
+    justify-content: center;
+}
 }
 
 .text-second-sec h5, .text-third-sec h5{
@@ -275,7 +277,4 @@ font-size: 30px;
 
 .second-sec, .third-sec{
     margin-top: 4rem;
-}
-
-
 }

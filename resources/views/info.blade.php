@@ -22,17 +22,9 @@
         font-size: 12px;
     }
 
-    .grid{
-        display: grid;
-        grid-template-columns: repeat(2,minmax(50px, 170px));
+    .flex{
+        display: flex;
         margin-top: 5px;
-    }
-
-    .most{
-        font-size: 20px;
-        color: #323f53;
-        cursor: pointer;
-        margin-top: 2rem;
     }
 
     .non{
@@ -42,6 +34,16 @@
     .text-perfil-dos{
         width: 80%;
         text-align: justify;
+    }
+
+    .first{
+        width: 80%
+    }
+
+    .sec{
+        width: 20%;
+        display: flex;
+        align-items: center;
     }
 </style>
 <body>
@@ -234,13 +236,21 @@
                     <p>Nombre y apellido: {{Auth::user()->name}}</p>
                     <p>Tipo ID: Cédula</p>
                     <p>Número ID: 00000000</p>
-                    <div class="grid">
-                        <p>Email: {{Auth::user()->email}}</p>
-                        <a href="#" class="button-m">Modificar</a>
+                    <div class="flex">
+                        <div class="first">
+                            <p>Email: {{Auth::user()->email}}</p>
+                        </div>
+                        <div class="sec">
+                            <a href="#" class="button-m">Modificar</a>
+                        </div>
                     </div>
-                    <div class="grid">
-                        <p>Teléfono: {{Auth::user()->phone}}</p>
-                        <a href="#" class="button-md">Modificar</a>
+                    <div class="flex">
+                        <div class="first">
+                            <p>Teléfono: {{Auth::user()->phone}}</p>
+                        </div>
+                        <div class="sec">
+                            <a href="#" class="button-md">Modificar</a>
+                        </div>
                     </div>
                 </div>
 
