@@ -22,7 +22,7 @@
             border-top-right-radius: 10px;
             overflow-x: hidden;
             flex-direction: column;
-            padding: 0 2rem 2rem;
+            padding: 2rem;
             color: #324963;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -58,26 +58,29 @@
 
         .input-container {
             margin: 2rem 0 0 0;
+            font-size: 12px;
         }
 
         .input-container select,
         .sec-input-box select {
-            margin: 1rem 0 0 0;
             height: 2.3rem;
             width: 15rem;
+            padding: 0px 90px;
         }
 
         .double-input-container {
             display: flex;
             margin: 1rem 0 0 0;
             align-items: center;
+            font-size: 12px;
         }
 
         .first-input-box input[type="text"],
         .sec-input-box input[type="text"] {
-            margin: 1rem 0 0 0;
             height: 2rem;
             width: 20rem;
+            border: 0.5px solid #262650;
+            border-radius: 5px;
         }
 
         .sec-input-box {
@@ -129,20 +132,26 @@
         }
 
         .tiny {
-            font-size: 11px;
+            font-size: 9px;
         }
 
         .checkBox-container {
             text-align: center;
-            font-size: 16px;
+            font-size: 10px;
             margin: 0 1rem;
             display: flex;
             align-items: center;
             justify-content: space-around;
+            width: 40%;
         }
 
         .checkBox-container label {
-            margin-left: 1rem;
+            margin: 0px;
+            width: 83%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
         }
 
         .btn-container {
@@ -179,15 +188,84 @@
             margin: 1rem 0;
         }
 
+        .box p{
+            margin: 0px;
+        }
+
+        .life{
+            font-size: 19px;
+            margin-top: 1rem;
+        }
+
+        .submit{
+            margin: 0px;
+            border-radius: 0px;
+            width: 18%;
+        }
+
+        select{
+            background: none;
+            border: 0.5px solid #262650;
+            border-radius: 5px;
+        }
+
+        .terms-box{
+            font-size: 9px;
+            text-decoration: none;
+            color: #262650;
+        }
+
         @media only screen and (min-width: 1024px){
             .bodyy{
                 width: 55%;
             }
 
             .sec-p {
-            width: 50%;
+            width: 40%;
             font-size: 18px;
-        }
+            }
+
+            .sec-p h3{
+                width: 80%;
+                margin-top: 2rem;
+            }
+
+            .sec-p p{
+                margin-top: 20px;
+            }
+
+            .file-select {
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    width: 25%;
+                    height: 36px;
+                }
+
+                .file-select::before {
+                    background-color: transparent;
+                    color: #262650;
+                    border: 2px solid #262650;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 3px;
+                    content: 'ARJUNTAR ARCHIVO'; /* teXto por defecto */
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    cursor: pointer;
+                }     
+                
+                .file-select input[type="file"] {
+                    opacity: 0;
+                    width: 200px;
+                    height: 32px;
+                    display: inline-block;
+                    cursor: pointer;
+                }
         }
 
             @media only screen and (max-width: 800px){
@@ -236,7 +314,7 @@
         </div>
         <nav>
             <div class="menu-text">
-                <p>¡Hola!</p>
+                <p class="hello">¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p>{{Auth::user()->email}}</p>
                 <form action="{{route('logout')}}" method="POST">
@@ -314,7 +392,7 @@
         <nav>
             <div class="menu-text">
                 <h5>Men&uacute;</h5>
-                <p>¡Hola!</p>
+                <p class="hello">¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p><small>{{Auth::user()->email}}</small></p>
                 <form action="{{route('logout')}}" method="POST">
@@ -402,7 +480,7 @@
         <div class="double-input-container">
             <div class="first-input-box">
                 <p>Escribe tu profesi&oacute;n o actividad laboral reciente</p>
-                <input type="text" name="profession" value="{{$profession}}"/>
+                <input type="text" name="profession"/>
                 @error('profession')
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
@@ -422,11 +500,13 @@
             </div>
         </div>
 
-        <h3>Adjunta tu hoja de vida en formato pdf o word</h3>
+            <div class="life">
+                <h5>Adjunta tu hoja de vida en formato pdf o word</h5>
+            </div>
 
         <div class="adjuntar-box">
-            <div class="recibo-box">
-                <input type="file" name="file" value="Adjuntar archivo" />
+            <div class="recibo-box file-select">
+                <input type="file" name="file" value="Adjuntar archivo"/>
                 <span class="gray tiny">El formato no debe superar un peso de 3 mb</span>
                 @error('file')
                     <div class="is-invalid">{{ $message }}</div>
@@ -443,10 +523,10 @@
             
             <input type="submit" class="submit" value="Enviar" id="openModal">
             <div class="checkBox-container">
-                
-                <input type="checkbox" id="" name="tyc" />
+                <input type="checkbox" id="" name="tyc" value="{{$tyc}}"/>
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y
-                    condiciones</label>
+                    condiciones 
+                    <a href="" class="terms-box">Ver t&eacute;rminos y condiciones</a></label>
                 @error('tyc')
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
