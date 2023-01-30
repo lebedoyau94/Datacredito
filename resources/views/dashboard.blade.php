@@ -388,11 +388,6 @@
         </div>
     </div>
 
-            
-
-            
-
-
         <div class="gradient-box">
 
             <div class="text-box">

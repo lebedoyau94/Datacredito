@@ -10,6 +10,40 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <script src="https://kit.fontawesome.com/2e3d4c9f14.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    .content-section{
+        overflow-y: hidden;
+        border-bottom-left-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+
+    .text-perfil-dos p{
+        display: flex;
+        font-size: 12px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(50px, 170px));
+        margin-top: 5px;
+    }
+
+    .most{
+        font-size: 20px;
+        color: #323f53;
+        cursor: pointer;
+        margin-top: 2rem;
+    }
+
+    .non{
+        border: none !important;
+    }
+
+    .text-perfil-dos{
+        width: 80%;
+        text-align: justify;
+    }
+</style>
 <body>
     <section class="menu-section">
         <button class="cursor">
@@ -31,7 +65,7 @@
         </div>
         <nav>
             <div class="menu-text">
-                <p>¡Hola!</p>
+                <p class="hello">¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p>{{Auth::user()->email}}</p>
                 <form action="{{route('logout')}}" method="POST">
@@ -195,17 +229,19 @@
             <p>Actualizar y modificar datos</p>
         </div>
 
-        <div class="vida box bold">
-            <p>Historial de soluciones tomadas</p>
-        </div>
-
         <div class="grid-box-dos">
                 <div class="text-perfil-dos">
-                    <p class="bold">Nombre y apellido: {{Auth::user()->name}}</p>
+                    <p>Nombre y apellido: {{Auth::user()->name}}</p>
                     <p>Tipo ID: Cédula</p>
                     <p>Número ID: 00000000</p>
-                    <p>Email: {{Auth::user()->email}} <a href="#" class="button-m">Modificar</a></p>
-                    <p>Teléfono: {{Auth::user()->phone}} <a href="#" class="button-md">Modificar</a></p>
+                    <div class="grid">
+                        <p>Email: {{Auth::user()->email}}</p>
+                        <a href="#" class="button-m">Modificar</a>
+                    </div>
+                    <div class="grid">
+                        <p>Teléfono: {{Auth::user()->phone}}</p>
+                        <a href="#" class="button-md">Modificar</a>
+                    </div>
                 </div>
 
             
@@ -222,8 +258,8 @@
                 </div>
             </div>
 
-            <div class="vida box">
-                <p>Próximas recompensas</p>
+            <div class="most">
+                <h5>Próximas recompensas</h5>
             </div>
 
 
@@ -290,7 +326,7 @@
             <div class="history-info-box">
                 Tipo de recompensa
             </div>
-            <div class="history-info-box">
+            <div class="history-info-box non">
                 Descripción
             </div>
         </div>
@@ -323,8 +359,8 @@
                 </div>
         </div>
 
-        <div class="vida box">
-            <p>Recompensas obtenidas</p>
+        <div class="most">
+            <h5>Recompensas obtenidas</h5>
         </div>
 
         <div class="historias-box">
@@ -337,7 +373,7 @@
             <div class="history-info-box">
                 Tipo de recompensa
             </div>
-            <div class="history-info-box">
+            <div class="history-info-box non">
                 Descripción
             </div>
         </div>
