@@ -444,7 +444,7 @@
             <input type="submit" class="submit" value="Enviar" id="openModal">
             <div class="checkBox-container">
                 
-                <input type="checkbox" id="" name="tyc" @if($tyc == 1) checked @endif />
+                <input type="checkbox" id="" name="tyc" @if($tyc == 1) checked @endif/>
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y
                     condiciones</label>
                 @error('tyc')
