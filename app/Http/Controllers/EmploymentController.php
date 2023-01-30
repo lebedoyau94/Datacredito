@@ -41,8 +41,8 @@ class EmploymentController extends Controller
             $rows['tyc'] = $employmenUser->tyc;
         }else{
             $rows['profession'] = \old('profession');
-            $rows['scholarship'] =\old('scholarship');
-            $rows['year_experincie'] =\old('year_experincie');
+            $rows['scholarship'] = \old('scholarship');
+            $rows['year_experincie'] = \old('year_experincie');
             $rows['tyc'] = \old('tyc') == 'on'? '1': '';
         }
         
@@ -68,8 +68,7 @@ class EmploymentController extends Controller
     public function store(StoreEmploymentRequest $request)
     {   
         if($this->employmentUserService->storeService()) 
-            return view('employment');
-            //return to_route('employment.index');
+            return to_route('employment.index');
     }
 
     /**
