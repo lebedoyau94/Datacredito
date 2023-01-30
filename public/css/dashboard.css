@@ -1289,6 +1289,7 @@ nav ul li a{
         width: auto;
         align-items: center;
         justify-content: center;
+        display: flex;
     }
 
     .prestamo-boxs{
@@ -1521,6 +1522,7 @@ nav ul li a{
         padding: 5px;
         color: #3c4b62;
         width: 55px;
+        border-radius: 5px;
     }
 
     .button-md{
@@ -1530,6 +1532,7 @@ nav ul li a{
         padding: 5px;
         color: #3c4b62;
         width: 55px;
+        border-radius: 5px;
     }
 
     .perfil-box-box{
@@ -1676,7 +1679,7 @@ nav ul li a{
 
 @media only screen and (min-width: 800px){
     .history-box{
-        height: 15%;
+        height: 10%;
     }
 
     .m-box, .center, .dot-container, .boxessss, .dot-his, .dot-container2, .prestamo-boxs2, .acuerdo-box2, .text-perfil-tres{
@@ -1717,7 +1720,7 @@ nav ul li a{
     .salir{
         font-size: 15px;
         text-decoration: none;
-        border: 1px solid white;
+        border: none;
         color: white;
         text-align: center;
         padding: 5px;
@@ -1725,6 +1728,13 @@ nav ul li a{
         background-color: transparent;
         cursor: pointer;
         width: 100%;
+    }
+
+    .most{
+        font-size: 20px;
+        color: #323f53;
+        cursor: pointer;
+        margin-top: 2rem;
     }
 
     @media only screen and (max-width: 800px) {

@@ -32,18 +32,18 @@
 
         .first-form-container {
             margin: 2rem 0 0 0;
+            width: 60%;
         }
 
         .first-form-container h3 {
-            font-weight: lighter;
+            font-size: 16px;
         }
 
         .select-container p {
             margin: 1rem 0 0 0;
         }
 
-        .select-container select,
-        .dirigido-input input[type=text] {
+        .select-container select{
             height: 2.3rem;
             width: 15rem;
         }
@@ -77,7 +77,7 @@
         }
 
         .sec-form-container .select-container select {
-            width: 20rem;
+            width: 50%;
         }
 
         .third-form-container {
@@ -102,10 +102,39 @@
         }
 
         input[type="date"]{
-            width: 8rem;
+            width: 90%;
             height: 2rem;
             background-color: white;
             border-radius: 6px;
+        }
+
+        .box p{
+            margin-top: 0rem;
+        }
+
+        .content-section{
+            color: #324963;
+        }
+
+        .dirigido-input input[type=text]{
+            width: 100%;
+            height: 2.3rem;
+        }
+
+        .select-container{
+            justify-items: start;
+        }
+
+        .download{
+            display: flex;
+            height: 80px;
+            align-items: center;
+        }
+
+        .submit{
+            border-radius: 0px;
+            width: 150px;
+            margin: 0px;
         }
 
         @media only screen and (max-width: 800px){
@@ -146,7 +175,7 @@
         </div>
         <nav>
             <div class="menu-text">
-                <p>¡Hola!</p>
+                <p class="hello">¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p>{{Auth::user()->email}}</p>
                 <form action="{{route('logout')}}" method="POST">
@@ -224,7 +253,7 @@
         <nav>
             <div class="menu-text">
                 <h5>Men&uacute;</h5>
-                <p>¡Hola!</p>
+                <p class="hello">¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p><small>{{Auth::user()->email}}</small></p>
                 <form action="{{route('logout')}}" method="POST">
@@ -273,7 +302,7 @@
             </ul>
         </nav>
     </section>
-    <section class="content">
+    <section class="content-section">
         <div class="vida box">
             <h5>Certificados</h5>
             <p>Descarga paz y salvos, certificados al d&iacute;a</p>
@@ -346,7 +375,7 @@
                     <input type="text">
                 </div>
 
-                <div class="select-container">
+                <div class="download">
                     <input type="submit" value="Descargar" class="submit">
                 </div>
 
