@@ -40,7 +40,7 @@
         </div>
         <nav>
             <div class="menu-text">
-                <p>¡Hola!</p>
+                <p class="hello">¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p>{{Auth::user()->email}}</p>
                 <form action="{{route('logout')}}" method="POST">
@@ -118,7 +118,7 @@
         <nav>
             <div class="menu-text">
                 <h5>Men&uacute;</h5>
-                <p>¡Hola!</p>
+                <p class="hello">¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p><small>{{Auth::user()->email}}</small></p>
                 <form action="{{route('logout')}}" method="POST">
