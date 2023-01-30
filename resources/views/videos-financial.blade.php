@@ -18,6 +18,10 @@
             justify-content: center;
         }
 
+        .hello {
+        font-size: 1.5rem;
+        }
+
         .container{
             background-color: white;
             width: 60%;
@@ -26,6 +30,9 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            padding: 2rem;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
         }
 
         .text-container{
@@ -113,10 +120,6 @@
             text-align: start;
             margin-left: 15px;
         }
-
-        .container{
-            padding: 1px 15px;
-        }
     }
 
     </style>
@@ -133,10 +136,6 @@
                 <h5>Soluciones financieras</h5>
                 <p>Beneﬁcios, posibilidades de pago y crédito</p>
             </div>
-        </div>
-        <div class="vida box">
-            <h5>Eduaci&oacute;n financiera</h5>
-            <p>Contenido especializado para mejorar tu perfil financiero</p>
         </div>
 
         <div class="videos-container">
