@@ -35,8 +35,8 @@ class StoreEmploymentRequest extends FormRequest
     {
         return [
             "scholarship" => "nivel de escolaridad",
-            "profession" => "profesi&oacute;n",
-            "year_experincie" => "años de experinencia",
+            "profession" => "profesion",
+            "year_experincie" => "anios de experinencia",
             "tyc" => "terminos y condiciones",
             "file" => "archivo"
 

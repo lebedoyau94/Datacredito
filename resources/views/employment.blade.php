@@ -390,9 +390,9 @@
             <p>¿Cu&aacute;l es tu nivel de escolaridad?</p>
             <select name="scholarship" id="" >
                 <option value=""></option>
-                <option value="option">option</option>
-                <option value="option">option</option>
-                <option value="option">option</option>
+                <option value="option1" @if($scholarship == 'option1') selected @endif>option</option>
+                <option value="option2" @if($scholarship == 'option2') selected @endif>option</option>
+                <option value="option3" @if($scholarship == 'option3') selected @endif>option</option>
             </select>
             @error('scholarship')
                 <div class="is-invalid">{{ $message }}</div>
@@ -412,9 +412,9 @@
                 <p>Años de experiencia</p>
                 <select name="year_experincie" id="" >
                     <option value=""></option>
-                    <option value="option">option</option>
-                    <option value="option">option</option>
-                    <option value="option">option</option>
+                    <option value="option1" @if($year_experincie == 'option1') selected @endif>option</option>
+                    <option value="option2" @if($year_experincie == 'option2') selected @endif>option</option>
+                    <option value="option3" @if($year_experincie == 'option3') selected @endif>option</option>
                 </select>
                 @error('year_experincie')
                     <div class="is-invalid">{{ $message }}</div>
@@ -434,7 +434,7 @@
             </div>
 
             <div class="archivo-box">
-                <p class="gray upper">Nombre archivo.</p>
+                <p class="gray upper"> @if(isset($file) &&$file) {{$file}} @else Nombre archivo. @endif</p>
                 <span>Eliminar</span>
             </div>
         </div>
@@ -444,7 +444,7 @@
             <input type="submit" class="submit" value="Enviar" id="openModal">
             <div class="checkBox-container">
                 
-                <input type="checkbox" id="" name="tyc" />
+                <input type="checkbox" id="" name="tyc" @if($tyc == 1) checked @endif />
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y
                     condiciones</label>
                 @error('tyc')
