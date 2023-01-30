@@ -31,10 +31,21 @@ class EmploymentController extends Controller
      */
     public function index()
     {
-        $rows = array('profession'=>'');
+        $rows = array('file'=>'');
         if ($employmenUser = $this->employmentUserService->first(["user_id" => \request()->user()->getKey()])){
             $rows['profession'] =$employmenUser->profession;
+            $rows['scholarship'] =$employmenUser->scholarship;
+            $rows['year_experincie'] =$employmenUser->year_experincie;
+            $file = explode('/',$employmenUser->file);
+            $rows['file'] = $file[1];
+            $rows['tyc'] = $employmenUser->tyc;
+        }else{
+            $rows['profession'] = \old('profession');
+            $rows['scholarship'] = \old('scholarship');
+            $rows['year_experincie'] = \old('year_experincie');
+            $rows['tyc'] = \old('tyc') == 'on'? '1': '';
         }
+        
         return view('employment',$rows);
     }
 

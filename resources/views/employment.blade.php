@@ -229,11 +229,9 @@
                 width: 80%;
                 margin-top: 2rem;
             }
-
             .sec-p p{
                 margin-top: 20px;
             }
-
             .file-select {
                     position: relative;
                     display: inline-block;
@@ -241,7 +239,6 @@
                     width: 25%;
                     height: 36px;
                 }
-
                 .file-select::before {
                     background-color: transparent;
                     color: #262650;
@@ -314,7 +311,7 @@
         </div>
         <nav>
             <div class="menu-text">
-                <p class="hello">¡Hola!</p>
+                <p>¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p>{{Auth::user()->email}}</p>
                 <form action="{{route('logout')}}" method="POST">
@@ -392,7 +389,7 @@
         <nav>
             <div class="menu-text">
                 <h5>Men&uacute;</h5>
-                <p class="hello">¡Hola!</p>
+                <p>¡Hola!</p>
                 <p class="bold">{{Auth::user()->name}}</p>
                 <p><small>{{Auth::user()->email}}</small></p>
                 <form action="{{route('logout')}}" method="POST">
@@ -468,9 +465,9 @@
             <p>¿Cu&aacute;l es tu nivel de escolaridad?</p>
             <select name="scholarship" id="" >
                 <option value=""></option>
-                <option value="option">option</option>
-                <option value="option">option</option>
-                <option value="option">option</option>
+                <option value="option1" @if($scholarship == 'option1') selected @endif>option</option>
+                <option value="option2" @if($scholarship == 'option2') selected @endif>option</option>
+                <option value="option3" @if($scholarship == 'option3') selected @endif>option</option>
             </select>
             @error('scholarship')
                 <div class="is-invalid">{{ $message }}</div>
@@ -480,7 +477,7 @@
         <div class="double-input-container">
             <div class="first-input-box">
                 <p>Escribe tu profesi&oacute;n o actividad laboral reciente</p>
-                <input type="text" name="profession"/>
+                <input type="text" name="profession" value="{{$profession}}"/>
                 @error('profession')
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
@@ -490,9 +487,9 @@
                 <p>Años de experiencia</p>
                 <select name="year_experincie" id="" >
                     <option value=""></option>
-                    <option value="option">option</option>
-                    <option value="option">option</option>
-                    <option value="option">option</option>
+                    <option value="option1" @if($year_experincie == 'option1') selected @endif>option</option>
+                    <option value="option2" @if($year_experincie == 'option2') selected @endif>option</option>
+                    <option value="option3" @if($year_experincie == 'option3') selected @endif>option</option>
                 </select>
                 @error('year_experincie')
                     <div class="is-invalid">{{ $message }}</div>
@@ -500,13 +497,13 @@
             </div>
         </div>
 
-            <div class="life">
+        <div class="life">
                 <h5>Adjunta tu hoja de vida en formato pdf o word</h5>
-            </div>
+        </div>
 
         <div class="adjuntar-box">
-            <div class="recibo-box file-select">
-                <input type="file" name="file" value="Adjuntar archivo"/>
+            <div class="recibo-box  file-select">
+                <input type="file" name="file" value="Adjuntar archivo" />
                 <span class="gray tiny">El formato no debe superar un peso de 3 mb</span>
                 @error('file')
                     <div class="is-invalid">{{ $message }}</div>
@@ -514,7 +511,7 @@
             </div>
 
             <div class="archivo-box">
-                <p class="gray upper">Nombre archivo.</p>
+                <p class="gray upper"> @if(isset($file) &&$file) {{$file}} @else Nombre archivo. @endif</p>
                 <span>Eliminar</span>
             </div>
         </div>
@@ -523,9 +520,10 @@
             
             <input type="submit" class="submit" value="Enviar" id="openModal">
             <div class="checkBox-container">
-                <input type="checkbox" id="" name="tyc" value="{{$tyc}}"/>
+                
+                <input type="checkbox" id="" name="tyc" @if($tyc == 1) checked @endif/>
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y
-                    condiciones 
+                    condiciones
                     <a href="" class="terms-box">Ver t&eacute;rminos y condiciones</a></label>
                 @error('tyc')
                     <div class="is-invalid">{{ $message }}</div>
