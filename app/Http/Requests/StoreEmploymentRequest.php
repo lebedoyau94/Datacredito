@@ -27,8 +27,8 @@ class StoreEmploymentRequest extends FormRequest
             "scholarship"=>'required|string',
             "profession"=>'required|string',
             "year_experincie"=>'required|string',
-            "tyc"=>'required|string',
-            "file"=>'required|file|mimes:pdf,docx'
+            "tyc"=>'required',
+            "file"=>'required|file|mimes:pdf,docx|max:30000'
         ];
     }
     public function attributes()

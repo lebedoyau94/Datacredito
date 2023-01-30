@@ -49,13 +49,14 @@ class EmploymentUserService extends EmploymentUserRepository
     {
 
         DB::beginTransaction();
+        
         try {
             $file = \request()->file();
             $data = [
                 "tyc" => !!(\request("tyc") === "on")
             ];
-            $payload = Arr::collapse([$data,\request()->except("tyc","_token")]);
-
+            $payload = Arr::collapse([$data,\request()->except("tyc","_token",'file')]);
+          
             $nameFile= \request()->user()->getKey().'.'.$file['file']->getClientOriginalExtension();
             $payload['file'] = "employmentUser/".$nameFile;
     
