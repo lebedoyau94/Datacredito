@@ -31,7 +31,7 @@ class EmploymentController extends Controller
      */
     public function index()
     {
-        $rows = array('profession'=>'', 'scholarship'=>'','year_experincie'=>'','file'=>'');
+        $rows = array('file'=>'');
         if ($employmenUser = $this->employmentUserService->first(["user_id" => \request()->user()->getKey()])){
             $rows['profession'] =$employmenUser->profession;
             $rows['scholarship'] =$employmenUser->scholarship;
