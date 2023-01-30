@@ -497,10 +497,12 @@
             </div>
         </div>
 
-        <h3>Adjunta tu hoja de vida en formato pdf o word</h3>
+        <div class="life">
+                <h5>Adjunta tu hoja de vida en formato pdf o word</h5>
+        </div>
 
         <div class="adjuntar-box">
-            <div class="recibo-box">
+            <div class="recibo-box  file-select">
                 <input type="file" name="file" value="Adjuntar archivo" />
                 <span class="gray tiny">El formato no debe superar un peso de 3 mb</span>
                 @error('file')
@@ -521,7 +523,8 @@
                 
                 <input type="checkbox" id="" name="tyc" @if($tyc == 1) checked @endif/>
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y
-                    condiciones</label>
+                    condiciones
+                    <a href="" class="terms-box">Ver t&eacute;rminos y condiciones</a></label>
                 @error('tyc')
                     <div class="is-invalid">{{ $message }}</div>
                 @enderror
