@@ -752,8 +752,8 @@ nav ul li a{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 6rem;
-        height: 7vh;
+        width: 8rem;
+        height: 6vh;
         border: 1px solid white;
     }
 
