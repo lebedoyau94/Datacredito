@@ -31,10 +31,9 @@ class EmploymentController extends Controller
      */
     public function index()
     {
-        $rows = array();
+        $rows = array('profession'=>'');
         if ($employmenUser = $this->employmentUserService->first(["user_id" => \request()->user()->getKey()])){
             $rows['profession'] =$employmenUser->profession;
-            $rows['tyc'] =$employmenUser->tyc;
         }
         return view('employment',$rows);
     }
@@ -57,14 +56,8 @@ class EmploymentController extends Controller
      */
     public function store(StoreEmploymentRequest $request)
     {   
-        $rows = array();
-        if ($employmenUser = $this->employmentUserService->first(["user_id" => \request()->user()->getKey()])){
-            $rows['profession'] =$employmenUser->profession;
-        }
-       
-        if($this->employmentUserService->storeService())
-            return view('employment',$rows);
-
+        if($this->employmentUserService->storeService()) 
+            return to_route('employment.index');
     }
 
     /**
