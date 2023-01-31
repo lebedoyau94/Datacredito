@@ -160,8 +160,8 @@
         .is-invalid {
         color: red;
         font-size: small;
-        justify-content: center !important;
         display: flex !important;
+        justify-content: center !important;
         }
 
     </style>

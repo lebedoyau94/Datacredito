@@ -34,6 +34,7 @@ class SeventhRequest extends FormRequest
         return [
             "allocate_payment"  => "destinar al pago",
             "income_range"      => "ingresos actualmente",
+            
         ];
     }
 }
