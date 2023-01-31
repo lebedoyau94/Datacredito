@@ -157,6 +157,13 @@
             font-size: 12px;
         }
 
+        .is-invalid {
+        color: red;
+        font-size: small;
+        display: flex !important;
+        justify-content: center !important;
+        }
+
     </style>
 </head>
 <body>
@@ -200,10 +207,11 @@
             <section class="checkBox-container">
                 <input type="checkbox" type="checkbox" name="tyc">
                 <label for="">Para continuar debes de aceptar t&eacute;rminos y condiciones</label><br>
-                @error('tyc')
-                <div class="is-invalid">{{ $message }}</div>
-                @enderror
             </section>
+
+            @error('tyc')
+            <div class="is-invalid">{{ $message }}</div>
+            @enderror
         </form>
 
 

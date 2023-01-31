@@ -24,7 +24,17 @@ class SeventhRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "income_range"       => "required|string",
+            "allocate_payment"   => "required|string",
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            "allocate_payment"  => "destinar al pago",
+            "income_range"      => "ingresos actualmente",
+            
         ];
     }
 }
