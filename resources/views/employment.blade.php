@@ -28,6 +28,11 @@
             border-bottom-left-radius: 10px;
         }
 
+        .is-invalid {
+        color: red;
+        font-size: 10px;
+        }
+
         .container{
             background-color: rgb(255, 255, 255);
             width: 60%;
@@ -156,7 +161,7 @@
 
         .btn-container {
             display: flex;
-            margin: 2rem 0 0 0;
+            margin: 2.5rem 0 0 0;
             align-items: center;
         }
 
@@ -533,7 +538,7 @@
     </section>
 </form>
 
-    <div class="modal" id="modal">
+    {{-- <div class="modal" id="modal">
         <div class="exit-boxx">
             <span id="close">X</span>
         </div>
@@ -551,7 +556,7 @@
                 <p>Logo</p>
             </div>
         </div>
-    </div>
+    </div>--}}
             </div>
     <div class="content2">
         @extends('vista-casa')
@@ -573,15 +578,15 @@
             }
         });
 
-        let closeBtn = document.getElementById('close');
-    let modal = document.getElementById('modal');
+    let closeBtn = document.getElementById('close');
+    /*let modal = document.getElementById('modal');
     let openBtn = document.getElementById('openModal');
 
     modal.style.display = 'none';
 
     closeBtn.addEventListener('click', function(){
         modal.style.display = 'none';
-    });
+    });*/
 
     openBtn.addEventListener('click', function(){
         modal.style.display = 'block';
