@@ -133,15 +133,14 @@ class CreditController extends Controller
      */
     public function redirectQuarter(ValidateCodeRequest $validateCodeRequest)
     {
-        /*if ($user = $this->userService->getCodeService()){
-            if ($user->credit)
-                return view('dashboard');
+        if ($user = $this->userService->getCodeService()){
+            /*if ($user->credit)
+                return view('dashboard');*/
 
             return view('quarter');
-        }*/
-        $this->userService->getCodeService();
+        }
 
-        return view('quarter');
+        return view('error');
     }
     /**
      * Show the application dashboard.
