@@ -33,7 +33,7 @@
             <div class="first-content">
 
                 <div class="house-box">
-                    <img src="{{asset('assets/img/Casa.png')}}" width="100px" height="100px">
+                    <img src="{{asset('assets/img/Casa.png')}}" width="60px" height="60px">
                 </div>
                 <div class="house-text">
                     <p class="subtitle">Mi Sueño</p>

@@ -293,6 +293,39 @@
                 height: 70%;
             }
         }
+
+        @media only screen and (min-width: 1200px){
+
+            .sec-p h3{
+                width: 75%;
+            }
+
+            .sec-p {
+                width: 50%;
+                font-size: 16px;
+            }
+
+            .sec-p p{
+                font-weight: 500;
+            }
+
+            .file-select::before{
+                font-size: 12px;
+            }
+
+            .tiny {
+                font-size: 7px;
+            }
+
+            .input-container, .double-input-container{
+                font-weight: 600;
+            }
+
+            .checkBox-container{
+                font-size: 9px;
+                width: 60%;
+            }
+}
     </style>
 </head>
 <body>
@@ -462,7 +495,7 @@
 
         <div class="sec-p">
             <h3>Con&eacute;ctate con nuestra red de aliados</h3>
-            <p>Para brindarte las mejores opciones de empleo necesitamos</p>
+            <p>Para brindarte las mejores opciones de empleo necesitamos información y tu hoja de vida</p>
         </div>
 <form role="form" action="{{route('employment.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
