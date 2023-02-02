@@ -89,6 +89,11 @@
             border-radius: 5px;
         }
 
+        iframe{
+            width: 500px;
+            height: 300px;
+        }
+
         @media only screen and (max-width: 800px){
                 .container{
                     width: 100%;
@@ -122,6 +127,15 @@
             text-align: start;
             margin-left: 15px;
         }
+    }
+
+        /*View 1366x768px*/
+
+        @media only screen and (min-width: 1200px){
+            .container{
+                width: 55%;
+            }
+
     }
 
     </style>

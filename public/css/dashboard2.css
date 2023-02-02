@@ -278,3 +278,58 @@ font-size: 30px;
 .second-sec, .third-sec{
     margin-top: 4rem;
 }
+
+    /*View 1366x768px*/
+
+@media only screen and (min-width: 1200px){
+    
+    .house-text{
+        width: 75%;
+    }
+
+    .house-text p:nth-child(2){
+        font-size: 10px;
+    }
+
+    .first-content{
+        display: flex;
+        padding: 0px 1rem;
+    }
+
+    .text-second-sec, .text-third-sec{
+        width: 86%;
+    }
+
+    .text-second-sec h5, .text-third-sec h5 {
+        font-size: 12px;
+        color: #031d3a;
+    }
+
+    .text-second-sec p, .text-third-sec p {
+        font-size: 10px;
+    }
+
+    .bigger{
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .credito .mini-box:nth-child(1) {
+        font-size: 12px;
+    }
+
+    .credito input[type="submit"], .tarjeta input[type="submit"]{
+        width: 5rem;
+        margin: 10px;
+        font-weight: 900;
+    }
+
+    .parragraph-spacing h5 {
+        font-size: 11px;
+    }
+
+    .fourth-sec{
+        height: 120px;
+        margin-top: 0px;
+    }
+}

@@ -23,10 +23,6 @@
         color: #323f53;
     }
 
-    .most{
-        margin-top: 1rem;
-    }
-
     .box p{
         margin-top: 0px;
     }
@@ -35,20 +31,8 @@
         font-size: 12px;
     }
 
-    .mini-history-box{
-        height: 148px;
-    }
-
-    .maxi-history-box{
-        height: 148px;
-    }
-
     .boxesss{
         height: auto;
-    }
-
-    .grid-tres{
-        height: 45px;
     }
 
     .content-section{

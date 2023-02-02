@@ -125,10 +125,10 @@ h1{
 }
 
 .color-circle{
-    background-image: url("/assets/img/450.png");
-    width: 147px;
-    height: 147px;
-    /*background-color: rgb(60,140,203);
+    width: 100px;
+    height: 100px;
+    /*background-image: url("/assets/img/450.png");
+    background-color: rgb(60,140,203);
     background: linear-gradient(90deg, rgba(60,140,203,1) 0%, rgba(143,122,181,1) 50%, rgba(223,71,147,1) 100%);
     border-radius: 50%;
     width: 120px;
@@ -1800,3 +1800,182 @@ nav ul li a{
     }
 
     }
+
+    /*View 1366x768px*/
+
+    @media only screen and (min-width: 1200px){
+
+    .sec-p h3{
+        width: 100%;
+    }
+
+    .hello {
+        font-size: 1.2rem;
+    }
+
+    ul h5 {
+        font-size: 1.2rem;
+    }
+
+    a {
+        font-size: 13px;
+    }
+
+    .box p{
+        padding-right: 1rem;
+    }
+
+    .most {
+        font-size: 18px;
+        margin-top: .5rem;
+    }
+
+    .boxes {
+        width: 50%;
+        height: 6%;
+    }
+
+    .grid-tres{
+        width: 50%;
+        height: 30px;
+    }
+
+    .history-info-box{
+        font-size: 11px;
+        margin: 1rem 0 0.2rem 0;
+    }
+
+    .history-information{
+        font-size: 10px;
+    }
+
+    .mini-history-box{
+        height: 140px;
+    }
+
+    .maxi-history-box {
+        height: 140px;
+    }
+
+    .boxess{
+        width: 95%;
+    }
+
+    .vehicle-box{
+        width: 24%;
+    }
+
+    .color-circle{
+        width: 100px;
+        height: 100px;
+    }
+
+    .deudas-box {
+        margin: 2rem 0.5rem 0 0.5rem;
+    }
+
+    .recommed-box{
+        margin-top: 30px;
+    }
+
+    .recomendaciones-box{
+        height: 14%;
+        margin-top: -1rem;
+    }
+
+    .recomendaciones-box{
+        height: 7%;
+        margin: 0px;
+        margin: 1rem 0rem;
+    }
+
+    .info-box{
+        margin: 0rem .1rem;
+        height: 50%;
+    }
+
+    .progress-bar{
+        width: 180px;
+        font-size: 8px;
+        height: 20px;
+    }
+
+    .star {
+        width: 48px;
+        height: 44px;
+        top: -4px;
+        right: -25px;
+    }
+
+    .grid-prestamo-2{
+        grid-template-columns: repeat(2,minmax(165px, 80px));
+    }
+
+    .center-container{
+        height: 60px;
+    }
+
+    .bold-long{
+        font-size: 7px;
+    }
+
+    .grid-prestamo-2{
+        font-size: 9px;
+    }
+
+    .grid-prestamo p {
+        font-size: 6px;
+        text-align: center;
+    }
+
+    .text-box p{
+        font-size: 11px;
+    }
+
+    .box{
+        width: 65%;
+    }
+
+    .text-circle-box{
+        height: 60px;
+    }
+
+    .container-number-cuotas{
+        margin-left: 15px;
+    }
+
+    .flex-container2 {
+        margin: 0px 0px 0px 15px;
+    }
+
+    .text-perfil p{
+        padding-right: 5rem;
+    }
+
+    .text-p{
+        font-size: 10px !important;
+    }
+
+    .small{
+        font-size: 7px;
+    }
+
+    .biggers{
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .circle-two{
+        left: 12px;
+    }
+
+    .circle-four{
+        left: 12px;
+    }
+
+    .circle-five{
+        left: 40px;
+    }
+    
+}

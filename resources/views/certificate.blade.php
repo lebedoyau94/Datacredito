@@ -152,6 +152,12 @@
             flex-direction: column;
             }
         }
+
+    @media only screen and (min-width: 1200px){
+        .first-form-container {
+            width: 90%;
+        }
+    }
     </style>
 </head>
 <body>

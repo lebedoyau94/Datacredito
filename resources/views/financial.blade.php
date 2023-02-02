@@ -167,9 +167,9 @@
             </ul>
         </nav>
     </section>
-
+    <div class="content2">
         @extends('vista-casa')
-
+    </div>
         @extends('videos-financial')
 
     <script>
