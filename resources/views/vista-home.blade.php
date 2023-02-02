@@ -52,30 +52,44 @@
         <section class="second-sec">
 
             <div class="text-second-sec">
-                <div class="prestamo-banc">
-                    <h6>Pr&eacute;stamo tarjetas</h6>
-                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
+                <div class="line-card">
+                    <div class="prestamo-banc">
+                        <h6>Pr&eacute;stamo tarjetas</h6>
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
+                    </div>
                 </div>
                 <div class="grid-tarjet">
                     <div class="tarjet morado">
+                        <div class="text-card">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus amet deserunt reprehenderit,</p>
+                        </div>
                         <div class="select-card">
                             <p class="select-o select-text"><input type="radio" value="option1">Lo Quiero</p>
                         </div>
                     </div>
 
                     <div class="tarjet naranja">
+                        <div class="text-card">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus amet deserunt reprehenderit,</p>
+                        </div>
                         <div class="select-card">
                             <p class="select-o select-text"><input type="radio" value="option2">Lo Quiero</p>
                         </div>
                     </div>
 
                     <div class="tarjet verde">
+                        <div class="text-card">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus amet deserunt reprehenderit,</p>
+                        </div>
                         <div class="select-card">
                             <p class="select-o select-text"><input type="radio" value="option3">Lo Quiero</p>
                         </div>
                     </div>
 
                     <div class="tarjet azul">
+                        <div class="text-card">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus amet deserunt reprehenderit,</p>
+                        </div>
                         <div class="select-card">
                             <p class="select-o select-text"><input type="radio" value="option4">Lo Quiero</p>
                         </div>
@@ -88,15 +102,19 @@
                 <p class="text-flex-sec">Pagar por PSE</p>
             </div>
 
+        <div class="line-card2">
             <div class="prestamo-banc">
                 <h6>Pr&eacute;stamo Vehículo</h6>
                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
             </div>
+        </div>
 
+        <div class="line-card2">
             <div class="prestamo-banc">
                 <h6>Pr&eacute;stamo Tarjetas</h6>
                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
             </div>
+        </div>
 
             <section class="third-sec">
 
