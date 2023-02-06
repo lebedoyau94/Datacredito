@@ -179,6 +179,21 @@
                     width: 18rem;
                 }
             }
+
+            @media only screen and (min-width: 800px) {
+                body{
+                    overflow: hidden;
+                }
+
+                .logo-container{
+                    margin-top: 4rem;
+                    margin-bottom: 2rem;
+                }
+
+                .percent-sec p{
+                    font-weight: 600;
+                }
+            }
     </style>
 </head>
 <body>

@@ -164,6 +164,25 @@
         justify-content: center !important;
         }
 
+        @media only screen and (min-width: 1200px) {
+            .logo-container {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            }
+
+            .third-sec p{
+                font-weight: 600;
+            }
+
+            body{
+                overflow: hidden;
+            }
+
+            .question-container h3{
+                width: 52%;
+            }
+        }
+
     </style>
 </head>
 <body>

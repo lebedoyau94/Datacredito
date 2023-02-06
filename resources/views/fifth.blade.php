@@ -92,6 +92,29 @@
                 }
             }
 
+            @media only screen and (min-width: 1200px) {
+                .logo-container{
+                    margin-top: 4rem;
+                    margin-bottom: 2rem;
+                }
+
+                .question-container{
+                    align-self: end;
+                }
+
+                .percent-sec p{
+                    font-weight: 600;
+                }
+
+                .question-container select{
+                    padding: 13px 70px;
+                }
+
+                body{
+                    overflow: hidden;
+                }
+            }
+
 
     </style>
 </head>
