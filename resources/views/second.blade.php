@@ -75,6 +75,25 @@
                     margin-left: 40px;
                 }
 
+                @media only screen and (min-width: 1200px) {
+
+                .email-box, .phone-box{
+                    margin: 11px 0;
+                }
+
+                .logo-container{
+                    margin: 25px 0;
+                }
+
+                .second-sec p{
+                    font-weight: 600;
+                }
+
+                .leyend{
+                    font-size: 14px;
+                }
+
+}
 
     </style>
 </head>

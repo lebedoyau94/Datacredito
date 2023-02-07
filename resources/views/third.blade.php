@@ -73,12 +73,23 @@
                     width: 365px;
                 }
                 
-                @media only screen and (max-width: 600px) {
+                    @media only screen and (max-width: 600px) {
                         .logo-container{
                             margin-top: 50px;
                         }
                     }
 
+                    @media only screen and (min-width: 1200px) {
+
+                    .logo-container{
+                        margin-top: 90px;
+                    }
+
+                    .leyend{
+                        font-weight: 600;
+                    }
+
+}
 
 
     </style>

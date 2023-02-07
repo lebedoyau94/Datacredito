@@ -144,6 +144,56 @@
         .m-left{
             margin-left: 10px;
         }
+
+        @media only screen and (min-width: 1200px) {
+            .left-grid-sec{
+                font-size: 10px;
+            }
+
+            .first-line-m h2{
+                font-size: 18px;
+            }
+
+            .first-line-m p{
+                font-size: 13px;
+            }
+
+            .gradient-section h4{
+                font-size: 16px;
+            }
+
+            .icon-text-box{
+                padding-right: 48%;
+                font-size: 13px;
+                margin: .8rem 0;
+            }
+
+            #Capa_2{
+                width: 45px;
+            }
+
+            .text-right-grid{
+                padding-right: 25px;
+            }
+
+            .buy{
+                font-weight: 900;
+                font-size: 15px;
+            }
+
+            .buy-p{
+                font-size: 14px;
+            }
+
+            .long-card{
+                height: 63px;
+            }
+
+            input[type="text"]{
+                width: 9rem;
+                max-width: 9rem;
+            }
+        }
     </style>
 </head>
 <body class="bodys">
@@ -338,8 +388,8 @@
                 <div class="card-section">
 
                     <div class="text-card-sec">
-                        <p>Compramos tu cartera</p>
-                        <p>¿Te gusta nuestra experiencia? trae tus otras deudas, nosotros te la compramos.</p>
+                        <p class="buy">Compramos tu cartera</p>
+                        <p class="buy-p">¿Te gusta nuestra experiencia? trae tus otras deudas, nosotros te la compramos.</p>
                     </div>
 
                     <div class="tarjeta long-card">

@@ -241,8 +241,30 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-}
+        }
 
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+        input[type="submit"]{
+            padding: 5px 35px;
+            height: 45px;
+            border-radius: 28px;
+        }
+
+        .container-p{
+            width: 71%;
+        }
+
+        .first-sec{
+            margin-left: 6rem;
+        }
+
+        input[type="text"]{
+            width: 17rem;
+            text-align: center;
+        }
     }
 
 
@@ -268,7 +290,7 @@
 					<form action="{{route('redirect.second')}}" method="POST">
 						@csrf
                         <input type="text"
-                                placeholder="Ingresa con tu numero celular"
+                                placeholder="Ingresa con tu celular"
                                 name="phone"
                         >
 						<input type="submit" value="Ingresar">

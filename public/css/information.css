@@ -328,3 +328,54 @@ input[type=email]{
         margin-bottom: 2rem;
     }
 }
+
+@media only screen and (min-width: 1200px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .text-container{
+        margin: 2rem 3.0rem 2rem 3.0rem;
+    }
+
+    .text-container .title {
+        font-size: 2.5rem;
+    }
+
+    .text-container .paragraph{
+        font-size: 13px;
+        margin: .5rem 0 0 0;
+    }
+
+    .tasa-big-box{
+        width: 39%;
+        font-size: 15px;
+    }
+
+    .tasa-interes{
+        font-size: 11px;
+        width: 20%;
+    }
+
+    .form-box{
+        width: 60%;
+    }
+
+    .nombreApellido input[type="text"]{
+        width: 23rem;
+    }
+
+    input[type="text"], select{
+        width: 19rem;
+    }
+
+    input[type="email"]{
+        padding: .7rem;
+        width: 27.1rem;
+    }
+
+    .fourth-line input[type="text"]{
+        width: 30rem;
+    }
+}

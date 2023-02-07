@@ -10,6 +10,7 @@ body{
     font-family: 'Rubik', sans-serif;
     background: rgb(208,226,245);
     background: linear-gradient(127deg, rgba(208,226,245,1) 77%, rgba(179,175,240,0.9564138691077072) 94%);
+    overflow: hidden;
 }
 
 .logo-container{

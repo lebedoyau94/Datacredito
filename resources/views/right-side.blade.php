@@ -36,6 +36,7 @@
             width: 100%;
             height: 25%;
             justify-content: end;
+            margin-top: 3rem;
         }
 
         .first-sec h1{
@@ -93,6 +94,10 @@
 .right-container{
     background-size: cover;
     }
+}
+
+h1{
+    text-transform: none;
 }
 
     </style>
