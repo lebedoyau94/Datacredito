@@ -51,6 +51,23 @@ class CreditController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function newCode()
+    {
+            $user = $this->userService->first(["phone" => \old("phone")]);
+            $email = $this->userService->first(["email" => \old("email")]);
+
+            return view('second',[
+                "phone" => \old("phone"),
+                "email" => $email
+            ]);
+        }
+	
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function tranquillity()
     {
         if ($user = $this->userService->first(["phone" => \old("phone")])){
@@ -66,6 +83,7 @@ class CreditController extends Controller
 
         return view('index1');
 	}
+
 
 	public function redirectSecond(IndexCreditRequest $indexCreditRequest)
 	{

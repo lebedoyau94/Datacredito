@@ -23,8 +23,8 @@ class SixthRequest extends FormRequest
     public function rules()
     {
         return [
-            'electricity_receipt' => 'required|image|mimes:jpeg,png,jpg|max:3000',
-            'water_bill' => 'required|image|mimes:jpeg,png,jpg|max:3000'
+            'electricity_receipt' => 'required|mimes:jpeg,png,jpg,pdf|max:3000',
+            'water_bill' => 'required|mimes:jpeg,png,jpg,pdf|max:3000'
         ];
     }
     public function attributes()

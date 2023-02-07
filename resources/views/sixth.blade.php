@@ -250,7 +250,7 @@
         <section class="btn-container">
             <input type="submit" class="submit" value="Continuar">            
         </form>
-            <form action="{{route('login')}}" method="POST">
+            <form action="{{route('view.seventh')}}" method="GET">
                 @csrf
                 <input type="submit" class="submit" value="Omitir">
             </form>

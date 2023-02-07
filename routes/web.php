@@ -39,6 +39,7 @@ Route::get('/range', [App\Http\Controllers\CreditController::class, 'viewValidat
 Route::get('/attachment', [App\Http\Controllers\CreditController::class, 'viewSixth'])->name('view.sixth');
 Route::get('/sixth', [App\Http\Controllers\CreditController::class, 'sixth'])->name('sixth');
 Route::get('/dreams', [App\Http\Controllers\CreditController::class, 'viewSeventh'])->name('view.seventh');
+Route::get('/newCode', [App\Http\Controllers\CreditController::class, 'newCode'])->name('view.code');
 
 Route::post('/tranquillity', [App\Http\Controllers\CreditController::class, 'redirectSecond'])->name('redirect.second');
 Route::post('/code', [App\Http\Controllers\CreditController::class, 'redirectThird'])->name('redirect.third');
