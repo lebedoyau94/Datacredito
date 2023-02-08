@@ -54,7 +54,7 @@ h1{
     border-radius: 15px;
 }
 
-input[type=submit]{
+.submit{
     height: 35px;
     border-radius: 15px;
     border: none;
