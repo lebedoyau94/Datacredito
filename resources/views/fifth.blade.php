@@ -115,6 +115,24 @@
                 }
             }
 
+            a{
+                height: 25px;
+                border-radius: 15px;
+                border: none;
+                padding: 5px 25px;
+                color: white;
+                background-color: #262650;
+                font-weight: 600;
+                cursor: pointer;
+                margin: 1rem 10px;
+                width: 46px;
+                text-decoration: none;
+                align-content: center;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+
 
     </style>
 </head>
@@ -160,10 +178,7 @@
     <section class="btn-container">
         <input type="submit" class="submit" value="Continuar">
     </form>
-    <form action="{{route('view.sixth')}}" method="GET">
-        @csrf
-        <input type="submit" class="submit" value="Omitir">
-    </form>
+        <a href="{{route('view.sixth')}}">Omitir</a>
     </section>
     </section>
 </body>
