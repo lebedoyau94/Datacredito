@@ -27,7 +27,31 @@
 
                 .submit{
                     margin: 1rem 10px;
+                    font-family: 'Rubik';
+                    font-size: 15px;
                 }
+
+                a{
+                    height: 25px;
+                    border-radius: 15px;
+                    border: none;
+                    padding: 5px 25px;
+                    color: white;
+                    background-color: #262650;
+                    cursor: pointer;
+                    margin: 1rem 10px;
+                    width: 46px;
+                    text-decoration: none;
+                    align-content: center;
+                    text-align: center;
+                    display: flex;
+                    /* flex-direction: column; */
+                    align-items: center;
+                    font-weight: normal;
+                    font-family: 'Rubik';
+                }
+
+
 
                 @media only screen and (min-width: 800px) {
 
