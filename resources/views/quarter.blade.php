@@ -136,7 +136,7 @@
             background: white;
             border-radius: 15px;
             width: 13rem;
-            padding: 0px 32px;
+            padding: 0px 20px;
             border: none;
         }
 

@@ -50,6 +50,7 @@
                     text-align: center;
                     width: 100px;
                 }
+            
 
                 input[type="submit"]{
                     margin-left: 15px;
@@ -74,8 +75,10 @@
                 }
 
                 a{
+                    border: 1px solid #262650;
                     text-decoration: none;
                     color: #262650;
+                    padding: 10px;
                 }
 
                     @media only screen and (max-width: 600px) {
