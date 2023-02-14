@@ -146,15 +146,13 @@
                 padding: 5px 25px;
                 color: white;
                 background-color: #262650;
-                font-weight: 600;
                 cursor: pointer;
                 margin: 1rem 10px;
                 width: 46px;
                 text-decoration: none;
-                align-content: center;
+                align-items: center;
                 text-align: center;
                 display: flex;
-                flex-direction: column;
             }
 
 
