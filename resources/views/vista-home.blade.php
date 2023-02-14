@@ -82,7 +82,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus amet deserunt reprehenderit,</p>
                         </div>
                         <div class="select-card">
-                            <p class="select-o select-text"><input type="radio" value="option3">Lo Quiero</p>
+                            <p class="select-o select-text"><input type="radio" value="option3" id="significaModalBtn">Lo Quiero</p>
                         </div>
                     </div>
 
@@ -91,7 +91,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus amet deserunt reprehenderit,</p>
                         </div>
                         <div class="select-card">
-                            <p class="select-o select-text"><input type="radio" value="option4">Lo Quiero</p>
+                            <p class="select-o select-text"><input type="radio" value="option4" id="direccionModalBtn">Lo Quiero</p>
                         </div>
                     </div>
                 </div>
@@ -102,19 +102,19 @@
                 <p class="text-flex-sec">Pagar por PSE</p>
             </div>
 
-        <div class="line-card2">
-            <div class="prestamo-banc">
-                <h6>Pr&eacute;stamo Vehículo</h6>
-                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
+            <div class="line-card2">
+                <div class="prestamo-banc">
+                    <h6>Pr&eacute;stamo Vehículo</h6>
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
+                </div>
             </div>
-        </div>
 
-        <div class="line-card2">
-            <div class="prestamo-banc">
-                <h6>Pr&eacute;stamo Tarjetas</h6>
-                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
+            <div class="line-card2">
+                <div class="prestamo-banc">
+                    <h6>Pr&eacute;stamo Tarjetas</h6>
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="orange" d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8H288c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg>
+                </div>
             </div>
-        </div>
 
             <section class="third-sec">
 
@@ -135,12 +135,12 @@
                         <p>Tasa preferencial</p>
                     </div>
                     <div class="mini-box2">
-                        <input type="submit" class="want" value="Lo Quiero">
+                        <input type="submit" class="want" value="Lo Quiero" id="button-modal"> 
                     </div>
                 </div>
 
                 <div class="text-third-sec">
-                    <h5>!Felicitaciones! Recibe un crédito al instante por tu cumplimiento</h5>
+                    <h5>¡Felicitaciones! Recibe un crédito al instante por tu cumplimiento</h5>
                     <p>Un crédito es una gran forma de aumentar tu puntaje crediticio, aumentamos el cupo al cumplir con el pago de tus obligaciones</p>
                 </div>
 
@@ -158,12 +158,106 @@
                     </div>
                     <div class="mini-box parragraph-spacing">
                         <p>Conoce m&aacute;s</p>
-                        <input type="submit" class="want" value="Lo Quiero" id="wants">
+                        <input type="submit" class="want" value="Lo Quiero" id="wants" id="direccionModalBtn">
                 </div>
 
             </section>
 
         </section>
+
+        <section class="modal">
+            <div class="exit">
+                <span id="closeBtn">X</span>
+            </div>
+
+            <div class="significa-sec">
+                <div class="circle-box">
+                    <img src="/assets/img/650.png" alt="" width="110px" height="100px">
+                </div>
+
+                <div class="text-container">
+                    <h3>¿Qu&eacute; significa este puntaje?</h3>
+                    <br>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, doloremque a quidem voluptate possimus
+                        dolores repellendus ex, et eligendi similique soluta aliquid, sit minima reprehenderit voluptates
+                        aperiam animi nihil iusto.
+                    </p>
+                </div>
+            </div>
+
+            <div class="description-sec">
+                <div class="logo-box">
+                    <div class="logo-container">
+                        <p>Logo</p>
+                    </div>
+                </div>
+
+                <div class="cards-box">
+                    <div class="letters-box">
+                        <div class="content-letters">
+                            <p>Rep.positivo</p>
+                            <div class="gray-line"></div>
+                            <p>Rep.negativo</p>
+                        </div>
+                    </div>
+
+
+                    <div class="big-box">
+                        <div class="mini-cards-container">
+                            <div class="gray-card tarjetas">
+                                <p class="margin-left">Tarjetas de cr&eacute;dito</p>
+                            </div>
+                            <div class="banco light-card">
+                                <p class="margin-left">Prestamos bancarios</p>
+                            </div>
+                            <div class="gray-card cuentas">
+                                <p class="margin-left">Cuentas de ahorro</p>
+                            </div>
+                            <div class="light-card vivienda">
+                                <p class="margin-left">Pr&eacute;stamos vivienda</p>
+                            </div>
+                        </div>
+
+                        <div class="big-gray-line-box">
+                            <div class="big-gray-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </main>
+
+    <script>
+        let significaModalBtn = document.getElementById('button-modal');
+        let direccionModalBtn =  document.getElementById('direccionModalBtn');
+
+        let closeBtn =  document.getElementById('closeBtn');
+
+        
+        let modal = document.querySelector('.modal');
+        modal.style.display = 'none';
+        let modalStatus = false;
+
+        significaModalBtn.addEventListener('click', function(){
+            openModal();
+            closeBtn.addEventListener('click', closeModal);
+        })
+            
+
+        function openModal(){
+            modalStatus === true;
+            modal.style.display = 'block';
+        }
+
+        function closeModal(){
+            modalStatus === false;
+            modal.style.display = 'none';
+        }
+        
+       
+    </script>
 </body>
 </html>
