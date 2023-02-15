@@ -2022,3 +2022,154 @@ li{
     right: 91px;
     top: 10px;
 }
+
+/*Modal puntaje*/
+
+.significa-sec{
+    display: flex;
+    height: 50%;
+}
+
+.exit{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-color: #324963;
+    height: 5%;
+    align-items: center;
+    border-radius: 0;
+}
+
+.exit span{
+    margin-right: 1rem;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.exit span:active, .exit span::after{
+    font-size: 16px;
+}
+
+.exit span::after{
+    font-size: 22px;
+}
+
+.circle-box{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container{
+    width: 70%;
+    /* display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center; */
+    color: #324963;
+    margin: 10px 5px;
+}
+
+.description-sec{
+    width: 100%;
+    height: 45%;
+    display: flex;
+}
+
+.logo-box{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo-containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6vh;
+    border: 1px solid #324963;
+    margin: 2rem;
+    text-transform: uppercase;
+    color: #324963;
+    font-size: 18px;
+}
+
+.cards-box{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+}
+
+.letters-box{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+ .gray-line{
+     width: 3px;
+     height: 20px;
+     background-color: gray;
+ }
+
+ .content-letters{
+     display: flex;
+     height: auto;
+     margin-left: 4rem;
+     width: 12rem;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ .big-box{
+     height: 100%;
+     width: 100%;
+     display: flex;
+ }
+
+ .mini-cards-container{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     height: 100%;
+     width: 80%;
+ }
+
+ .gray-card,
+ .light-card{
+     height: 30px;
+     display: flex;
+     align-items: center;
+ }
+
+ .gray-card{
+     background-color: #c4c5c7;
+ }
+
+ .light-card{
+     background-color: #ececed;
+ }
+
+ .margin-left{
+    margin-left: 1rem;
+}
+
+.big-gray-line-box{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-gray-line{
+    width: 10px;
+    height: 100%;
+    background-color: gray;
+
+}
