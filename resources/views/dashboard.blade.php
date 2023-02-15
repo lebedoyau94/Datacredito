@@ -13,6 +13,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">  
     <script src="https://kit.fontawesome.com/2e3d4c9f14.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    #modal {
+    width: 435px;
+    height: 400px;
+    margin: 1rem 0;
+    background-color: #ffffff;
+    border: 1px solid #324963;
+    padding-bottom: 1rem;
+    font-size: 14px;
+    position: absolute;
+    top: 60px;
+    left: 300px;
+}
+
+input[type=submit]{
+    background-color: transparent;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
 <body>
     <section class="menu-section">
         <button class="cursor">
@@ -209,7 +231,7 @@
                     <img src="/assets/img/450.png" alt="" width="100px" height="100px">
                     </div>
                     <div class="orange-box">
-                        <p>¿Qu&eacute; significa este puntaje?</p>
+                        <input type="submit" value="¿Qu&eacute; significa este puntaje?" id="button-modal">
                     </div>
                 </div>
             </div>
@@ -478,14 +500,7 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
-
-
-
         </div>
 
         <div class="prestamo-flex-box">
@@ -525,6 +540,68 @@
         
 
     </section>
+
+    <section id="modal">
+        <div class="exit">
+            <span id="closeBtn">X</span>
+        </div>
+
+        <div class="significa-sec">
+            <div class="circle-box">
+                <img src="/assets/img/650.png" alt="" width="110px" height="100px">
+            </div>
+
+            <div class="text-container">
+                <h3>¿Qu&eacute; significa este puntaje?</h3>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, doloremque a quidem voluptate possimus
+                    dolores repellendus ex, et eligendi similique soluta aliquid, sit minima reprehenderit voluptates
+                    aperiam animi nihil iusto.
+                </p>
+            </div>
+        </div>
+
+        <div class="description-sec">
+            <div class="logo-box">
+                <div class="logo-containers">
+                    <p>Logo</p>
+                </div>
+            </div>
+
+            <div class="cards-box">
+                <div class="letters-box">
+                    <div class="content-letters">
+                        <p>Rep.positivo</p>
+                        <div class="gray-line"></div>
+                        <p>Rep.negativo</p>
+                    </div>
+                </div>
+
+
+                <div class="big-box">
+                    <div class="mini-cards-container">
+                        <div class="gray-card tarjetas">
+                            <p class="margin-left">Tarjetas de cr&eacute;dito</p>
+                        </div>
+                        <div class="banco light-card">
+                            <p class="margin-left">Prestamos bancarios</p>
+                        </div>
+                        <div class="gray-card cuentas">
+                            <p class="margin-left">Cuentas de ahorro</p>
+                        </div>
+                        <div class="light-card vivienda">
+                            <p class="margin-left">Pr&eacute;stamos vivienda</p>
+                        </div>
+                    </div>
+
+                    <div class="big-gray-line-box">
+                        <div class="big-gray-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="soluciones-financieras-web">
         <p>Hola</p>
     </section>
@@ -550,5 +627,34 @@
 
 
     </script>
+
+<script>
+    let significaModalBtn = document.getElementById('button-modal');
+
+    let closeBtn =  document.getElementById('closeBtn');
+
+    
+    let modal = document.getElementById('modal');
+    modal.style.display = 'none';
+    let modalStatus = false;
+
+    significaModalBtn.addEventListener('click', function(){
+        openModal();
+        closeBtn.addEventListener('click', closeModal);
+    })
+        
+
+    function openModal(){
+        modalStatus === true;
+        modal.style.display = 'block';
+    }
+
+    function closeModal(){
+        modalStatus === false;
+        modal.style.display = 'none';
+    }
+    
+   
+</script>
 </body>
 </html>
