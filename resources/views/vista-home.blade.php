@@ -158,15 +158,131 @@
                     </div>
                     <div class="mini-box parragraph-spacing">
                         <p>Conoce m&aacute;s</p>
-                        <input type="submit" class="want" value="Lo Quiero" id="wants" id="direccionModalBtn">
+                        <input type="submit" class="want" value="Lo Quiero" id="wants" >
                 </div>
 
             </section>
 
         </section>
 
+        <section class="sec-modal">
 
+            <section class="exit">
+
+                <span id="closeSecBtn">X</span>
+            </section>
+             
+            <section class="text-container">
+
+                <p>Ingresa tu dirección y encuentra un punto de pago cerca a ti.</p>
+
+                <p>C&oacute;digo para pagos: 0000000000000</p>
+
+                <div class="button-printer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30">
+                        <path fill="white"
+                            d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                    </svg>
+                    <p>Imprimir recibo</p>
+                </div>
+
+            </section>
+
+            <section class="grid-container">
+
+                <div class="first-container">
+
+                    <span>Soluci&oacute;n elegida</span>
+
+                    <div class="tarjet morado">
+                        <div class="text-card">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus amet deserunt
+                                reprehenderit,
+                            </p>
+                        </div>
+
+                        <div class="select-card">
+                            <p class="select-o select-text"><input type="radio" value="option1">Lo Quiero</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sec-container">
+
+                    <select name="" id="">
+                        <option value="">Ingrese ciudad</option>
+                        <option value="">-</option>
+                        <option value="">-</option>
+                        <option value="">-</option>
+                    </select>
+
+                    <div class="various-selects">
+                       <select name="" id="">
+                            <option value="">Calle</option>
+                            <option value="">-</option>
+                            <option value="">-</option>
+                            <option value="">-</option>
+                        </select>
+
+                        <input type="text" value="">
+
+                        <span>#</span>
+
+                        <input type="text" value="">
+
+                        <input type="text" value="">
+
+                        <input type="submit" value="Aceptar">
+
+                    </div>
+                        <div class="list">
+                            <h3>Puntos cerca a ti</h3>
+                            <p>Direcci&oacute;n opci&oacute;n 1</p>
+                            <p>Direcci&oacute;n opci&oacute;n 2</p>
+                            <p>Direcci&oacute;n opci&oacute;n 3</p>
+                            <p>Direcci&oacute;n opci&oacute;n 4</p>
+                        </div>
+                    </div>
+                </section>
+
+            <div class="logo-container">
+                <div class="little-box">
+                    <p>Logo</p>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <script>
+        
+        let loQuieroBtn = document.getElementById('wants');
+        let secModal = document.querySelector('.sec-modal');
+        let closeSecBtn = document.getElementById('closeSecBtn');
+
+        secModal.style.display = 'none';
+        let secModalStatus = false;
+
+        loQuieroBtn.addEventListener('click', function(){
+            openSecModal();
+            closeSecBtn.addEventListener('click', function(){
+                closeSecModal();
+            })
+        })
+
+        function openSecModal(){
+            secModalStatus === true;
+            secModal.style.display = 'block';
+
+        }
+
+        function closeSecModal(){
+            secModalStatus === false;
+            secModal.style.display = 'none';
+        }
+
+
+
+    </script>
 </body>
 </html>
