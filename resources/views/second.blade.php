@@ -10,7 +10,7 @@
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">     
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
             <style>
 
                 .second-sec{
@@ -18,6 +18,11 @@
                     flex-direction: column;
                     align-items: center;
                     font-size: 15px;
+                }
+
+                .second-sec h2{
+                    font-weight: 900;
+                    font-size: 25px;
                 }
 
                 .second-sec p{
@@ -89,8 +94,13 @@
                     font-weight: 600;
                 }
 
+                .second-sec h2{
+                    font-weight: 900;
+                }
+
                 .leyend{
                     font-size: 14px;
+                    width: 590px;
                 }
 
 }

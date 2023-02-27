@@ -9,7 +9,7 @@ body{
     height: 100vh; 
     font-family: 'Rubik', sans-serif;
     background: rgb(208,226,245);
-    background: linear-gradient(127deg, rgba(208,226,245,1) 77%, rgba(179,175,240,0.9564138691077072) 94%);
+    background: linear-gradient(127deg, rgba(183,215,247,1) 60%, rgba(155,150,232,0.9564138691077072) 75%);
     overflow: hidden;
 }
 

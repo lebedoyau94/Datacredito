@@ -10,7 +10,7 @@
             <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">  
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
             <style>
 
                 .text-container{
@@ -28,7 +28,7 @@
                 .submit{
                     margin: 1rem 10px;
                     font-family: 'Rubik';
-                    font-size: 15px;
+                    font-size: 17px;
                 }
 
                 a{
@@ -137,10 +137,19 @@
                 body{
                     overflow: hidden;
                 }
+
+                .question-container {
+                font-weight: bold;
+                font-size: 20px;
+                }
+
+                .submit{
+                    height: 42px;
+                }
             }
 
             a{
-                height: 25px;
+                height: 33px;
                 border-radius: 15px;
                 border: none;
                 padding: 5px 25px;
