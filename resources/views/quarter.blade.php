@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
     <style>
 
         .submit{
@@ -181,6 +181,33 @@
             .question-container h3{
                 width: 52%;
             }
+
+            .second-sec {
+            font-size: 21px;
+            text-align: center;
+            font-weight: 900;
+            width: 44%;
+            }
+
+            .percent {
+            font-weight: 700;
+            font-size: 43px;
+            }
+
+            select{
+            width: 16rem;
+            }
+
+            .question-container h3 {
+            font-size: 26px;
+            font-weight: 700;
+            width: 53%;
+            }
+
+            .submit{
+                height: 43px;
+            }
+            
         }
 
     </style>
@@ -211,7 +238,7 @@
             </section>
 
             <section class="selection-container">
-                <select id="" name="reason">
+                <select id="" name="reason" class="no-arrow fa">
                     <option value="">Seleccione una opción</option>
                     <option value="none">Ninguno</option>
                     <option value="cash">Efectivo</option>

@@ -9,8 +9,8 @@
             <!-- icon -->
             <link rel="icon" href="https://www.itsolutionsengly.com/images/Ite-icon.png">
             <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">  
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>            
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
             <style>
         
                 .text-container{
@@ -218,6 +218,22 @@
 
                 .percent-sec p{
                     font-weight: 600;
+                }
+            }
+
+            @media only screen and (min-width: 1200px) {
+                .percent {
+                    font-weight: bold;
+                    font-size: 45px;
+                }
+
+                .second-sec {
+                    font-size: 17px;
+                    width: 34rem;
+                }
+
+                .upload-box{
+                    height: 105px;
                 }
             }
 
