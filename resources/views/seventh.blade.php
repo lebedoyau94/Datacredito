@@ -29,6 +29,56 @@
                     margin: 1rem 0;
                 }
 
+                select {
+                    -webkit-appearance:none;
+                    -moz-appearance:none;
+                    -ms-appearance:none;
+                    appearance:none;
+                    outline:0;
+                    box-shadow:none;
+                    border:0!important;
+                    /* background: white; */
+                    background-image: none;
+                    flex: 1;
+                    padding: 0 .5em;
+                    color: #262650;
+                    cursor:pointer;
+                    font-size: 1em;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                select::-ms-expand {
+                    display: none;
+                }
+                .select {
+                    position: relative;
+                    display: flex;
+                    width: 16em;
+                    height: 3em;
+                    line-height: 3;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    color:  #262650;
+                }
+                .select::after {
+                    content: '\25BC';
+                    position: absolute;
+                    left: 0;
+                    padding: 0 1em;
+                    background: white;
+                    cursor:pointer;
+                    pointer-events:none;
+                    transition:.25s all ease;
+                    color:  #262650;
+                }
+                .select:hover::after {
+                    color:  #262650;
+                }
+
+                select { 
+                    direction: rtl; 
+                    text-align: center;
+                }
+
                 @media only screen and (max-width: 600px) {
                     .percent{
                     border: 3px solid #262650;
@@ -60,10 +110,6 @@
                     font-size: 1.2rem;
                 }
 
-                .question-container select{
-                    width: 22rem;
-                    padding: 14px 107px;
-                }
 
                 .logo-container{
                     display: flex;
@@ -92,12 +138,15 @@
         </section>
         <section class="question-container">
             <h3>¿C&uacute;entanos c&uacute;al es tu sueño?</h3>
-            <select id="" name="dreams">
-                <option value="">Seleccione una opción</option>
-                <option value="car">Carro</option>
-                <option value="home">Casa</option>
-                <option value="travel">Viaje</option>
-            </select>
+
+            <div class="select">
+                <select name="dreams" id="">
+                    <option value="">Seleccione una opción</option>
+                    <option value="car">Carro</option>
+                    <option value="home">Casa</option>
+                    <option value="travel">Viaje</option>
+                </select>
+            </div>
             @error('dreams')
                 <div class="is-invalid">{{ $message }}</div>
             @enderror

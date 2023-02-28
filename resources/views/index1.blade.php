@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
     <style>
             body{
             margin: 0;
@@ -20,24 +21,14 @@
             flex-direction: column;
             width: 100vw;
             height: 100vh;
-            background-image: url('/assets/img/index.png');
+            background-image: url('/assets/img/index-curtain.png');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
 			font-family: 'Rubik', sans-serif;
 			background-color: #cfebf9;
+            background-size: cover;
 
-        }
-
-        .curtain{
-            background: rgb(170,234,255);
-            background: linear-gradient(127deg, rgba(170,234,255,1) 61%, rgba(179,175,240,0.9564138691077072) 80%);
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            opacity: .8;
-            z-index: -4;
-            top: 0;
         }
 
         .text-container{
@@ -78,6 +69,7 @@
             font-size: 30px;
             margin-bottom: 1rem;
 			height: 4rem;
+            font-weight: bold;
         }
 
         p{
@@ -131,7 +123,6 @@
             margin-top: 100px;
         }
         .mt-3 {
-            margin-top: 60px;
             text-align: center;
             padding-right: 140px;
         }
@@ -159,18 +150,7 @@
         align-items: center;
         flex-direction: column;
         }
-        @media only screen and (min-width: 600px) {
-            .curtain{
-            background: linear-gradient(0deg, rgba(196,146,254,1) 0%, rgba(149,231,232,0.7931547619047619) 43%);
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            opacity: .8;
-            z-index: -4;
-            top: 0;
-            clip-path: circle(56.4% at 19% 48%);
-                }
-        }
+
 
         @media only screen and (max-width: 600px) {
             body{
@@ -271,9 +251,6 @@
     </style>
 </head>
 <body>
-
-    <div class="curtain"></div>
-
 		<section class="first-sec">
             <div class="container-l">
                 <div class="logo">

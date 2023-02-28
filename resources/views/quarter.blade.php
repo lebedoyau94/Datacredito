@@ -131,15 +131,6 @@
             justify-content: center;
         }
 
-        select{
-            height: 3rem;
-            background: white;
-            border-radius: 15px;
-            width: 13rem;
-            padding: 0px 20px;
-            border: none;
-        }
-
         input[type=submit]{
             height: 45px;
             border-radius: 30px;
@@ -163,6 +154,61 @@
         display: flex !important;
         justify-content: center !important;
         }
+
+        /* select */
+
+        select {
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            -ms-appearance:none;
+            appearance:none;
+            outline:0;
+            box-shadow:none;
+            border:0!important;
+            /* background: white; */
+            background-image: none;
+            flex: 1;
+            padding: 0 .5em;
+            color: #262650;
+            cursor:pointer;
+            font-size: 1em;
+            font-family: 'Open Sans', sans-serif;
+        }
+        select::-ms-expand {
+            display: none;
+        }
+        .select {
+            position: relative;
+            display: flex;
+            width: 16em;
+            height: 3em;
+            line-height: 3;
+            overflow: hidden;
+            border-radius: 10px;
+            color:  #262650;
+        }
+        .select::after {
+            content: '\25BC';
+            position: absolute;
+            left: 0;
+            padding: 0 1em;
+            background: white;
+            cursor:pointer;
+            pointer-events:none;
+            transition:.25s all ease;
+            color:  #262650;
+        }
+        .select:hover::after {
+            color:  #262650;
+        }
+
+        select { 
+            direction: rtl; 
+            text-align: center;
+        }
+
+        
+
 
         @media only screen and (min-width: 1200px) {
             .logo-container {
@@ -238,12 +284,17 @@
             </section>
 
             <section class="selection-container">
-                <select id="" name="reason" class="no-arrow fa">
-                    <option value="">Seleccione una opción</option>
-                    <option value="none">Ninguno</option>
-                    <option value="cash">Efectivo</option>
-                    <option value="problem">Problemas</option>
-                </select> <br>
+
+
+                <div class="select">
+                    <select name="reason" id="">
+                        <option value="" >Seleccione una opción</option>
+                        <option value="none">Ninguno</option>
+                        <option value="cash">Efectivo</option>
+                        <option value="problem">Problemas</option>
+                    </select>
+                </div>
+
                 @error('motive')
                 <div class="is-invalid">{{ $message }}</div>
                 @enderror

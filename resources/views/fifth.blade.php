@@ -31,7 +31,7 @@
                     font-size: 17px;
                 }
 
-                a{
+                .question-container a {
                     height: 25px;
                     border-radius: 15px;
                     border: none;
@@ -40,16 +40,75 @@
                     background-color: #262650;
                     cursor: pointer;
                     margin: 1rem 10px;
-                    width: 46px;
+                    width: 90px;
+                    align-self: flex-start;
                     text-decoration: none;
                     align-content: center;
-                    text-align: center;
+                    justify-content: center;
                     display: flex;
-                    /* flex-direction: column; */
                     align-items: center;
                     font-weight: normal;
                     font-family: 'Rubik';
                 }
+
+                select {
+                    -webkit-appearance:none;
+                    -moz-appearance:none;
+                    -ms-appearance:none;
+                    appearance:none;
+                    outline:0;
+                    box-shadow:none;
+                    border:0!important;
+                    /* background: white; */
+                    background-image: none;
+                    flex: 1;
+                    padding: 0 .5em;
+                    color: #262650;
+                    cursor:pointer;
+                    font-size: 1em;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                select::-ms-expand {
+                    display: none;
+                }
+                .select {
+                    position: relative;
+                    display: flex;
+                    height: 3em;
+                    line-height: 3;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    color:  #262650;
+
+                }
+                .select::after {
+                    content: '\25BC';
+                    position: absolute;
+                    left: 0;
+                    padding: 0 1em;
+                    background: white;
+                    cursor:pointer;
+                    pointer-events:none;
+                    transition:.25s all ease;
+                    color:  #262650;
+                }
+                .select:hover::after {
+                    color:  #262650;
+                }
+
+                select { 
+                    direction: rtl; 
+                    text-align: center;
+                }
+
+                /* submit */
+
+                input[type='submit']{
+                    width: 150px;
+                    align-self: end;
+                }
+
+                
 
 
 
@@ -149,7 +208,7 @@
             }
 
             a{
-                height: 33px;
+                height: 25px;
                 border-radius: 15px;
                 border: none;
                 padding: 5px 25px;
@@ -181,36 +240,40 @@
         <p>Gana este descuento en tus deudas respondiendo las siguientes preguntas</p>
     </section>
     <div class="grid-question">
-    <section class="question-container">
-        <h3>¿C&uacute;al es su rango de ingresos actualmente?</h3>
-        <select id="question" name="income_range">
-            <option value="">Seleccione una opción</option>
-            <option value="100">100</option>
-            <option value="200">200</option>
-            <option value="300">300</option>
-        </select>
-        @error('income_range')
-            <div class="is-invalid">{{ $message }}</div>
-        @enderror
-    </section>
-    <section class="question-container">
-        <h3>¿De sus ingresos actuales cuánto puede destinar al pago de su deuda?</h3>
-        <select id="" name="allocate_payment">
-            <option value="">Seleccione una opción</option>
-            <option value="50">50</option>
-            <option value="150">150</option>
-            <option value="250">250</option>
-        </select>
-        @error('allocate_payment')
-            <div class="is-invalid">{{ $message }}</div>
-        @enderror
-    </section>
-</div>
-    <section class="btn-container">
-        <input type="submit" class="submit" value="Continuar">
+        <section class="question-container">
+            <h3>¿C&uacute;al es su rango de ingresos actualmente?</h3>
+
+            <div class="select">
+                <select id="question" name="income_range">
+                    <option value="" >Seleccione una opción</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                    <option value="300">300</option>
+                </select>
+            </div>
+            @error('income_range')
+                <div class="is-invalid">{{ $message }}</div>
+            @enderror
+            <input type="submit" class="submit" value="Continuar">
+        </section>
+        <section class="question-container">
+            <h3>¿De sus ingresos actuales cuánto puede destinar al pago de su deuda?</h3>
+
+            <div class="select">
+                <select id="question" name="income_range">
+                    <option value="" >Seleccione una opción</option>
+                    <option value="50">50</option>
+                    <option value="150">150</option>
+                    <option value="250">250</option>
+                </select>
+            </div>
+            @error('allocate_payment')
+                <div class="is-invalid">{{ $message }}</div>
+            @enderror
+            <a href="{{route('view.sixth')}}">Omitir</a>
+        </section>
+    </div>
     </form>
-        <a href="{{route('view.sixth')}}">Omitir</a>
-    </section>
     </section>
 </body>
 </html>
