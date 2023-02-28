@@ -260,7 +260,7 @@
             <h3>¿De sus ingresos actuales cuánto puede destinar al pago de su deuda?</h3>
 
             <div class="select">
-                <select id="question" name="income_range">
+                <select id="question" name="allocate_payment">
                     <option value="" >Seleccione una opción</option>
                     <option value="50">50</option>
                     <option value="150">150</option>
