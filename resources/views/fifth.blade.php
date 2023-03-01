@@ -32,7 +32,7 @@
                 }
 
                 .question-container a {
-                    height: 25px;
+                    height: 30px;
                     border-radius: 15px;
                     border: none;
                     padding: 5px 25px;
